@@ -7,14 +7,25 @@ One-click-ish setup for splitting a Telegram **Forum** group into topics (thread
 - Scripts to initialize SSOT and update mappings
 
 ## Install (as a skill)
-Copy the skill folder into your workspace:
+
+### Option A) Download the `.skill` (recommended)
+1) Download from Releases:
+- <https://github.com/edmonddantesj/openclaw-telegram-topics-router/releases>
+
+2) Install it into OpenClaw (CLI varies by version). If your CLI doesn't have a direct installer, unzip it into your workspace:
 
 ```bash
-mkdir -p skills/public
-cp -R openclaw-telegram-topics-router skills/public/
+mkdir -p skills/public/openclaw-telegram-topics-router
+unzip -o openclaw-telegram-topics-router.skill -d skills/public/openclaw-telegram-topics-router
 ```
 
-(Or package it into a `.skill` with your own tooling.)
+### Option B) Git clone
+```bash
+git clone https://github.com/edmonddantesj/openclaw-telegram-topics-router
+cd openclaw-telegram-topics-router
+mkdir -p ../skills/public
+cp -R openclaw-telegram-topics-router ../skills/public/
+```
 
 ## Quick start
 ```bash
