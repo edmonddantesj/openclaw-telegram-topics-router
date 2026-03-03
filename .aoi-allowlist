@@ -1,0 +1,7 @@
+# AOI Security Gate allowlist (public repo)
+# Keep tight; default-deny.
+
+.aoi-allowlist
+README.md
+LICENSE
+openclaw-telegram-topics-router/
