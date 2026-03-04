@@ -15,6 +15,7 @@ description: Set up and maintain Telegram forum Topics routing for OpenClaw. Use
 Created/used under your workspace:
 - `context/telegram_topics/TOPICS_DEFINITION_V0_1.md`
 - `context/telegram_topics/thread_topic_map.json`
+- `context/telegram_topics/thread_workstream_map.json` (optional: per-thread friendly name)
 
 ## Quick start
 1) Initialize SSOT files:
@@ -30,11 +31,24 @@ Created/used under your workspace:
 
 4) Audit
    - `python3 skills/public/openclaw-telegram-topics-router/scripts/audit_map.py`
+   - (optional) `python3 skills/public/openclaw-telegram-topics-router/scripts/audit_workstreams.py`
 
 ## Operating rule (recommended)
 - In chat, never claim a topic mapping exists without proof.
 - For operational reporting, combine this with Proof-first:
   - `context/protocols/PROOF_FIRST_STATUS_PROTOCOL_V0_1.md`
+
+## Workstream naming (recommended)
+If you want to declare a topic as a dedicated workstream ("이 토픽을 'xx' 작업 스레드로 고정/명명"), store a friendly name per thread.
+
+1) Initialize (one-time):
+- `python3 skills/public/openclaw-telegram-topics-router/scripts/init_workstream_ssot.py --chat-id telegram:-100...`
+
+2) Set name (repeat per thread):
+- `python3 skills/public/openclaw-telegram-topics-router/scripts/set_workstream.py --thread-id 68 --name "Ralph Loop / WIP" --slug ralph-loop`
+
+3) Parser helper (for higher-level automation):
+- `python3 skills/public/openclaw-telegram-topics-router/scripts/parse_workstream_command.py --text "이 토픽을 'Ralph Loop' 작업 스레드로 고정"`
 
 ## When you need deeper customization
 - Edit topic taxonomy/rules in:
