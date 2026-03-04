@@ -3,8 +3,8 @@
 
 Supported:
 - #call <Role1> <Role2> ...
-- #council all
-- #all-hands
+- #council all (alias of #all-hands)
+- #all-hands (12요원 전원 의견 요청일 때만)
 - #council core
 - #council market
 
