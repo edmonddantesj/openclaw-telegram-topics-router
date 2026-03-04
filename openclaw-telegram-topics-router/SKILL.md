@@ -48,7 +48,13 @@ If you want one default sub-agent (role) per topic/thread, store primary agent p
 ## Delegation mode (ops policy)
 - A-mode (manual): delegate only when `#delegate` is present.
 - **B-mode (default): auto-delegate** to the primary agent when a message arrives, with noise filters + cooldown + L3 fail-closed.
-- Suggested SSOT: `context/telegram_topics/DELEGATION_POLICY_V0_1.md`
+- SSOT: `context/telegram_topics/DELEGATION_POLICY_V0_1.md`
+
+### Execution-layer building blocks (included)
+These scripts are deterministic helpers you can embed into an inbound router:
+- `scripts/delegation_decider.py` — decide should_delegate from message text
+- `scripts/delegation_state.py` — cooldown state file helper (180s default)
+- `scripts/resolve_primary_agent.py` — thread_id -> primary agent lookup
 
 1) Initialize (one-time):
 - `python3 skills/public/openclaw-telegram-topics-router/scripts/init_agent_map_ssot.py --chat-id telegram:-100...`
