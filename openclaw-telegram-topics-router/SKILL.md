@@ -45,6 +45,43 @@ If you want to declare a topic as a dedicated workstream ("이 토픽을 'xx' �
 ## Topic → Primary agent routing (recommended)
 If you want one default sub-agent (role) per topic/thread, store primary agent per thread.
 
+## Workstream lock registry (prevent duplicated/conflicting work)
+When multiple topics run in parallel, tasks can overlap (same file/pipeline) and cause conflicts.
+This skill can maintain a lightweight **exclusive lock registry** (SSOT) keyed by lock strings.
+
+### SSOT
+- `context/telegram_topics/workstream_lock_map.json`
+
+### Initialize
+```bash
+python3 skills/public/openclaw-telegram-topics-router/scripts/init_workstream_locks_ssot.py --chat-id telegram:-100...
+```
+
+### Claim / release locks
+```bash
+# claim a lock for a task
+python3 skills/public/openclaw-telegram-topics-router/scripts/claim_workstream_lock.py \
+  --lock scripts/notion_mirror_sync.py \
+  --ledger-id RL-20260306-026 \
+  --thread-id 68 \
+  --owner "Blue-Gear"
+
+# audit current locks
+python3 skills/public/openclaw-telegram-topics-router/scripts/audit_workstream_locks.py
+
+# release a lock
+python3 skills/public/openclaw-telegram-topics-router/scripts/release_workstream_lock.py \
+  --lock scripts/notion_mirror_sync.py \
+  --ledger-id RL-20260306-026
+```
+
+### Policy (recommended)
+- Before starting a task in a topic, **claim required locks**.
+- If a lock is already claimed, either:
+  - merge/supersede the task, or
+  - split scope, or
+  - wait until released.
+
 ## Delegation mode (ops policy)
 - A-mode (manual): delegate only when `#delegate` is present.
 - **B-mode (default): auto-delegate** to the primary agent when a message arrives, with noise filters + cooldown + L3 fail-closed.
