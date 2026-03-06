@@ -2,4 +2,7 @@
 # Keep this tight; add paths as needed.
 
 context/
+scripts/
+skills/private/
+artifacts/skill_builds/
 .aoi-allowlist
