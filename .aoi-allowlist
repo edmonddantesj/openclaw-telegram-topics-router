@@ -6,3 +6,4 @@ scripts/
 skills/private/
 artifacts/skill_builds/
 .aoi-allowlist
+launchd/ai.aoi.v6-invest-routine.plist

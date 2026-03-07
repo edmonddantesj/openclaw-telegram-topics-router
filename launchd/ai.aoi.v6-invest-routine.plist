@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>ai.aoi.v6-invest-routine</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/silkroadcat/.openclaw/workspace/scripts/v6_invest_routine.sh</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/silkroadcat/.openclaw/workspace</string>
+
+  <key>StartInterval</key>
+  <integer>3600</integer>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/silkroadcat/.openclaw/workspace/logs/launchd/v6-invest-routine.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/silkroadcat/.openclaw/workspace/logs/launchd/v6-invest-routine.err.log</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/usr/local/bin</string>
+  </dict>
+</dict>
+</plist>

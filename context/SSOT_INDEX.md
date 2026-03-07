@@ -29,6 +29,13 @@ This is a lightweight index of canonical SSOT docs in `context/`.
 - Community Activity Log — Live-Sync (auto-archive) protocol: `context/ops/COMMUNITY_ACTIVITY_LOG_LIVE_SYNC_PROTOCOL_V0_1.md`
 - Ralph Loop — business-wide application policy (execution mode): `context/ops/RALPH_LOOP_BUSINESS_WIDE_APPLICATION_POLICY_V0_1.md`
 - Antigravity — Ralph Loop adoption notes (Context reset / .agent/ / Proof-first): `context/ops/ANTIGRAVITY_RALPH_LOOP_ADOPTION_NOTES_V0_1.md`
+- V6/Limitless Ops Spec: `context/limitless/LIMITLESS_V6_OPS_SPEC_V0_1.md`
+
+## Limitless / V6
+- Topic playbook: `context/topics/v6-invest_PLAYBOOK_V0_1.md`
+- Active handoff: `context/handoff/HF_v6_invest_live_restart_202603.md`
+- Handoff policy/vindex: `context/handoff/HANDOFF_POLICY_V0_1.md`, `context/handoff/INDEX.md`
+- Routine automation stub: `scripts/v6_invest_routine.sh`, `launchd/ai.aoi.v6-invest-routine.plist`
 
 ## Knowledge
 - Knowledge Index Feedback Loop (AOI adaptation): `context/knowledge/KNOWLEDGE_INDEX_FEEDBACK_LOOP_AOI_ADAPTATION_V0_1.md`
