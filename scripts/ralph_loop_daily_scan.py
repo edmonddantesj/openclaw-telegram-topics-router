@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Ralph Loop Daily Scan
 
-Creates a daily report under ops/reports/ralph_loop_daily/REPORT_YYYY-MM-DD.md
+Creates a daily report under context/ops/reports/ralph_loop_daily/REPORT_YYYY-MM-DD.md (and legacy ops/reports for compatibility if present)
 and (optionally) creates follow-up ops/items tasks when drift/staleness is detected.
 
 This is a reconstruction script: minimal, deterministic, local-only.
@@ -31,11 +31,17 @@ def main() -> int:
     if not d:
         d = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-    os.makedirs("ops/reports/ralph_loop_daily", exist_ok=True)
+    # Prefer SSOT path under context/, but keep legacy ops/ path if it exists.
+    report_dir = "context/ops/reports/ralph_loop_daily"
+    legacy_dir = "ops/reports/ralph_loop_daily"
+    os.makedirs(report_dir, exist_ok=True)
+    if os.path.isdir("ops/reports"):
+        os.makedirs(legacy_dir, exist_ok=True)
 
     wip_line = run(["python3", "scripts/ralph_loop_wip_sweep.py", "--limit", str(args.wip_limit), "--sla-h", str(args.sla_h)])
 
-    report_path = f"ops/reports/ralph_loop_daily/REPORT_{d}.md"
+    report_path = f"{report_dir}/REPORT_{d}.md"
+    legacy_report_path = f"{legacy_dir}/REPORT_{d}.md"
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     content = f"""# Ralph Loop Daily Scan — {d}
@@ -60,6 +66,14 @@ Generated: {now}
 
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(content)
+
+    # Best-effort write to legacy location too, if available.
+    try:
+        if os.path.isdir(legacy_dir):
+            with open(legacy_report_path, "w", encoding="utf-8") as f:
+                f.write(content)
+    except Exception:
+        pass
 
     print(report_path)
     return 0
