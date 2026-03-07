@@ -1,0 +1,16 @@
+{
+  "ops": ["gateway", "launchd", "launchctl", "cron", "health", "status", "로그", "헬스", "보안", "audit"],
+  "maintenance": ["maintenance", "복구", "recovery", "smoke", "digest", "3h", "daily scan"],
+  "github": ["github", "gh ", "PR", "issue", "repo", "release", "actions"],
+  "acp": ["ACP", "agentic", "codex", "harness", "dispatch"],
+  "adp": ["ADP", "backlog", "라벨", "label"],
+  "bazaar": ["Nexus", "Bazaar", "The Archive", "receipt", "영수증"],
+  "ralph-loop": ["Ralph", "RSL", "oldest-first", "매시간", "2개"],
+  "hackathons": ["hackathon", "해커톤", "deadline", "제출"],
+  "longform": ["pdf", "longform", "docx", "인제스트", "ingest"],
+  "x-post": ["X ", "tweet", "트윗", "post", "공지", "announcement", "Live-Sync"],
+  "v6-invest": ["oracle", "bet", "투자", "DLMM", "수익", "V6", "Alpha Oracle"],
+  "moltbook": ["Molt", "molt"],
+  "inbox-dev": ["긴급", "hotfix", "P0", "deploy", "vercel", "demo"],
+  "handoff": ["handoff", "HF_", "Context Card", "SSOT"]
+}
