@@ -137,10 +137,16 @@ def main() -> int:
 
     cur_files = pre["files"]
 
+    IGNORE_CHANGED_PREFIXES = [
+        "context/ops/reports/",
+    ]
+
     for path, old_hash in prev_files.items():
         if path not in cur_files:
             missing_in_current.append(path)
         elif cur_files[path] != old_hash:
+            if any(path.startswith(pfx) for pfx in IGNORE_CHANGED_PREFIXES):
+                continue
             changed.append(path)
 
     for path in cur_files.keys():

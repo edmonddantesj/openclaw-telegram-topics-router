@@ -1,6 +1,6 @@
 {
   "schema": "ralph-loop.drift.checksums.v0.1",
-  "generated_at": "2026-03-07T231532Z",
+  "generated_at": "2026-03-07T231817Z",
   "scope": {
     "md": "context/ralph_loop/DRIFT_CANONICAL_SCOPE_V0_1.md",
     "dirs": [
@@ -14,8 +14,8 @@
     "context/state/knowledge_index.state.json": "32aeef547868146de186dac16aac3de15efa038ec1c0e08b146f13f284cdafef",
     "context/state/notion_mirror.state.json": "32aeef547868146de186dac16aac3de15efa038ec1c0e08b146f13f284cdafef",
     "context/state/ralph_loop_sync.state.json": "32aeef547868146de186dac16aac3de15efa038ec1c0e08b146f13f284cdafef",
-    "context/ops/reports/ralph_loop_daily/REPORT_2026-03-07.md": "640d86a64c66b5e34709927729e6308c6c29c98604c41c8f6d524c304acd9a22",
-    "context/ops/reports/ralph_loop_daily/REPORT_2026-03-08.md": "2883992b4df148d664b73ad02654ea8d91c8299462004c4f2058aa178e87b102",
+    "context/ops/reports/ralph_loop_daily/REPORT_2026-03-07.md": "8513b2be433e317ac5ed6914d6d831a77ffe4c58fb5579d604e7f6ba880151cf",
+    "context/ops/reports/ralph_loop_daily/REPORT_2026-03-08.md": "977a9e0daf6a153011909e44d43ad16094a63e2c321ad0d1d06f66fa12bde27f",
     "context/ops/items/TASK-20260304-ADP-BUBBLE-UX-01.md": "de4bc19de278cbc650a0f97f1e99cdc4499d146c378ade1ecb9002ddd14ece6a",
     "context/ops/items/TASK-20260304-ADP-COST-TOKENS-PANEL-01.md": "89acd1e5692ffb11eaedd4981cd4c05cc52a87af140f52a3e8a99cb829435e88",
     "context/ops/items/TASK-20260304-ADP-MC-OVERVIEW-01.md": "4c7040978f33c669dcce40f3fae98acf347e73b153bc44a42683161574ba73f0",
