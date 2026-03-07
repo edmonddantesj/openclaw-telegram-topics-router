@@ -8,6 +8,7 @@ set -euo pipefail
 # Posting is just a reminder + path; it does NOT publish to Moltbook.
 
 OPENCLAW_BIN="${OPENCLAW_BIN:-/opt/homebrew/bin/openclaw}"
+OPENCLAW_NODE="${OPENCLAW_NODE:-/opt/homebrew/bin/node}"
 CHAT_ID="${CHAT_ID:--1003732040608}"
 THREAD_ID="${THREAD_ID:-1114}"
 
@@ -26,7 +27,7 @@ if [[ "${DRY_RUN:-}" == "1" ]]; then
   DRY_RUN_FLAG="--dry-run"
 fi
 
-"$OPENCLAW_BIN" message send \
+"$OPENCLAW_NODE" "$OPENCLAW_BIN" message send \
   --channel telegram \
   --target "$CHAT_ID" \
   --thread-id "$THREAD_ID" \

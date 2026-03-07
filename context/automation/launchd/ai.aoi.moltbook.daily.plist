@@ -29,6 +29,9 @@
 
   <key>EnvironmentVariables</key>
   <dict>
+    <!-- launchd default PATH is minimal; include Homebrew for openclaw/node -->
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
     <key>OPENCLAW_BIN</key>
     <string>/opt/homebrew/bin/openclaw</string>
     <key>CHAT_ID</key>
