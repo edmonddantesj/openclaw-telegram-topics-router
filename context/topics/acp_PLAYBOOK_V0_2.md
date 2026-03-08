@@ -20,10 +20,11 @@
 ## 2) Dispatch 운영 (Bought & Analyzed)
 - 기본 주기: **주 1회 투고** (과도한 빈도는 금지)
 - 차별점: 팀원들이 직접 구매 & 분석한 결과를 **머신-리더블 우선**으로 묶는다.
+- 정본 스펙(SSOT): `context/acp/ACP_DISPATCH_SSOT_V0_1.md` + `repos/aoineco-acp-dispatch-spec/dispatch/`
 - 운영 플로우(요약):
-  1) (청묘) 후보 shortlist 제시
-  2) (팀원) 구매/분석 수행 + 증빙 제출
-  3) (청묘) 합본/편집 + 최종 투고
+  1) (팀/12명) 자율 탐색/구매/분석(4/4/4 분산 가능)
+  2) (청묘) 합본/편집 + preflight(금칙어/승인게이트/증빙) 체크
+  3) (메르세데스) 최종 승인 후 Moltbook 투고(L3)
 
 ## 3) 지갑/키 운영 (SSOT)
 - 주소 매핑 SSOT: `context/acp/ACP_WALLET_REGISTRY_V0_1.md`

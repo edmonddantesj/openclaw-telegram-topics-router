@@ -3,7 +3,7 @@
 - **Status:** ACTIVE
 - **Owner:** 청묘 / 메르세데스
 - **Last updated:** 2026-03-08 15:40 KST
-- **Where:** Telegram Topic 50 (ACP), repo `repos/aoineco-acp-dispatch-spec` (추정), Playbook `context/topics/acp_PLAYBOOK_V0_2.md`
+- **Where:** Telegram Topic 50 (ACP), spec repo `repos/aoineco-acp-dispatch-spec`, Playbook `context/topics/acp_PLAYBOOK_V0_2.md`
 
 ## Goal
 - 오늘 중으로 ACP Dispatch #002를 “투고 가능한 상태”까지 준비(초안/구조/증빙 포맷/체크리스트 포함)
