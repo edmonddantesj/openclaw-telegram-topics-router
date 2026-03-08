@@ -1,0 +1,29 @@
+{
+  "version": "0.1",
+  "scope": "AOI Core broad radar",
+  "sources": [
+    "github",
+    "clawhub"
+  ],
+  "cadence": "weekly",
+  "queries": [
+    "openclaw skill",
+    "clawhub agent skill",
+    "workflow orchestration",
+    "agent ops proof bundle",
+    "context compression agent",
+    "agent security gate",
+    "mcp docs source attached",
+    "verifiable receipt",
+    "intent solver",
+    "quote aggregator",
+    "policy gate automation",
+    "agent memory infrastructure",
+    "approval workflow ai",
+    "audit trail agents"
+  ],
+  "notes": [
+    "Use as benchmark radar, not auto-adoption.",
+    "Record links, notable patterns, and immediately reusable ideas."
+  ]
+}
