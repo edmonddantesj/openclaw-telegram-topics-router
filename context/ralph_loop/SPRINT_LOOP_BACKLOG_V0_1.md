@@ -28,8 +28,10 @@ Sprint Loop(4-topic batch)으로 DM export/운영 백로그를 **토픽별 SSOT(
   - Safe Promotion msgs: ops=3190, github=3191, maintenance=3192, inbox-dev=3193
   - Audit post: maintenance(77) msgId=3189
 
-### Sprint 2 (DONE → awaiting ADOPT/HOLD/CONFLICT replies)
+### Sprint 2 (DONE → ADOPT confirmed)
 - Topics: acp / adp / handoff / ralph-loop
+- Decision:
+  - ADOPT (confirmed by 메르세데스, 2026-03-08)
 - Proof:
   - Commit: `23a08cb` (Sprint2 shadow-ingest playbooks + automation candidates)
   - Safe Promotion msgs: acp=3194, adp=3195, handoff=3196, ralph-loop=3198
