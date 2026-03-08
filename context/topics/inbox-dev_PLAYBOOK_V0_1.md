@@ -12,6 +12,10 @@
 3) 멈추기 전 Next 3
    - 중단 직전에 다음 액션 3개를 HF에 남긴다.
 
+## Imported from DM export (Shadow Ingest)
+- 반복 패턴: 외부 서비스/SDK 상호작용(예: 시장/계정 상태가 시간에 따라 만료)에서 오류가 날 경우, **재스캔/재조회(현 시점 기준)**가 1차 대응.
+  - Proof: DM export `messages2.html` msgId=1059 (시장 재스캔 제안)
+
 ## Canonical Handoff
 - ACTIVE 인덱스: `context/handoff/INDEX.md`
 - 관련 HF(현재): `context/handoff/HF_inbox_dev_urgent_202603.md`
