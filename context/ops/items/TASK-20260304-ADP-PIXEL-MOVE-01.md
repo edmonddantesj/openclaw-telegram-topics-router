@@ -3,8 +3,8 @@
 labels: adp, pixel-office, ui, ralph-loop, move, rebuild
 priority: P0
 status: in-progress
-assignee: 청정
-updated: 2026-03-08T08:13:19+09:00
+assignee: 청섬
+updated: 2026-03-08T09:30:36+09:00
 
 ## Goal
 Implement "status → zone → (x,y)" movement for pixel agents.

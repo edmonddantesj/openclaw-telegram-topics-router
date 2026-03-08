@@ -3,8 +3,8 @@
 labels: adp, ops, overview, dashboard, ralph-loop, rebuild
 priority: P0
 status: in-progress
-assignee: 청정
-updated: 2026-03-08T08:13:19+09:00
+assignee: 청뇌
+updated: 2026-03-08T09:30:36+09:00
 
 ## Goal
 Create an ADP Ops Overview page/panel that shows (at minimum):

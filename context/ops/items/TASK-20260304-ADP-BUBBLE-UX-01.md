@@ -3,8 +3,8 @@
 labels: adp, ui, pixel-office, bubble, ralph-loop, rebuild
 priority: P0
 status: in-progress
-assignee: 청정
-updated: 2026-03-08T08:13:19+09:00
+assignee: 청섬
+updated: 2026-03-08T09:30:36+09:00
 
 ## Goal
 Add 1-line status bubble UI to each agent (mobile-safe).
