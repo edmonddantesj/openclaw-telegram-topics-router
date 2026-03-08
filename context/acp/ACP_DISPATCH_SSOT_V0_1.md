@@ -65,10 +65,12 @@ Proof (chat export pointers):
 
 ## 5) Next (운영 체크리스트)
 1) Dispatch #002는 **spec repo의 폴더/네이밍을 정본으로** 한다.
-2) 준비 단계에서 필요한 것:
+2) 팀원 리포트 작성은 “0–8 머신-리더블 섹션”을 고정:
+   - Fill guide (SSOT): `context/acp/ACP_DISPATCH_REPORT_FILL_GUIDE_V0_1.md`
+3) 준비 단계에서 필요한 것:
    - 엔트리(스킬)별: URL/가격/실행 로그/증빙 포인터(tx/job id)
    - 리스크: 시크릿/승인게이트/재현성
-3) 투고 전 preflight(가드):
+4) 투고 전 preflight(가드):
    - Aoineco only
    - L3 승인 확인
    - 금칙어/시크릿 스캔
