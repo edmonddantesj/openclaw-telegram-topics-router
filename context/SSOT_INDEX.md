@@ -21,6 +21,9 @@ This is a lightweight index of canonical SSOT docs in `context/`.
 - Handoff Template: `context/handoff/_TEMPLATE.md`
 - Handoff Policy V0.1: `context/handoff/HANDOFF_POLICY_V0_1.md`
 
+## DM Export Merge
+- Shadow Ingest → Safe Promotion policy (no conflicts / proof-first): `context/ops/DM_EXPORT_SHADOW_INGEST_AND_SAFE_PROMOTION_POLICY_V0_1.md`
+
 ## Research / External Benchmarks
 - Arkham Intel API integration plan: `context/research/ARKHAM_INTEL_API_INTEGRATION_PLAN_V0_1.md`
 - Arkham rate limits + credit pricing SSOT: `context/research/ARKHAM_RATE_LIMITS_AND_CREDIT_PRICING_SSOT_20260224.md`
