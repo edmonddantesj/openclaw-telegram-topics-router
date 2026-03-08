@@ -3,24 +3,25 @@
 - Topic: `handoff`
 - Telegram topic id: `586`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:08 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
-- SSOT 기반 handoff/dispatch/compact로 ‘컨텍스트 끊김’ 방지 + 토픽 간 병렬 운영을 제어
+- HF 중심 handoff/dispatch/compact로 컨텍스트 끊김을 막고 병렬 작업을 제어한다.
 
 ## Latest checkpoint
-- handoff 토픽은 진행중 큰 작업을 끊김없이 재개하기 위한 HF 중심 허브다.
-- ACTIVE 인덱스는 context/handoff/INDEX.md가 정본이며, 각 작업은 HF_*.md로 관리된다.
-- topic-state는 현재 어떤 HF를 우선 복구해야 하는지 압축 요약하는 역할을 맡는다.
+- ACTIVE/HOLD/DONE 정본은 `context/handoff/INDEX.md`이고, 큰 작업은 모두 `HF_*.md`로 관리하는 구조가 정착돼 있다.
+- 장문/이전대화 인입은 끝까지 읽기 → 요약 → 분석/제안 → SSOT 저장 순서가 고정 규칙이다.
+- 컨텍스트 60% 이상이면 compact/reset 권고를 함께 주는 운영 규칙도 여기와 연결된다.
 
 ## Decisions locked
-- 모든 토픽은 기본적으로 `context/topic-state/<slug>.md`를 가진다.
-- 반복 규칙은 Playbook, 열린 이슈는 HF, 즉시 복구 요약은 topic-state에 둔다.
+- 큰 작업은 반드시 HF 1장으로 분리.
+- 결정 3종 세트는 즉시 영구 저장.
+- thread/topic 매핑은 병렬 라우팅의 전제다.
 
 ## Next actions
 1. ACTIVE HF 우선순위를 checkpoint에 반영.
-2. 새 에픽/큰 작업 시작 시 HF 생성.
-3. 완료된 작업은 DONE 처리 및 산출물 링크 남기기.
+2. 새 에픽 시작 시 HF 생성 후 INDEX 등록.
+3. compact/handoff 산출물 경로도 함께 남긴다.
 
 ## Key files
 - Playbook: `context/topics/handoff_PLAYBOOK_V0_1.md`
@@ -32,4 +33,4 @@
 - 복구 응답은 `현재 목표 / 마지막 체크포인트 / 다음 액션` 순서로 짧게 재구성한다.
 
 ## Notes
-- handoff는 개별 작업 세부보다 우선순위와 연결 포인터가 중요하다.
+- handoff는 세부 내용보다 “어떤 HF를 먼저 읽어야 하는가”를 명확히 해주는 게 핵심이다.

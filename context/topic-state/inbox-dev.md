@@ -3,24 +3,25 @@
 - Topic: `inbox-dev`
 - Telegram topic id: `585`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:08 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
-- 긴급개발/핫픽스/데드라인 대응 (실행 우선)
+- 긴급개발/핫픽스/데드라인 대응을 proof-first와 식별자 우선 원칙 아래 처리한다.
 
 ## Latest checkpoint
-- 긴급개발 토픽은 식별자 먼저, proof-first, 중단 직전 Next 3 남기기 규칙이 고정됨.
-- 현재 대표 HF는 HF_inbox_dev_urgent_202603이며, 긴급개발/핫픽스/데드라인 대응의 기준 파일이다.
-- GitHub auth 환경변수가 gh 인증을 덮어쓰는 함정도 공통 pitfall로 정리되어 있다.
+- 긴급건은 식별자 먼저, 모든 P0는 proof-first, 멈추기 전 Next 3 남기기가 고정 규칙이다.
+- 현재 대표 active HF는 `context/handoff/HF_inbox_dev_urgent_202603.md`다.
+- 외부 서비스/SDK 상태 오류는 재스캔/재조회가 1차 대응 패턴으로 남아 있다.
 
 ## Decisions locked
-- 모든 토픽은 기본적으로 `context/topic-state/<slug>.md`를 가진다.
-- 반복 규칙은 Playbook, 열린 이슈는 HF, 즉시 복구 요약은 topic-state에 둔다.
+- HF 없이 추측 실행 금지.
+- 배포 URL/PR/로그/재현 스텝 중 최소 1개 proof 확보.
+- auth 이상 시 환경변수 오염부터 확인.
 
 ## Next actions
-1. 새 P0 발생 시 HF/토픽+키워드 식별자부터 확보.
-2. 중단 전 Next 3를 이 파일 또는 HF에 남기기.
-3. 배포 URL/PR/로그 등 최소 1개 proof 확보.
+1. 새 P0 발생 시 HF 또는 토픽+키워드 식별자를 먼저 박는다.
+2. 중단 전 Next 3를 반드시 남긴다.
+3. 긴급 대응 결과는 proof와 함께 축약 보고한다.
 
 ## Key files
 - Playbook: `context/topics/inbox-dev_PLAYBOOK_V0_1.md`
@@ -32,4 +33,4 @@
 - 복구 응답은 `현재 목표 / 마지막 체크포인트 / 다음 액션` 순서로 짧게 재구성한다.
 
 ## Notes
-- inbox-dev는 속도보다 식별자/증빙 누락 방지가 더 중요하다.
+- inbox-dev는 속도보다 “헛다리 안 짚기”가 중요하다. 식별자 없는 긴급 대응은 사고 난다.

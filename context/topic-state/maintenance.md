@@ -2,25 +2,25 @@
 
 - Topic: `maintenance`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:00 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
 - 운영 유지보수 토픽에서 자동화 루프를 안정적으로 돌리고, 성공 시 침묵 / 실패 시 알림 규칙을 유지한다.
 
 ## Latest checkpoint
-- daily skill scouting 루프 복구 완료.
-- SSOT/자동화 세트가 정리됨: playbook + python script + launchd.
-- 운영 감시 규칙은 “원인분석은 즉시, 재시작/모델전환/설정변경은 선보고 후승인”으로 고정됨.
+- daily skill scouting 루프 복구와 launchd 세트가 정리돼 있다.
+- 성공 시 침묵, 실패 시 topic 77 알림, 원인분석은 즉시/재시작·모델전환·설정변경은 선보고 후승인 원칙이 고정돼 있다.
+- 3h digest / notion sync / daily smoke / x-post tick 유지도 maintenance가 품는 운영 범위다.
 
 ## Decisions locked
-- 성공 시 topic 77에 굳이 떠들지 않음.
-- 실패 시에만 알림.
-- 과격한 조치(재시작/모델 전환/설정변경)는 승인 전 실행 금지.
+- 성공 시 노이즈 최소화.
+- 실패 시 proof와 영향 범위를 우선 정리.
+- 과격한 조치 전 승인.
 
 ## Next actions
-1. 루프 정상 실행 여부만 주기적으로 확인.
-2. 실패 시 원인/로그/영향 범위 먼저 정리.
-3. 규칙 변경 시 playbook/automation 문서 동시 갱신.
+1. 각 루프의 마지막 성공/실패 상태를 필요 시 checkpoint에 갱신.
+2. 실패 시 관련 로그/플리스트/스크립트를 바로 연결.
+3. 규칙 변경은 playbook과 automation 문서를 같이 갱신.
 
 ## Key files
 - Playbook: `context/topics/maintenance_PLAYBOOK_V0_1.md`
@@ -34,4 +34,4 @@
 - 이슈가 있으면 관련 로그/최근 산출물만 추가 확인
 
 ## Notes
-- maintenance는 “조용히 굴러가야 좋은 토픽”이다.
+- maintenance는 “조용히 굴러가야 좋은 토픽”이다. 이상 징후가 있을 때만 두껍게 쓴다.

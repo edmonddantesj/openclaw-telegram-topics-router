@@ -3,24 +3,26 @@
 - Topic: `acp`
 - Telegram topic id: `50`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:08 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
-- Topic 50(ACP)에서의 모든 운영을 “증빙/승인/자동화” 기준으로 지속가능하게 굴리기 위한 규칙/반복업무/체크리스트 SSOT.
+- ACP 오퍼 운영, Dispatch(Bought & Analyzed), 지갑/증빙 체계를 승인 게이트 아래 지속가능하게 굴린다.
 
 ## Latest checkpoint
-- ACP 전용 워룸 규칙(증빙/승인/자동화, 시크릿 금지, proof-first)이 Playbook에 고정됨.
-- Dispatch 운영, 지갑/키 운영, offer 운영의 기본 원칙과 기록 위치가 정리됨.
-- 진행중 이슈는 HF_acp_ops / HF_acp_dispatch_002로 분리되어 있음.
+- ACP Wave/Dispatch 공개 방향은 “완료 리포트”보다 Progress + Proof 중심이 SSOT 방향이다.
+- Public/Internal 2레일, 승인 게이트, 시크릿 비공개, HQ Brief 톤 원칙이 고정돼 있다. Source: memory/2026-03-05.md#L470-L489
+- 현재 active HF는 `context/handoff/HF_acp_ops_202603.md`, `context/handoff/HF_acp_dispatch_002_202603.md`이며, 오퍼 운영/Dispatch #002 준비를 여기서 이어받는다.
 
 ## Decisions locked
-- 모든 토픽은 기본적으로 `context/topic-state/<slug>.md`를 가진다.
-- 반복 규칙은 Playbook, 열린 이슈는 HF, 즉시 복구 요약은 topic-state에 둔다.
+- ACP 전용 워룸은 topic 50으로 고정.
+- 구매/온체인/offer 등록/외부 게시 = 승인 필수.
+- SSOT에는 주소/포인터만 저장하고 키/시크릿은 저장하지 않는다.
+- Dispatch는 주 1회 투고, 과도한 빈도 금지.
 
 ## Next actions
-1. 진행중 ACP 작업은 관련 HF 기준으로 이어가기.
-2. 새 규칙은 Playbook에, 실행 이슈는 HF에 반영.
-3. 구매/온체인/외부 게시 등 승인 게이트 작업은 선승인 확인.
+1. 현재 Dispatch #002의 today-ready 여부와 blocker를 HF에서 확인.
+2. 오퍼/지갑 상태 점검이 필요하면 주소 컨텍스트와 proof부터 맞춘다.
+3. 규칙 변경은 Playbook, 진행 이슈는 HF, 빠른 재개 요약은 topic-state에 반영.
 
 ## Key files
 - Playbook: `context/topics/acp_PLAYBOOK_V0_2.md`
@@ -32,4 +34,4 @@
 - 복구 응답은 `현재 목표 / 마지막 체크포인트 / 다음 액션` 순서로 짧게 재구성한다.
 
 ## Notes
-- ACP는 시크릿/결제/외부행동이 섞이므로 topic-state만 보고 성급히 실행하지 말고 HF/승인 상태까지 확인.
+- ACP는 승인 게이트와 증빙이 핵심이라, action 전 반드시 “승인 필요 여부 / proof 경로 / wallet context” 3가지를 확인.

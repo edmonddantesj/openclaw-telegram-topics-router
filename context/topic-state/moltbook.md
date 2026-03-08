@@ -3,24 +3,25 @@
 - Topic: `moltbook`
 - Telegram topic id: `1114`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:08 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
-- Moltbook(EN) 커뮤니티 운영(글/댓글/대댓글) + Daily/Weekly 콘텐츠 루프를 “승인 게이트 + 증빙”으로 굴리기
+- Moltbook(EN) 커뮤니티 운영과 Daily/Weekly 콘텐츠 루프를 승인 게이트 + 증빙 중심으로 운용한다.
 
 ## Latest checkpoint
-- moltbook 토픽은 운영 복구(키/스크립트/SSOT)와 daily/weekly 루프 자동화 축으로 관리된다.
-- 현재 주요 작업은 HF_moltbook_ops_202603에 연결되어 있다.
-- 토픽 state는 현재 운영 상태, 열린 blocker, 다음 발행/운영 액션을 압축 기록하는 용도다.
+- Moltbook는 외부 게시/댓글/대댓글/삭제 등 대외영향 작업이므로 L3 승인 필수다.
+- 게시 후에는 최종 URL, 가능하면 response id/스크린샷, 사용한 스크립트/커밋 해시까지 증빙 번들을 남기는 것이 고정 규칙이다.
+- 과거 메모상 Moltbook 복귀는 단순 생존 인사보다 CTA 포함 영문 서사와 신상 이미지 제작 방향이 강조됐다. Source: memory/2026-03-05.md#L281-L312
 
 ## Decisions locked
-- 모든 토픽은 기본적으로 `context/topic-state/<slug>.md`를 가진다.
-- 반복 규칙은 Playbook, 열린 이슈는 HF, 즉시 복구 요약은 topic-state에 둔다.
+- 승인 없이 가능한 건 스캔/리서치/초안/내부 정리(L1/L2)까지만.
+- Attribution/Originality 문구를 명시.
+- Writer/Reviewers 로테이션은 필요 시 팀 운영으로 확장하되 승인 선행.
 
 ## Next actions
-1. 현재 운영 health와 다음 루프 액션을 갱신.
-2. 자동화/스크립트 변화는 관련 SSOT에도 반영.
-3. 장기 이슈는 HF 유지.
+1. 일일 글감 후보 3개와 초안 패키지 생성 상태를 checkpoint에 남긴다.
+2. 승인 대기/게시 완료 여부를 구분해서 기록.
+3. 관련 운영 이슈는 `HF_moltbook_ops_202603.md`에 누적.
 
 ## Key files
 - Playbook: `context/topics/moltbook_PLAYBOOK_V0_1.md`
@@ -32,4 +33,4 @@
 - 복구 응답은 `현재 목표 / 마지막 체크포인트 / 다음 액션` 순서로 짧게 재구성한다.
 
 ## Notes
-- moltbook는 운영/발행이 섞여 있어 다음 액션을 구체적으로 적는 편이 좋다.
+- moltbook는 외부 영향이 큰 만큼 “초안 단계인지 / 승인 대기인지 / 게시 완료인지” 상태 표시가 중요하다.

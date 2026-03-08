@@ -2,25 +2,25 @@
 
 - Topic: `random`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:00 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
-- Topic 81에서 섞여 나오던 규칙/반복업무/오픈 이슈를 Playbook + HF 구조로 분리해 재개성을 높이고, AOI PRO 관련 열린 이슈를 추적한다.
+- 혼재된 이슈/규칙/오픈 태스크를 Playbook + HF 구조로 정리해 잡탕 토픽도 복구 가능하게 유지한다.
 
 ## Latest checkpoint
-- Proof-first 프로토콜과 반복규칙 Playbook이 생성됨.
-- Topic81 유래의 열린 이슈들이 HF로 분리되고 `context/handoff/INDEX.md`에 ACTIVE 등록됨.
-- AOI PRO 베타 라이선스 이슈는 allowlist만으로 해결되지 않으며, 서명된 라이선스 JSON + issuer key 경로 탐색이 핵심 병목으로 정리됨.
+- Topic81 유래 작업들은 proof-first 프로토콜, repeatable rules playbook, 관련 HF 분리까지 완료됐다.
+- AOI PRO 베타 라이선스 이슈는 allowlist만으로 해결되지 않고 signed license JSON + issuer key 탐색이 병목으로 정리돼 있다.
+- 잡탕 토픽일수록 topic-state가 “현재 뭐가 메인인지”를 강하게 압축해야 한다.
 
 ## Decisions locked
-- 반복 규칙은 Playbook으로 승격.
-- 큰 이슈/열린 작업은 HF로 분리.
-- AOI PRO 활성 조건은 signed license JSON 검증이 핵심이며 단순 allowlist 추가로는 해결 불가.
+- 반복 규칙은 playbook으로 승격.
+- 큰 이슈는 HF로 분리.
+- AOI PRO 활성은 signed license 검증이 핵심.
 
 ## Next actions
-1. Topic81 계열 오픈 이슈는 각 HF 기준으로 추적.
-2. AOI PRO issuer key 위치를 우선 탐색.
-3. key 미발견 시 재발급 플랜 수립.
+1. 현재 메인 이슈 1~2개만 checkpoint에 남기고 나머지는 HF 링크로 보낸다.
+2. issuer key 탐색/재발급 플랜은 관련 HF에 누적.
+3. 토픽이 더 섞이기 전에 새 main topic으로 분리할지 검토.
 
 ## Key files
 - Playbook: `context/playbook/REPEATABLE_RULES_V0_1.md`
@@ -34,4 +34,4 @@
 - AOI PRO 쪽이면 라이선스/키 탐색 이슈부터 다시 잡기
 
 ## Notes
-- `random`은 잡탕 토픽이라 topic-state를 특히 짧고 선명하게 유지해야 함.
+- random은 편하지만 기억엔 독이다. state를 자주 깎아줘야 한다.

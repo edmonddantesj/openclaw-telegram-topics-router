@@ -3,24 +3,25 @@
 - Topic: `longform`
 - Telegram topic id: `65`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:08 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
-- 긴 글(가이드/PDF/리서치)을 **요약/추출/SSOT 승격**해서 재사용 가능하게 만드는 토픽.
+- 긴 글/PDF/리서치를 요약·추출·SSOT 승격해 재사용 가능한 지식으로 전환한다.
 
 ## Latest checkpoint
-- longform 토픽은 장문 문서 ingest/요약/정리 정책과 실제 장문 작업을 이어받기 위한 복구 포인트로 편입됨.
-- 문서 저장 정책은 중요도별 차등 저장(S/A/B/C) 원칙이 메모에 남아 있다.
-- 토픽 state는 현재 다루는 문서 묶음과 산출 상태를 압축 기록하는 용도로 쓴다.
+- 장문 문서는 먼저 요약본/핵심 섹션/링크 중 어떤 형태로 받을지 결정하는 것이 운영 규칙이다.
+- 저장 정책은 S/A/B/C 차등 저장 원칙으로 정리되어 있다. Source: memory/2026-03-05.md#L210-L238
+- 채팅에는 전체 원문 재출력 대신 요약, 핵심 인용, SSOT 경로만 남기는 방향이 고정돼 있다. Source: memory/2026-03-05.md#L225-L238
 
 ## Decisions locked
-- 모든 토픽은 기본적으로 `context/topic-state/<slug>.md`를 가진다.
-- 반복 규칙은 Playbook, 열린 이슈는 HF, 즉시 복구 요약은 topic-state에 둔다.
+- PDF 분석은 Flash vs Pro 등 모델/TPM을 고려해 수행.
+- 결과물은 요약 + 핵심 인용 + SSOT 경로 3종 세트로 남긴다.
+- 원문 전체를 채팅에 다시 뿌리지 않는다.
 
 ## Next actions
-1. 현재 처리중 문서/출처/산출 상태를 checkpoint에 명시.
-2. 반복 정책은 playbook/SSOT에 유지.
-3. 장기 파이프라인 이슈는 HF로 분리.
+1. 현재 처리 중인 문서 묶음과 판정(S/A/B/C)을 checkpoint에 남긴다.
+2. 중요 인사이트는 context/research 또는 context/knowledge로 승격.
+3. 장기 파이프라인 문제는 HF로 분리.
 
 ## Key files
 - Playbook: `context/topics/longform_PLAYBOOK_V0_1.md`
@@ -32,4 +33,4 @@
 - 복구 응답은 `현재 목표 / 마지막 체크포인트 / 다음 액션` 순서로 짧게 재구성한다.
 
 ## Notes
-- longform은 원문 저장 부담이 크므로 state에는 요약/판정만 적고 본문 전체는 넣지 않음.
+- longform은 토큰/저장비용이 크니 state에는 “무엇을 어떻게 저장했는가”만 남기고 본문은 별도 파일로 넘긴다.

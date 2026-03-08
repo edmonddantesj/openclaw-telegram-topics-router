@@ -3,24 +3,25 @@
 - Topic: `ops`
 - Telegram topic id: `38`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:08 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
-- Mac mini/OpenClaw 운영(게이트웨이/launchd/cron/백업/드리프트) + 운영 규칙을 SSOT로 고정
+- Mac mini/OpenClaw 운영(게이트웨이/launchd/cron/백업/드리프트)과 운영 규칙 SSOT를 안정적으로 유지한다.
 
 ## Latest checkpoint
-- ops 토픽은 운영 프로토콜/자동화/정책성 SSOT를 모으는 허브 성격으로 유지.
-- 관련 정본은 context/ops/ 하위 문서에 누적되고, 토픽 state는 그중 현재 재개용 압축 상태를 담당.
-- 큰 운영 이슈는 handoff 문서와 연결해 추적하는 구조를 따른다.
+- 운영 토픽의 핵심 반복축은 Gateway 상태 감지, launchd/cron 운용, Notion 연동 장애 분석, SAVE NOW 스냅샷 유지다.
+- 큰 변경/불안정 조치 후엔 SAVE NOW로 상태를 박제하는 것이 고정 규칙이다. Source: context/ops/SAVE_NOW_PROTOCOL_V0_1.md
+- 재시작/모델전환/설정변경은 선보고 후조치 원칙이 playbook에 고정되어 있다.
 
 ## Decisions locked
-- 모든 토픽은 기본적으로 `context/topic-state/<slug>.md`를 가진다.
-- 반복 규칙은 Playbook, 열린 이슈는 HF, 즉시 복구 요약은 topic-state에 둔다.
+- 새 주기 작업은 먼저 1회 테스트 후 정기화.
+- 운영 장애 대응은 “성공했다고 주장”보다 env/DB ID/실행 컨텍스트 증빙 우선.
+- ops는 허브 토픽이므로 세부 사건은 HF/개별 SSOT에 분산하고 여기엔 핵심만 남긴다.
 
 ## Next actions
-1. 새 운영 정책/자동화가 생기면 관련 SSOT 경로를 이 파일에도 반영.
-2. 실행중 이슈는 HF로 승격.
-3. 토픽 복구 시 최근 ops 문서만 최소 읽기.
+1. 현재 운영 장애나 변경 작업이 있으면 관련 HF와 proof 경로를 checkpoint에 즉시 추가.
+2. 주기 작업은 성공/실패 패턴과 증빙 위치를 정리.
+3. 큰 조치 전에는 승인 필요 여부를 먼저 분류.
 
 ## Key files
 - Playbook: `context/topics/ops_PLAYBOOK_V0_1.md`
@@ -32,4 +33,4 @@
 - 복구 응답은 `현재 목표 / 마지막 체크포인트 / 다음 액션` 순서로 짧게 재구성한다.
 
 ## Notes
-- ops는 범위가 넓으니 이 파일은 반드시 짧은 허브 요약으로 유지.
+- ops 토픽은 넓기 때문에 “현재 어떤 운영축을 만지고 있는지”를 첫 줄에 남겨야 복구 품질이 좋아진다.

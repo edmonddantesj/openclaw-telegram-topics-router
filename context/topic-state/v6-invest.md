@@ -3,24 +3,26 @@
 - Topic: `v6-invest`
 - Telegram topic id: `1029`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:08 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
-- V6/Limitless 운영의 결정·검증·반복업무를 SSOT로 고정하고, 운영 중단 없이 이어받을 수 있게 유지한다.
+- V6/Limitless 운영의 결정·검증·반복업무를 SSOT로 고정하고, 운영 중단 없이 이어받게 한다.
 
 ## Latest checkpoint
-- V6/Limitless 운영은 결정·검증·반복업무를 SSOT로 고정하고 운영 중단 없이 이어받는 것이 핵심이다.
-- 현재 열린 주요 작업은 HF_v6_invest_live_restart_202603에 연결되어 있다.
-- 실행 타이밍/재개발/운영 복구는 topic-state에서 압축, 세부 증빙은 HF/관련 스크립트에서 읽는 구조다.
+- 거래 룰은 고정 시간이 아니라 EV 최대 타임 슬롯 선택 정책으로 전환되었고, 초기 고정시간은 폐기됐다.
+- Limitless agents-starter DRY_RUN에서 zero-price edge case가 발견돼 LIVE 전 guardrail 필요가 확인됐다. Source: memory/2026-03-05.md#L568-L584
+- 현재 active HF는 `context/handoff/HF_v6_invest_live_restart_202603.md`이며, 재개발/실투 재개/자동화 루틴이 이 축으로 이어진다.
 
 ## Decisions locked
-- 모든 토픽은 기본적으로 `context/topic-state/<slug>.md`를 가진다.
-- 반복 규칙은 Playbook, 열린 이슈는 HF, 즉시 복구 요약은 topic-state에 둔다.
+- 큰 작업은 HF 1장 분리.
+- Live 전환은 proof 우선.
+- Fail-closed/가드 우선, 카나리 한도 자동 상향 금지.
+- 중복 알림은 원문 재공유 대신 기존 HF만 유지.
 
 ## Next actions
-1. 현재 운영 상태와 blocker를 checkpoint에 주기적으로 갱신.
-2. 실투/자동화/검증 변화는 HF와 함께 업데이트.
-3. 반복 업무 규칙은 playbook 유지.
+1. 현재 live/dryrun 상태와 blocker를 checkpoint에 갱신.
+2. entrypoint/repo/commit/env path 식별자를 유지.
+3. launchd routine 산출물과 HF의 일치 여부를 주기 확인.
 
 ## Key files
 - Playbook: `context/topics/v6-invest_PLAYBOOK_V0_1.md`
@@ -32,4 +34,4 @@
 - 복구 응답은 `현재 목표 / 마지막 체크포인트 / 다음 액션` 순서로 짧게 재구성한다.
 
 ## Notes
-- v6-invest는 시간/운영상태가 빨리 변하므로 마지막 저장 시각이 특히 중요.
+- v6-invest는 상태가 빨리 변한다. “마지막 저장 시각 + 현재 모드(dry/live)”를 꼭 남겨라.

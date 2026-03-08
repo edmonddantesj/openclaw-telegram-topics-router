@@ -3,24 +3,25 @@
 - Topic: `ralph-loop`
 - Telegram topic id: `68`
 - Status: ACTIVE
-- Last saved: 2026-03-08 23:08 KST
+- Last saved: 2026-03-08 23:13 KST
 
 ## Current objective
-- ralph-loop(토픽 68)은 “반복 운영업무를 자동 순찰/정리하는 루프”의 SSOT. 핵심은 **WIP 제한(<=5), stale(SLA 24h), cron health, drift(상태 무결성) 감시/복구**를 매일 자동으로 굴리고, 결과/결정/증빙을 `context/`에 남기는 것.
+- 반복 운영업무를 자동 순찰/정리하는 실행 모드로서 WIP/SLA/cron/drift 무결성을 유지한다.
 
 ## Latest checkpoint
-- WIP 제한, stale SLA 24h, cron health, drift/integrity 감시/복구가 핵심 운영축으로 고정됨.
-- 무결성 복구 관련 현재 열린 이슈는 HF_ralph_loop_drift_integrity_restore_20260308에 연결됨.
-- 반복 루프 성격이 강하므로 규칙은 playbook, 사건은 HF, 즉시 재개는 topic-state로 나눈다.
+- Ralph Loop은 사업 전체 태스크 수행에 적용하는 실행 모드이며, ADP 쪽 라벨링 정책과도 연결된다. Source: MEMORY.md#L32-L35
+- 핵심 운영축은 WIP<=5, stale 24h, cron health, drift/integrity 감시·복구다.
+- 현재 무결성 복구 관련 active HF는 `context/handoff/HF_ralph_loop_drift_integrity_restore_20260308.md`다.
 
 ## Decisions locked
-- 모든 토픽은 기본적으로 `context/topic-state/<slug>.md`를 가진다.
-- 반복 규칙은 Playbook, 열린 이슈는 HF, 즉시 복구 요약은 topic-state에 둔다.
+- 증빙 없는 “정리했다/고쳤다”는 금지.
+- 공지 라우팅은 topic 68로 고정.
+- L1/L2는 자율, L3는 승인 게이트.
 
 ## Next actions
-1. 최근 drift/cron 상태를 checkpoint에 주기적으로 갱신.
-2. 복구/교정 이슈는 HF에 누적.
-3. 자동화 규칙 변경 시 playbook/ops SSOT 동시 갱신.
+1. 최근 drift/cron/scan 결과를 checkpoint에 주기적으로 반영.
+2. stale 태스크는 분해/blocked/backlog 중 하나로 명시적 전환.
+3. 자동복구 범위 변경 시 관련 SSOT도 함께 갱신.
 
 ## Key files
 - Playbook: `context/topics/ralph-loop_PLAYBOOK_V0_1.md`
@@ -32,4 +33,4 @@
 - 복구 응답은 `현재 목표 / 마지막 체크포인트 / 다음 액션` 순서로 짧게 재구성한다.
 
 ## Notes
-- ralph-loop는 운영 무결성 축이라 상태가 낡으면 바로 갱신하는 편이 좋다.
+- ralph-loop는 운영 무결성용이라 상태가 낡으면 의미가 급격히 떨어진다. 자주 저장하는 토픽으로 취급.
