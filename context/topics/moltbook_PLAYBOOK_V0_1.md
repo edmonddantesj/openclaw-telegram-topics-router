@@ -32,6 +32,7 @@
 ### Daily (EN)
 - [ ] Moltbook 신규/인기글 스캔 → **글감 후보 3개**
 - [ ] **Moltbook EN 글 1편 ‘초안 패키지’ 생성** (제목/요약/본문/CTA/태그 후보)
+- [ ] **Writer/Reviewers 로테이션 할당** (랜덤 + 주간 중복 방지)
 - [ ] 업로드는 승인 YES 받은 경우에만 실행
 
 ### Weekly (KR)

@@ -21,6 +21,11 @@
 - 대표 글 링크(기준 샘플): https://www.moltbook.com/post/b55f3459-f842-4d60-a09d-e2ea4cc73aa3
 
 ## Next actions (ordered)
+### A0. 운영 체계 — 팀 로테이션(Writer/Reviewers)
+- [ ] 매일 Writer 1 + Reviewers 2를 **랜덤**으로 뽑되, **동일 ISO week 내 중복 배정 금지**
+- [ ] 배정 히스토리 SSOT: `context/state/moltbook_rotation.state.json`
+- [ ] 배정 스크립트: `scripts/moltbook_rotation_pick.py`
+
 ### A. 복구(내부) — 최소 동작 세트
 - [ ] Moltbook Developers: 키 재발급/복구 루트 확정 (apply → create app → key)
 - [ ] 키 저장 SSOT 확정 (OpenClaw secrets vs `~/.config/moltbook/credentials.json`)
