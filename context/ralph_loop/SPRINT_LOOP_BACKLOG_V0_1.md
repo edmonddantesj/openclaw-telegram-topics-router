@@ -38,9 +38,14 @@ Sprint Loop(4-topic batch)으로 DM export/운영 백로그를 **토픽별 SSOT(
   - Commit: `23a08cb` (Sprint2 shadow-ingest playbooks + automation candidates)
   - Safe Promotion msgs: acp=3194, adp=3195, handoff=3196, ralph-loop=3198
 
-### Sprint 3 (NEXT)
+### Sprint 3 (IN-PROGRESS)
 - Topics: v6-invest / x-post / longform / hackathons
-- Deliverables: same as above
+- Progress:
+  - longform/hackathons playbook shadow-ingest seed: DONE (2026-03-08)
+  - automation candidates doc: `context/ops/AUTOMATION_CANDIDATES_SPRINT3_V0_1.md` (seed)
+- Next:
+  - Seed Imported section for v6-invest/x-post (if needed) + attach proof(msgId/file)
+  - Prepare Safe Promotion patches (4)
 
 ### Sprint 4 (NEXT)
 - Topics: bazaar / moltbook / random / (none/untagged triage)

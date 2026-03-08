@@ -1,11 +1,20 @@
-# hackathons PLAYBOOK V0.1
+# hackathons PLAYBOOK V0.1 (Topic 71)
 
-- **Purpose:** (fill)
+- **Purpose:** 해커톤 후보 발굴/제출 패키징/데모/레포 정리까지 “제출 가능한 형태”로 고정.
 - **Last updated:** 2026-03-08
 
+## Imported from DM export (Shadow Ingest) — Sprint 3 seed
+Proof (DM export tagged log):
+- `artifacts/telegram_ingest/tagged_messages.jsonl`
+  - msgId=362 (hackathons) — Openwork Hackathon(Clawathon) 레포 기반 프로젝트 분석/영감 수집
+  - msgId=123841 (hackathons) — Notion integration/session 꼬임/중복 페이지 이슈(운영 장애 패턴)
+
 ## Recurring tasks (must not forget)
-- TBD
+1) 제출물 패키지(문서/데모/링크/스크린샷) 템플릿 고정
+2) 레포/팀/요구사항을 한 장 요약으로 SSOT 승격
+3) Notion 연동 꼬임(세션/중복 페이지) 같은 운영 장애는 증빙+복구런북으로 남김
 
 ## Where to record
-- 진행중 작업: \ 및 개별 HF
-- 토픽 공통 규칙/체크리스트: 이 Playbook
+- 진행중 큰 작업: HF 1장 (`context/handoff/HF_*`)
+- 반복업무/규칙: 이 Playbook
+- 제출 패키지: `context/topics/hackathons/` 또는 `context/hackathons/`
