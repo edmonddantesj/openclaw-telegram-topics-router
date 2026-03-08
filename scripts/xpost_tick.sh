@@ -8,7 +8,7 @@ set -euo pipefail
 ROOT="/Users/silkroadcat/.openclaw/workspace"
 TS="$(date +"%Y%m%d_%H%M%S")"
 OUT_DIR="$ROOT/artifacts/x-post/$TS"
-LOG_DIR="$ROOT/artifacts/x-post/_logs"
+LOG_DIR="$ROOT/logs/launchd"
 
 mkdir -p "$OUT_DIR" "$LOG_DIR"
 

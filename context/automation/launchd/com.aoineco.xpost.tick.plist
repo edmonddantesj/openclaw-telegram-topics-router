@@ -22,12 +22,20 @@
     <string>/Users/silkroadcat/.openclaw/workspace</string>
 
     <key>StandardOutPath</key>
-    <string>/Users/silkroadcat/.openclaw/workspace/artifacts/x-post/_logs/launchd.stdout.log</string>
+    <string>/Users/silkroadcat/.openclaw/workspace/logs/launchd/xpost-tick.out.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/silkroadcat/.openclaw/workspace/artifacts/x-post/_logs/launchd.stderr.log</string>
+    <string>/Users/silkroadcat/.openclaw/workspace/logs/launchd/xpost-tick.err.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+      <key>TZ</key>
+      <string>Asia/Seoul</string>
+    </dict>
 
     <key>RunAtLoad</key>
-    <true/>
+    <false/>
 
     <key>ThrottleInterval</key>
     <integer>60</integer>
