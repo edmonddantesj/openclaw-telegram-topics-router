@@ -47,6 +47,12 @@
 - **ACP 공통 규칙/체크리스트:** 이 Playbook
 - **주소 매핑:** `context/acp/ACP_WALLET_REGISTRY_V0_1.md`
 
+## 5.1) Troubleshooting (자주 터지는 것)
+### T1. ACP 대시보드에서 job/활동이 안 보일 때 (1차 체크)
+1) 현재 UI가 보고 있는 **Agent/지갑 컨텍스트(주소)** 확인
+2) CLI/스크립트가 job을 만든 **지갑(주소)** 확인
+3) 둘이 다르면 “안 보이는 게 정상” → 올바른 컨텍스트로 전환
+
 ## 6) Automation plan (launchd / Ralph Loop)
 ### launchd (1차: 리마인더)
 - 주간 Dispatch 리마인더
