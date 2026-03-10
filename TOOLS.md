@@ -75,3 +75,20 @@ PY
 - `Gateway token rejected` = token mismatch / wrong token for current relay path.
 - Relay settings can look healthy while attach still fails if the port is wrong.
 - “Connected/연결됨” after using `18792` is the reliable success signal.
+
+## OpenClaw media / downloads storage
+
+### External media storage root
+- OpenClaw media root is moved to the external drive via symlink:
+  - `~/.openclaw/media` → `/Volumes/Bitcoin Core Qt/OpenClawMedia/state-media`
+  - `~/workspace/media` → `/Volumes/Bitcoin Core Qt/OpenClawMedia/workspace-media`
+- Existing media was migrated on `2026-03-10`.
+
+### Preferred download targets
+- General downloaded files: `/Volumes/Bitcoin Core Qt/OpenClawMedia/downloads`
+- Workspace-related downloads/staging: `/Volumes/Bitcoin Core Qt/OpenClawMedia/workspace-media/downloads`
+
+### Operating rule
+- For user-requested downloads (e.g. Google Drive links, direct file URLs), prefer saving explicitly into the external-drive download folders above instead of the internal SSD.
+- Inbound channel attachments that route through OpenClaw media storage should now land on the external drive automatically because the media paths are symlinked.
+- Keep the external drive mounted before handling large media/files.
