@@ -43,8 +43,11 @@ Sprint Loop(4-topic batch)으로 DM export/운영 백로그를 **토픽별 SSOT(
 - Progress:
   - longform/hackathons playbook shadow-ingest seed: DONE (2026-03-08)
   - automation candidates doc: `context/ops/AUTOMATION_CANDIDATES_SPRINT3_V0_1.md` (seed)
+  - transfer notes restored: `context/ralph-loop-hackathons-transfer-2026-03-11.md`, `context/ralph-loop-x-post-ops-transfer-2026-03-12.md` (2026-03-12)
+  - Ralph Loop main SSOT restored: `context/ralph-loop-ssot.md` (2026-03-12)
 - Next:
   - Seed Imported section for v6-invest/x-post (if needed) + attach proof(msgId/file)
+  - extract small executable task cards from hackathons / x-post transfer notes
   - Prepare Safe Promotion patches (4)
 
 ### Sprint 4 (NEXT)

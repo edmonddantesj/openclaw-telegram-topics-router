@@ -11,6 +11,7 @@
 ## Latest checkpoint
 - Ralph Loop은 사업 전체 태스크 수행에 적용하는 실행 모드이며, ADP 쪽 라벨링 정책과도 연결된다. Source: MEMORY.md#L32-L35
 - 핵심 운영축은 WIP<=5, stale 24h, cron health, drift/integrity 감시·복구다.
+- 2026-03-12 기준 메인 운영 SSOT(`context/ralph-loop-ssot.md`)와 transfer notes(`context/ralph-loop-hackathons-transfer-2026-03-11.md`, `context/ralph-loop-x-post-ops-transfer-2026-03-12.md`)를 복구해, scan-centric 상태에서 small-task throughput 모드로 되돌리는 중이다.
 - 현재 무결성 복구 관련 active HF는 `context/handoff/HF_ralph_loop_drift_integrity_restore_20260308.md`다.
 
 ## Decisions locked

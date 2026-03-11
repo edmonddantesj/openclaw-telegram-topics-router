@@ -1,14 +1,16 @@
 # ralph-loop PLAYBOOK V0.1
 
-- **Purpose:** ralph-loop(토픽 68)은 “반복 운영업무를 자동 순찰/정리하는 루프”의 SSOT. 핵심은 **WIP 제한(<=5), stale(SLA 24h), cron health, drift(상태 무결성) 감시/복구**를 매일 자동으로 굴리고, 결과/결정/증빙을 `context/`에 남기는 것.
+- **Purpose:** ralph-loop(토픽 68)은 Aoineco 내부 운영의 **intake / decomposition / dedup / routing 허브**이자, 반복 운영업무를 자동 순찰/정리하는 루프의 SSOT. 핵심은 **작은 태스크 고속처리 + WIP 제한(<=5) + stale(SLA 24h) + cron health + drift(상태 무결성) 감시/복구**를 함께 굴리고, 결과/결정/증빙을 `context/`에 남기는 것.
 - **Last updated:** 2026-03-08
 
 ## 0) SSOT / 저장 위치
+- **메인 운영 SSOT:** `context/ralph-loop-ssot.md`
 - **진행중 큰 작업(HF):** `context/handoff/HF_ralph_loop_drift_integrity_restore_20260308.md`
 - **태스크(개별 카드):** `context/ops/items/TASK-*.md`
 - **일일 스캔 리포트:** `context/ops/reports/ralph_loop_daily/REPORT_YYYY-MM-DD.md`
 - **위생/정합성 리포트(있으면):** `context/ops/reports/task_manager/*`
 - **상태 파일(state save):** `context/state/*.state.json` (예: `context/state/ralph_loop_sync.state.json`)
+- **transfer notes:** `context/ralph-loop-*-transfer-YYYY-MM-DD.md`
 - **정책/승인 게이트:** `context/telegram_topics/ANNOUNCEMENTS_CANONICAL_V0_1.md` (L1/L2/L3)
 
 ## 1) 고정 운영 규칙(반복)
