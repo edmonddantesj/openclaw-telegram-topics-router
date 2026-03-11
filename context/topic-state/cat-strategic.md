@@ -48,7 +48,9 @@
 - Playbook: `context/topics/cat-strategic_PLAYBOOK_V0_1.md`
 - Router spec: `context/AOINECO_ROUTER_SPEC_V0_1.md`
 - Owner logic: `context/AOINECO_ROUTER_OWNER_SELECTION_LOGIC_V0_1.md`
+- Semi-auto rollout: `context/AOINECO_ROUTER_SEMI_AUTO_ROLLOUT_PLAN_V0_1.md`
 - Edgecase log: `context/AOINECO_ROUTER_EDGECASE_LOG_V0_1.md`
+- Checklist: `context/CAT_STRATEGIC_ROUTER_CHECKLIST_V0_1.md`
 - Handoff: (없음)
 - Other: `context/telegram_topics/thread_topic_map.json`
 
