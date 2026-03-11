@@ -74,6 +74,11 @@ Restore Ralph Loop from scan-centric recovery mode back into execution mode:
 3. register them in ledger/queue with WIP discipline,
 4. keep scan/drift/state-save as guardrails rather than the main job.
 
+### First live cards (2026-03-12)
+- `RL-20260312-030` — hackathons transfer small-task decomposition
+- `RL-20260312-031` — x-post ops decomposition
+- `RL-20260312-032` — Ralph Loop throughput mode recovery
+
 ## Proof / memory anchor
 - Operating model clarification recorded in `memory/2026-03-11.md`.
 - Ralph Loop drift recovery and automation reconstruction recorded in `memory/2026-03-08.md`.

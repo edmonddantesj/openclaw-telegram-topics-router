@@ -48,6 +48,7 @@ Sprint Loop(4-topic batch)으로 DM export/운영 백로그를 **토픽별 SSOT(
 - Next:
   - Seed Imported section for v6-invest/x-post (if needed) + attach proof(msgId/file)
   - extract small executable task cards from hackathons / x-post transfer notes
+  - ledger cards created: `RL-20260312-030`, `RL-20260312-031`, `RL-20260312-032`
   - Prepare Safe Promotion patches (4)
 
 ### Sprint 4 (NEXT)

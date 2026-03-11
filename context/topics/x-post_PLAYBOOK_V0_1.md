@@ -73,6 +73,21 @@
 3) 룰 변경 시 즉시 SSOT 업데이트
 - 컷라인/시간창/소스(Following vs Lists)/가드레일 변경은 이 Playbook이 정본
 
+## Ralph Loop transfer split (2026-03-12 lock-in)
+### stays in x-post
+- editorial tone / final draft package / posting guardrails / manual-post policy
+
+### moves to Ralph Loop
+- discovery run decomposition
+- anti-dup filter pass
+- quote extraction
+- draft packet assembly ops
+- failure / blocker logging
+
+### linked Ralph Loop records
+- `context/ralph-loop-x-post-ops-transfer-2026-03-12.md`
+- `context/ralph_loop/ledger.json` → `RL-20260312-031`
+
 ## Where to record
 - **반복업무/규칙:** 이 Playbook
 - **진행중 큰 작업/긴급건:** `context/handoff/HF_x-post.md`

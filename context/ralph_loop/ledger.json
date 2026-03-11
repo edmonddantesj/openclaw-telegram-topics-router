@@ -1,0 +1,500 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-03-12T00:00:00Z",
+  "items": [
+    {
+      "id": "RL-20260306-001",
+      "title": "ACP Dispatch #002 package 준비 (001 포맷 상속 + preflight 재구축)",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "acp",
+        "dispatch"
+      ],
+      "owner": "청비",
+      "notes": "Spec repo는 복구(aoineco-acp-dispatch-spec). Drafts/preflight repo는 미확인/부재 → workspace scripts로 재구축 필요.",
+      "acceptance": {
+        "criteria": [
+          "Issue #001과 동일한 deliverable 구조로 #002 폴더/파일 네이밍 확정",
+          "preflight 스크립트(금칙어/파일명/내부문서 차단) 구현 및 PASS 증빙",
+          "onepager EN/KR + preface + 역할별 리포트 초안 생성"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T20:24:41Z",
+      "updated_at": "2026-03-05T20:24:41Z"
+    },
+    {
+      "id": "RL-20260306-010",
+      "title": "[OPUS4.6] Alpha Oracle V6 실행 타이밍 자동 계산 로직 SSOT+테스트 설계",
+      "status": "todo",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "fineng",
+        "alpha-oracle"
+      ],
+      "owner": "청뇌",
+      "notes": "고정 스케줄(:50) 폐기. 수익률/리스크 최적 타이밍 계산. 입력/제약/중단조건(circuit breaker) 명세 + 테스트 가능한 형태로 SSOT화.",
+      "acceptance": {
+        "criteria": [
+          "타이밍 결정 함수(입력→출력) 수학/규칙 명세",
+          "드로다운/손실연속 기반 circuit breaker 조건 정의",
+          "백테스트/시뮬용 테스트 케이스 최소 10개 제시"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T22:07:09Z",
+      "updated_at": "2026-03-05T22:07:09Z"
+    },
+    {
+      "id": "RL-20260306-011",
+      "title": "[OPUS4.6] Nexus Oracle Ω 베이지안 로그-오즈 합산 + veto(HOLD) 룰 재정의",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "fineng",
+        "oracle"
+      ],
+      "owner": "청뇌",
+      "notes": "멀티 에이전트 verdict를 로그오즈로 합산. conf<0.55 HOLD 등 veto + drawdown guard 정리.",
+      "acceptance": {
+        "criteria": [
+          "로그오즈 합산 규칙/정규화 정의",
+          "veto/HOLD 임계치 및 예외 규칙 정의",
+          "출력 템플릿(결정+근거+리스크) 표준화"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T22:07:09Z",
+      "updated_at": "2026-03-05T22:07:09Z"
+    },
+    {
+      "id": "RL-20260306-012",
+      "title": "[OPUS4.6] EV/odds 기반 운영지표(예: Limitless shadow digest) 계산/정규화 규칙 SSOT",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "fineng",
+        "limitless"
+      ],
+      "owner": "청뇌",
+      "notes": "odds/EV 산출, 결측 처리, 샘플링/주기, 모델 폴백과 리스크 한도 연결.",
+      "acceptance": {
+        "criteria": [
+          "EV/odds 정의 및 입력 데이터 요구사항 명시",
+          "결측/이상치 처리 규칙",
+          "산출물 포맷(12라인 digest) 고정"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T22:07:09Z",
+      "updated_at": "2026-03-05T22:07:09Z"
+    },
+    {
+      "id": "RL-20260306-020",
+      "title": "[GPT-5.3 Spark] NO_STATE 결손 제거: state 스켈레톤 생성기 + idempotent sync 안정화",
+      "status": "todo",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "state",
+        "notion-sync"
+      ],
+      "owner": "청기",
+      "notes": "Notion sync digest에서 보고된 NO_STATE 결손을 자동 생성으로 해결. 증분 동기화 깨짐 방지.",
+      "acceptance": {
+        "criteria": [
+          "결손 state 목록 자동 탐지",
+          "표준 스켈레톤 파일 생성(템플릿) 구현",
+          "재실행 시 부작용 없는 idempotent 보장"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T22:07:09Z",
+      "updated_at": "2026-03-05T22:07:09Z"
+    },
+    {
+      "id": "RL-20260306-021",
+      "title": "[GPT-5.3 Spark] Ralph Loop ledger를 'DB 대체'로 강화: 상태전이/중복방지/필터/검색",
+      "status": "todo",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "ledger"
+      ],
+      "owner": "청비",
+      "notes": "DB 유실 대응: ledger.json을 단일 SSOT로 강화(상태전이 규칙, 중복 방지, 간편 조회).",
+      "acceptance": {
+        "criteria": [
+          "ledger schema v0.2 제안(필수 필드/인덱싱 키)",
+          "중복키 정책(id/slug) 명시 및 검증",
+          "필터링/검색 CLI or jq recipe 제공"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T22:07:09Z",
+      "updated_at": "2026-03-05T22:07:09Z"
+    },
+    {
+      "id": "RL-20260306-022",
+      "title": "[GPT-5.3 Spark] '현재를 저장(SAVE NOW)'를 런타임 트리거로 연결 (명령어→스크립트 실행)",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "save-now"
+      ],
+      "owner": "청기",
+      "notes": "scripts/save_now.sh는 존재. 사용자 문구/명령으로 자동 실행되게 라우터/워처 레이어에 연결.",
+      "acceptance": {
+        "criteria": [
+          "트리거 규칙 정의(문구/명령)",
+          "실행 로그/에러 로그 위치 고정",
+          "실제 실행 1회 증빙(sha/manifest)"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T22:07:09Z",
+      "updated_at": "2026-03-05T22:07:09Z"
+    },
+    {
+      "id": "RL-20260306-023",
+      "title": "[GPT-5.3 Spark] Notion mirror 증분 업서트: last_edited 기반 변경분만 재생성",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "notion-mirror"
+      ],
+      "owner": "청기",
+      "notes": "scripts/notion_mirror_sync.py 현재는 최신N. 변경분만 갱신하도록 state.json 고도화.",
+      "acceptance": {
+        "criteria": [
+          "페이지별 last_edited 저장",
+          "변경분만 파일 재생성",
+          "커밋 노이즈 감소 확인"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T22:07:09Z",
+      "updated_at": "2026-03-05T22:07:09Z"
+    },
+    {
+      "id": "RL-20260306-024",
+      "title": "[GPT-5.3 Spark] aoi-notion-mirror 자동 commit/push 파이프라인 + 커밋 메시지 표준",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "notion-mirror",
+        "github"
+      ],
+      "owner": "청기",
+      "notes": "미러를 private repo에 지속 반영. 배치 커밋/푸시 및 실패 알림.",
+      "acceptance": {
+        "criteria": [
+          "sync 후 git commit/push 자동화",
+          "커밋 메시지 규격: db_key+count+timestamp",
+          "실패 시 알림/로그"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T22:07:09Z",
+      "updated_at": "2026-03-05T22:07:09Z"
+    },
+    {
+      "id": "RL-20260306-025",
+      "title": "[GPT-5.3 Spark] ACP Dispatch preflight 스크립트 workspace 재구축 (금칙어/파일명/증빙 체크)",
+      "status": "todo",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "acp",
+        "dispatch",
+        "preflight"
+      ],
+      "owner": "청기",
+      "notes": "drafts repo 부재로 workspace에 재구축 필요. public-safe 게이트 강제.",
+      "acceptance": {
+        "criteria": [
+          "금칙어 스캔(브랜딩/persona 포함 옵션)",
+          "필수 파일명 패턴 체크(EN/KR onepager+preface)",
+          "PASS/FAIL 리포트 출력 + 증빙 저장"
+        ],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-05T22:07:09Z",
+      "updated_at": "2026-03-05T22:07:09Z"
+    },
+    {
+      "id": "RL-20260306-026",
+      "title": "[GPT-5.3 Spark] 토픽/워크스트림 태스크 중복·충돌 방지 가드(ledger slug/fingerprint + locks) + topics-router 스킬 업데이트",
+      "status": "todo",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "db-loss",
+        "ledger",
+        "ops",
+        "dedup",
+        "locking",
+        "telegram-topics-router"
+      ],
+      "owner": "청기",
+      "notes": "토픽별 병렬 진행 중 중복 태스크/동일 파일 수정 충돌 방지. ledger v0.2에 slug/fingerprint/locks/owner rules 추가 + validator로 FAIL-CLOSED. openclaw-telegram-topics-router 스킬에도 workstream lock SSOT+audit/claim/release 스크립트 추가.",
+      "acceptance": {
+        "criteria": [
+          "ledger schema v0.2에 slug/fingerprint/locks 도입 및 중복/락 충돌 검사(FAIL-CLOSED) 구현",
+          "중복 발견 시 정책: merge(동일 목표) / supersede(대체) / split(분리) 중 택1 기록",
+          "openclaw-telegram-topics-router: workstream lock SSOT(init/claim/release/audit) + SKILL.md 문서화",
+          "샘플: 동일 locks를 가진 2개 태스크가 동시에 IN_PROGRESS 되지 않음을 증빙"
+        ],
+        "proof": []
+      },
+      "links": {
+        "repo": "https://github.com/edmonddantesj/openclaw-telegram-topics-router"
+      },
+      "created_at": "2026-03-06T00:20:29Z",
+      "updated_at": "2026-03-06T00:20:29Z"
+    },
+    {
+      "id": "RL-20260306-027",
+      "title": "[GPT-5.3 Spark] OpenClaw Setup Helper v0.2: 설치/업데이트 체크 + 스킬 설치 환경 구성 + 채널(텔레/디코/슬랙) 연결 가이드(질문-응답형)",
+      "status": "todo",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "ops",
+        "bootstrap",
+        "onboard",
+        "windows",
+        "macos",
+        "skill"
+      ],
+      "owner": "청기",
+      "notes": "openclaw-bootstrap-helper 확장. 기본=안전모드(명령 출력). 사용자에게 자동 실행 여부 질문 후 진행. OS별(Win/mac) 설치/업데이트 명령 생성 + 필요한 툴체인(curl/unzip/python3) 준비 + 채널별 onboard 체크리스트/블로커 요약.",
+      "acceptance": {
+        "criteria": [
+          "OpenClaw 설치 여부/버전 확인 + 업데이트 필요 시 안내(명령 생성)",
+          "스킬 설치 환경 준비(필수 툴 체크 + 설치 커맨드 생성) + GitHub Releases 접근 체크",
+          "사용자 선택(텔레그램/디스코드/슬랙) 기반 onboard 가이드 출력(토큰은 채팅에 붙여넣지 않도록 유도)",
+          "\"자동으로 진행할까?\" 질문-응답 후에만 exec 실행(옵션)",
+          "v0.2.0 .skill 릴리즈 + 3개 OS 시나리오 테스트 로그(Windows/WSL, macOS)"
+        ],
+        "proof": []
+      },
+      "links": {
+        "repo": "https://github.com/edmonddantesj/openclaw-bootstrap-helper"
+      },
+      "created_at": "2026-03-06T01:32:12Z",
+      "updated_at": "2026-03-06T01:32:12Z"
+    },
+    {
+      "id": "RL-20260306-028",
+      "title": "[GPT-5.3 Spark] 토픽 간 태스크 핸드오프 + 우선순위 큐 + 병렬 디스패처(locks/WIP) + 자동 실행(L1/L2, L3 승인) + 토픽별 결과 리포트",
+      "status": "todo",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "inbox-dev",
+        "ops",
+        "queue",
+        "dispatcher",
+        "telegram-topics-router",
+        "dedup",
+        "locking",
+        "automation"
+      ],
+      "owner": "청기",
+      "notes": "요구: 토픽→토픽 handoff, 우선순위 큐 적재, 병렬 허용(최적 퍼포먼스), L1/L2 자동 실행 + L3 승인 시 실행. 종료 시 담당 토픽에 실행내역+결과(Proof) 보고. 기존 workstream locks/ledger 중복방지 가드와 연동.\n\nConcurrency: dispatcher 기본 동시 실행 N=3 (configurable).",
+      "acceptance": {
+        "criteria": [
+          "SSOT: task_queue(ledger 확장 또는 별도 context/ops/task_queue.json) 스키마 정의: id, source_thread, target_thread, priority, status, locks, owner, policy_level(L1/L2/L3), approval_ref(optional), created_at/updated_at",
+          "topics-router: handoff 커맨드 파서(#handoff <slug> P1 <title...>) + 큐 등록 스크립트 추가",
+          "dispatcher: queued 중 실행가능 태스크를 선택(우선순위→락충돌 없음→WIP 제한)하여 병렬 실행(동시 N개, configurable) + 상태전이",
+          "자동 실행 정책: L1/L2는 자동, L3는 approval_ref 존재할 때만 실행",
+          "토픽별 보고: start/finish/blocked 메시지 템플릿 + 결과에 proof(커밋/아티팩트/링크) 첨부",
+          "락 연동: 실행 시작 시 claim, 종료 시 release, 충돌 시 blocked(lock-conflict)로 전환",
+          "시뮬레이션 테스트: 샘플 6개 태스크(P0~P2, lock 충돌 2개 포함)로 expected scheduling 결과 증빙",
+          "dispatcher 동시 실행 N 기본값=3, 설정으로 변경 가능"
+        ],
+        "proof": []
+      },
+      "links": {
+        "topics_router_repo": "https://github.com/edmonddantesj/openclaw-telegram-topics-router"
+      },
+      "created_at": "2026-03-06T04:00:26Z",
+      "updated_at": "2026-03-06T04:00:26Z"
+    },
+    {
+      "id": "RL-20260306-029",
+      "title": "Phase 2 SSOT 완성본 복구 (S-DNA Protocol)",
+      "status": "doing",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "ssot",
+        "recovery",
+        "opus",
+        "phase2"
+      ],
+      "owner": null,
+      "notes": "",
+      "acceptance": {
+        "criteria": [],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-06T12:11:24Z",
+      "updated_at": "2026-03-06T12:11:24Z"
+    },
+    {
+      "id": "RL-20260308-BASEBATCHES-001",
+      "title": "[P0] Base Batches 3/9 제출 패키지 완성",
+      "status": "todo",
+      "priority": "P0",
+      "labels": [
+        "basebatches",
+        "submit",
+        "vercel",
+        "video",
+        "proof"
+      ],
+      "owner": null,
+      "notes": "",
+      "acceptance": {
+        "criteria": [],
+        "proof": []
+      },
+      "links": {},
+      "created_at": "2026-03-07T22:39:07Z",
+      "updated_at": "2026-03-07T22:39:07Z"
+    },
+    {
+      "id": "RL-20260312-030",
+      "title": "[L2] hackathons transfer 기반 Scout/Deadline/Benchmark small-task 카드화",
+      "status": "doing",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "hackathons",
+        "transfer",
+        "scout",
+        "benchmark",
+        "decomposition"
+      ],
+      "owner": "청정",
+      "notes": "복구한 transfer note를 기준으로 해커톤 업무를 반복 가능한 작은 태스크로 분해. event room(hackathons)과 ops room(ralph-loop) 분리를 실운영에 반영.",
+      "acceptance": {
+        "criteria": [
+          "Scout / Deadline Sweep / Benchmark / Signal / Synthesis 태스크 형태를 SSOT에 명시",
+          "각 태스크가 proof-first 산출물 경로 또는 기록 위치를 가진다",
+          "해커톤 토픽 고유 업무와 Ralph Loop 반복운영 업무의 경계가 명확하다"
+        ],
+        "proof": [
+          "context/ralph-loop-hackathons-transfer-2026-03-11.md",
+          "context/topics/hackathons_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-12T00:00:00Z",
+      "updated_at": "2026-03-12T00:00:00Z"
+    },
+    {
+      "id": "RL-20260312-031",
+      "title": "[L2] x-post transfer 기반 ops decomposition: discovery/filter/extract/packet",
+      "status": "doing",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "x-post",
+        "transfer",
+        "ops",
+        "decomposition",
+        "throughput"
+      ],
+      "owner": "청정",
+      "notes": "x-post는 editorial room, Ralph Loop는 ops room으로 고정. 반복 실행 노이즈를 랄프루프로 끌어와 small-task throughput으로 재가동.",
+      "acceptance": {
+        "criteria": [
+          "Discovery run / Anti-dup filter / Quote extraction / Draft packet / Failure logging 5개 태스크 축을 정리",
+          "자동 게시 금지, 수동 복붙 정책 유지",
+          "운영 노이즈와 편집 최종본이 topic 수준에서 분리된다"
+        ],
+        "proof": [
+          "context/ralph-loop-x-post-ops-transfer-2026-03-12.md",
+          "context/topics/x-post_PLAYBOOK_V0_1.md",
+          "context/handoff/HF_x-post.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-12T00:00:00Z",
+      "updated_at": "2026-03-12T00:00:00Z"
+    },
+    {
+      "id": "RL-20260312-032",
+      "title": "[L1] Ralph Loop를 scan-centric에서 small-task throughput 모드로 재전환",
+      "status": "todo",
+      "priority": "P0",
+      "labels": [
+        "ralph-loop",
+        "ops",
+        "queue",
+        "throughput",
+        "wip",
+        "recovery"
+      ],
+      "owner": "청정",
+      "notes": "현재 daily scan/drift/state-save는 살아 있으나 실행 큐 소화력이 낮다. doing/done 이벤트를 늘리기 위한 운영 규칙과 카드 흐름 재고정 작업.",
+      "acceptance": {
+        "criteria": [
+          "메인 SSOT에 small-task throughput 원칙을 명시",
+          "현재 transfer-in 토픽에서 최소 2개 이상의 doing 카드가 생긴다",
+          "WIP<=5, proof-per-task, frequent done 원칙이 다시 강조된다"
+        ],
+        "proof": [
+          "context/ralph-loop-ssot.md",
+          "context/topics/ralph-loop_PLAYBOOK_V0_1.md",
+          "context/ralph_loop/SPRINT_LOOP_BACKLOG_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-12T00:00:00Z",
+      "updated_at": "2026-03-12T00:00:00Z"
+    }
+  ]
+}

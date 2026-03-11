@@ -14,6 +14,21 @@ Proof (DM export tagged log):
 2) 레포/팀/요구사항을 한 장 요약으로 SSOT 승격
 3) Notion 연동 꼬임(세션/중복 페이지) 같은 운영 장애는 증빙+복구런북으로 남김
 
+## Ralph Loop transfer split (2026-03-12 lock-in)
+### stays in hackathons
+- 이벤트별 요구사항/제출물/최종 패키지/외부 제출 게이트
+
+### moves to Ralph Loop
+- Scout
+- Deadline Sweep
+- Benchmark
+- Signal
+- Synthesis
+
+### linked Ralph Loop records
+- `context/ralph-loop-hackathons-transfer-2026-03-11.md`
+- `context/ralph_loop/ledger.json` → `RL-20260312-030`
+
 ## Where to record
 - 진행중 큰 작업: HF 1장 (`context/handoff/HF_*`)
 - 반복업무/규칙: 이 Playbook
