@@ -92,6 +92,26 @@
 
 ---
 
+### EDGE-20260312-04
+- **Date/Time:** 2026-03-12 01:25 KST
+- **Topic:** cat-strategic (6062)
+- **Message type:** explicit-multi-call
+- **Expected behavior:** 청묘와 흑묘가 서로의 발언을 이어받으며 agent-to-agent 대화처럼 진행
+- **Actual behavior:** 둘 다 직접 호출되자 각자 에드몽에게 따로 답했고, 서로의 메시지를 이어받는 대화는 발생하지 않음
+- **Impact:**
+  - ambiguity
+  - duplicate response
+  - no turn-taking
+- **Probable cause:** 현재 구조는 multi-response는 가능하지만, shared context/turn allocation 없이 agent-to-agent turn-taking을 보장하지 못함
+- **Rule touched:**
+  - Router Spec
+  - Owner Selection Logic
+  - Semi-auto rollout plan
+- **Suggested fix:** `공동 호출`과 `에이전트 간 대화`를 분리해서 정의하고, 후자를 원할 경우 라우터/공유상태/중재 turn-taking 레이어를 추가 설계
+- **Status:** open
+
+---
+
 ## Review cadence
 - 엣지케이스 3~5개 쌓일 때마다 검토
 - 반복 패턴이 보이면 v0.2 규칙으로 승격
