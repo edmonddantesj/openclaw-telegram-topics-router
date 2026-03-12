@@ -78,8 +78,15 @@ def main() -> int:
     collaborators = agent.get("collaborators", [])
 
     run_ts = int(time.time())
-    run_dir = RUNTIME_DIR / f"thread_{args.thread_id}"
+    created_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(run_ts))
+    thread_dir = RUNTIME_DIR / f"thread_{args.thread_id}"
+    latest_dir = thread_dir / "latest"
+    runs_dir = thread_dir / "runs"
+    run_key = time.strftime("%Y%m%dT%H%M%SZ", time.gmtime(run_ts))
+    run_dir = runs_dir / run_key
+
     run_dir.mkdir(parents=True, exist_ok=True)
+    latest_dir.mkdir(parents=True, exist_ok=True)
 
     dispatch_record = {
         "schema": "openclaw.telegram.orchestrator_alpha_dispatch.v0_1",
@@ -90,9 +97,12 @@ def main() -> int:
         "collaborators": collaborators,
         "preset": args.preset,
         "message": args.message,
-        "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(run_ts)),
+        "created_at": created_at,
+        "run_key": run_key,
     }
-    (run_dir / "dispatch.json").write_text(json.dumps(dispatch_record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    dispatch_json = json.dumps(dispatch_record, indent=2, ensure_ascii=False) + "\n"
+    (run_dir / "dispatch.json").write_text(dispatch_json, encoding="utf-8")
+    (latest_dir / "dispatch.json").write_text(dispatch_json, encoding="utf-8")
 
     cmd = [
         "node",
@@ -107,6 +117,8 @@ def main() -> int:
 
     (run_dir / "stdout.json").write_text(proc.stdout, encoding="utf-8")
     (run_dir / "stderr.log").write_text(proc.stderr or "", encoding="utf-8")
+    (latest_dir / "stdout.json").write_text(proc.stdout, encoding="utf-8")
+    (latest_dir / "stderr.log").write_text(proc.stderr or "", encoding="utf-8")
 
     out = {
         "ok": proc.returncode == 0,
@@ -114,9 +126,14 @@ def main() -> int:
         "slug": slug,
         "primary": primary,
         "collaborators": collaborators,
+        "run_key": run_key,
+        "thread_dir": str(thread_dir),
         "dispatch_path": str(run_dir / "dispatch.json"),
         "stdout_path": str(run_dir / "stdout.json"),
         "stderr_path": str(run_dir / "stderr.log"),
+        "latest_dispatch_path": str(latest_dir / "dispatch.json"),
+        "latest_stdout_path": str(latest_dir / "stdout.json"),
+        "latest_stderr_path": str(latest_dir / "stderr.log"),
         "returncode": proc.returncode,
     }
     print(json.dumps(out, ensure_ascii=False))
