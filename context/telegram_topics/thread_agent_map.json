@@ -110,10 +110,11 @@
     ]
   },
   "cat-strategic": {
-    "primary": "청뇌",
+    "primary": "청묘",
     "collaborators": [
-      "청령",
-      "청비"
-    ]
+      "흑묘",
+      "에드몽"
+    ],
+    "notes": "Private alpha lab topic for orchestrator tests before external beta"
   }
 }

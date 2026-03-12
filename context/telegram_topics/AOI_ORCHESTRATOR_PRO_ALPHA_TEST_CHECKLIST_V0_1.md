@@ -6,8 +6,10 @@ Purpose: internal alpha-only test plan before any beta distribution.
 - Chat: `telegram:-1003732040608`
 - Topic: `6062`
 - Topic slug: `cat-strategic`
-- Primary owner: `청뇌`
-- Collaborators: `청령`, `청비`
+- Operating mode: `orchestrator-alpha-lab`
+- Primary owner: `청묘`
+- Collaborators: `흑묘`, `에드몽`
+- Note: treat topic 6062 as a private internal alpha lab for orchestrator tests before any external beta distribution.
 
 ## Goal
 Verify that this topic can act as a realistic internal proving ground for:
@@ -20,16 +22,17 @@ Verify that this topic can act as a realistic internal proving ground for:
 ## Phase A — Router SSOT sanity
 - [x] `thread_topic_map.json` contains topic `6062 -> cat-strategic`
 - [x] `thread_agent_map.json` contains `cat-strategic`
-- [ ] `resolve_primary_agent.py --thread-id 6062` returns `청뇌`
-- [ ] `delegation_decider.py` returns `should_delegate=true` for a meaningful request in this topic
-- [ ] `delegation_state.py record/check` works under workspace context
+- [x] `resolve_primary_agent.py --thread-id 6062` returns `청묘`
+- [x] `delegation_decider.py` returns `should_delegate=true` for a meaningful request in this topic
+- [x] `delegation_state.py record/check` works under workspace context
 
 ## Phase B — Topic-local orchestration runtime
-- [ ] test run creates dedicated runtime path keyed by topic/workstream
-- [ ] `state.json` created
-- [ ] `events.jsonl` created
-- [ ] `turn_handoff` sequence visible
-- [ ] final state closes cleanly (`mode=idle`, `currentTurn=null`)
+- [x] test run creates dedicated runtime path keyed by topic/workstream
+- [x] mock dispatch artifact created under `context/telegram_topics/runtime/orchestrator_alpha_lab/thread_6062/`
+- [x] local orchestrator `state.json` created
+- [x] local orchestrator `events.jsonl` created
+- [x] `turn_handoff` sequence visible in local run output
+- [x] final state closes cleanly (`mode=idle`, `currentTurn=null`)
 
 ## Phase C — Isolation / repeated use
 - [ ] same topic repeated runs do not corrupt state
