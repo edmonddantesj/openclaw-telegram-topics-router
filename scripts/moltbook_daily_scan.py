@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import datetime as dt
 import json
-import os
 from pathlib import Path
 from typing import Any
 
@@ -56,6 +55,84 @@ def safe_posts_new(limit: int = 10) -> list[dict[str, Any]]:
     raise RuntimeError(f"failed to fetch posts (tried {len(urls)} urls): {last_err}")
 
 
+def _normalize(text: str) -> str:
+    return " ".join((text or "").lower().replace("-", " ").replace("_", " ").split())
+
+
+def build_candidate_angles(posts: list[dict[str, Any]] | None) -> list[str]:
+    default_angles = [
+        "Tooling deep dive (what we learned this week)",
+        "Proof-first / execution receipts (case study)",
+        "Ralph Loop (small routines → compounding)",
+        "Response to a Moltbook thread (quote + takeaways)",
+    ]
+    if not posts:
+        return default_angles
+
+    angle_specs: list[tuple[str, str, list[str]]] = [
+        (
+            "agent_infra",
+            "Agent infra / handoff contracts (what breaks, what scales)",
+            ["agent", "handoff", "workflow", "tool", "prompt", "proof", "verify", "contract", "automation"],
+        ),
+        (
+            "market_mint",
+            "Mint/market behavior readout (what today’s feed reveals)",
+            ["mint", "mbc", "token", "market", "price", "trade", "inscription", "collect"],
+        ),
+        (
+            "creator_mechanics",
+            "Creator mechanics / distribution lessons from a live post",
+            ["engagement", "question", "audience", "comment", "post", "thread", "write", "creator"],
+        ),
+        (
+            "identity_trust",
+            "Identity / trust / continuity for agents across platforms",
+            ["identity", "same agent", "continuity", "trust", "memory", "relationship", "authenticate"],
+        ),
+        (
+            "ops_routine",
+            "Ops routine / Ralph Loop (small routines → compounding)",
+            ["routine", "daily", "loop", "habit", "system", "ops", "process"],
+        ),
+        (
+            "response",
+            "Response to a Moltbook thread (quote + takeaways)",
+            ["hot take", "how do you", "what you", "i wrote", "thoughts", "challenge", "lessons"],
+        ),
+        (
+            "tooling",
+            "Tooling deep dive (what we learned this week)",
+            ["build", "engineering", "capacity", "system", "resource", "stack", "secure"],
+        ),
+        (
+            "proof_first",
+            "Proof-first / execution receipts (case study)",
+            ["proof", "verify", "receipt", "audit", "evidence", "execution"],
+        ),
+    ]
+
+    scored: list[tuple[int, str, str]] = []
+    for key, label, keywords in angle_specs:
+        score = 0
+        for p in posts[:10]:
+            title = _normalize(str(p.get("title") or p.get("name") or p.get("subject") or ""))
+            score += sum(1 for kw in keywords if kw in title)
+            if p.get("comment_count"):
+                score += 1 if key in {"response", "creator_mechanics"} else 0
+        scored.append((score, key, label))
+
+    scored.sort(key=lambda x: (-x[0], x[1]))
+    chosen = [label for score, _, label in scored if score > 0][:4]
+
+    for fallback in default_angles:
+        if fallback not in chosen:
+            chosen.append(fallback)
+        if len(chosen) == 4:
+            break
+    return chosen
+
+
 def render_md(today: str, posts: list[dict[str, Any]] | None, err: str | None) -> str:
     lines: list[str] = []
     lines.append(f"# Moltbook Daily Draft Package — {today}")
@@ -89,10 +166,8 @@ def render_md(today: str, posts: list[dict[str, Any]] | None, err: str | None) -
     lines.append("")
 
     lines.append("## 2) Candidate angles (pick 1)")
-    lines.append("- A) Tooling deep dive (what we learned this week)")
-    lines.append("- B) Proof-first / execution receipts (case study)")
-    lines.append("- C) Ralph Loop (small routines → compounding)")
-    lines.append("- D) Response to a Moltbook thread (quote + takeaways)")
+    for idx, angle in enumerate(build_candidate_angles(posts), 65):
+        lines.append(f"- {chr(idx)}) {angle}")
     lines.append("")
 
     lines.append("## 3) Draft")
