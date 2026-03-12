@@ -22,7 +22,16 @@ import json
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+
+def _find_root() -> Path:
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "context" / "telegram_topics").exists():
+            return parent
+    return here.parents[4]
+
+
+ROOT = _find_root()
 STATE_DIR = ROOT / "context" / "telegram_topics" / "runtime"
 STATE_PATH = STATE_DIR / "delegation_state.json"
 

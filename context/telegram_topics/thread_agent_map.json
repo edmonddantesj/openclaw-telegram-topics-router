@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "source": "SSOT: context/telegram_topics_assignment_v0_1.json (Owner/Sub) normalized to Primary/Collaborators",
+    "updated": "2026-03-06",
+    "schema": "topic_slug -> { primary, collaborators[] }",
+    "note": "primary == owner; collaborators == subs (pinned). Attendance escalation via TEAM_ATTENDANCE_COMMANDS_V0_1.md"
+  },
+  "acp": {
+    "primary": "청령",
+    "collaborators": [
+      "청성",
+      "청음"
+    ]
+  },
+  "announcements": {
+    "primary": "청묘",
+    "collaborators": [
+      "청령"
+    ]
+  },
+  "ops": {
+    "primary": "청기",
+    "collaborators": [
+      "청정",
+      "청검"
+    ]
+  },
+  "adp": {
+    "primary": "청정",
+    "collaborators": [
+      "청섬",
+      "청기"
+    ]
+  },
+  "bazaar": {
+    "primary": "청뇌",
+    "collaborators": [
+      "청안",
+      "청섬"
+    ]
+  },
+  "github": {
+    "primary": "청섬",
+    "collaborators": [
+      "청정",
+      "청검"
+    ]
+  },
+  "longform": {
+    "primary": "청비",
+    "collaborators": [
+      "청안"
+    ]
+  },
+  "ralph-loop": {
+    "primary": "청정",
+    "collaborators": [
+      "청기"
+    ]
+  },
+  "hackathons": {
+    "primary": "청섬",
+    "collaborators": [
+      "청성",
+      "청음"
+    ]
+  },
+  "maintenance": {
+    "primary": "청정",
+    "collaborators": [
+      "청기"
+    ]
+  },
+  "random": {
+    "primary": "청묘",
+    "collaborators": [
+      "청음"
+    ]
+  },
+  "inbox-dev": {
+    "primary": "청령",
+    "collaborators": [
+      "청비",
+      "청섬"
+    ]
+  },
+  "handoff": {
+    "primary": "청비",
+    "collaborators": [
+      "청령"
+    ]
+  },
+  "x-post": {
+    "primary": "청성",
+    "collaborators": [
+      "청음"
+    ]
+  },
+  "v6-invest": {
+    "primary": "청뇌",
+    "collaborators": [
+      "청약",
+      "청안"
+    ]
+  },
+  "moltbook": {
+    "primary": "청음",
+    "collaborators": [
+      "청성"
+    ]
+  },
+  "cat-strategic": {
+    "primary": "청뇌",
+    "collaborators": [
+      "청령",
+      "청비"
+    ]
+  }
+}
