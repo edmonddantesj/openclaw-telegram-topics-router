@@ -15,6 +15,22 @@ Proof (DM export tagged log):
 2) PDF 분석은 모델/TPM 고려해서 수행(Flash vs Pro)
 3) 결과는 1) 요약 2) 핵심 인용 3) SSOT 승격 경로(파일) 3종 세트로 남김
 
+## Ralph Loop transfer split (2026-03-12 lock-in)
+### stays in longform
+- 문서별 요약/핵심 인용/최종 write-up
+- 모델 선택과 장문 처리 규칙
+- SSOT 승격 대상 결정
+
+### moves to Ralph Loop
+- intake triage
+- large backlog chunking
+- extraction packet discipline
+- promotion routing
+
+### linked Ralph Loop records
+- `context/ralph-loop-longform-transfer-2026-03-12.md`
+- `context/ralph_loop/ledger.json` → `RL-20260312-033`
+
 ## Where to record
 - 진행중 큰 작업: HF 1장 (`context/handoff/HF_*`)
 - 반복업무/규칙: 이 Playbook

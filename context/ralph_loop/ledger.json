@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_at": "2026-03-12T00:00:00Z",
+  "generated_at": "2026-03-12T10:32:00Z",
   "items": [
     {
       "id": "RL-20260306-001",
@@ -495,6 +495,95 @@
       "links": {},
       "created_at": "2026-03-12T00:00:00Z",
       "updated_at": "2026-03-12T00:00:00Z"
+    },
+    {
+      "id": "RL-20260312-033",
+      "title": "[L2] longform intake triage를 Ralph Loop small-packet 루프로 전환",
+      "status": "doing",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "longform",
+        "transfer",
+        "intake",
+        "triage",
+        "decomposition"
+      ],
+      "owner": "청정",
+      "notes": "긴 문서를 그대로 backlog에 쌓지 않고, full read / summary-first / quotes-only / defer 로 나누는 intake triage 루프를 Ralph Loop로 끌어온다.",
+      "acceptance": {
+        "criteria": [
+          "longform transfer note가 존재한다",
+          "longform은 content room, Ralph Loop는 intake/queue room으로 분리된다",
+          "대형 longform 입력을 small packet 단위로 처리하는 규칙이 고정된다"
+        ],
+        "proof": [
+          "context/ralph-loop-longform-transfer-2026-03-12.md",
+          "context/topics/longform_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-12T10:30:00Z",
+      "updated_at": "2026-03-12T10:30:00Z"
+    },
+    {
+      "id": "RL-20260312-034",
+      "title": "[L2] bazaar proof-first backlog slicing을 Ralph Loop checkpoint 루프로 반영",
+      "status": "doing",
+      "priority": "P1",
+      "labels": [
+        "ralph-loop",
+        "bazaar",
+        "transfer",
+        "checkpoint",
+        "proof-first",
+        "backlog"
+      ],
+      "owner": "청정",
+      "notes": "Bazaar build room의 구현 백로그를 Ralph Loop에서 proof-first small task로 쪼개고 checkpoint packet으로 관리한다.",
+      "acceptance": {
+        "criteria": [
+          "bazaar transfer note가 존재한다",
+          "bazaar는 build room, Ralph Loop는 decomposition/checkpoint room으로 분리된다",
+          "today / blocker / next 형태 checkpoint 규칙이 반영된다"
+        ],
+        "proof": [
+          "context/ralph-loop-bazaar-transfer-2026-03-12.md",
+          "context/topics/bazaar_PLAYBOOK_V0_1.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-12T10:31:00Z",
+      "updated_at": "2026-03-12T10:31:00Z"
+    },
+    {
+      "id": "RL-20260312-035",
+      "title": "[L1] random 혼재 이슈를 Ralph Loop triage 기준으로 분류/배출",
+      "status": "todo",
+      "priority": "P2",
+      "labels": [
+        "ralph-loop",
+        "random",
+        "triage",
+        "routing",
+        "cleanup"
+      ],
+      "owner": "청정",
+      "notes": "random 전체를 먹지 않고, 반복 운영형/교차 토픽형 이슈만 Ralph Loop로 끌어와 tracked artifact로 바꾸는 규칙 정리.",
+      "acceptance": {
+        "criteria": [
+          "random triage note가 존재한다",
+          "random에 남을 것과 Ralph Loop로 끌어올 것을 구분한다",
+          "혼재 이슈는 HF/task/pointer 구조로 배출된다"
+        ],
+        "proof": [
+          "context/ralph-loop-random-triage-note-2026-03-12.md",
+          "context/topic-state/random.md"
+        ]
+      },
+      "links": {},
+      "created_at": "2026-03-12T10:32:00Z",
+      "updated_at": "2026-03-12T10:32:00Z"
     }
   ]
 }

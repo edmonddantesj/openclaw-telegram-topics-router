@@ -1,6 +1,6 @@
 # Ralph Loop Task Ledger
 
-Generated_at(UTC): 2026-03-11T23:07:21Z
+Generated_at(UTC): 2026-03-12T10:31:40Z
 
 ## RL-20260306-029 [P0] (doing) — Phase 2 SSOT 완성본 복구 (S-DNA Protocol)
 - labels: ralph-loop, ssot, recovery, opus, phase2
@@ -138,6 +138,34 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
 - notes: 현재 daily scan/drift/state-save는 살아 있으나 실행 큐 소화력이 낮다. doing/done 이벤트를 늘리기 위한 운영 규칙과 카드 흐름 재고정 작업.
 
 
+## RL-20260312-033 [P1] (doing) — [L2] longform intake triage를 Ralph Loop small-packet 루프로 전환
+- labels: ralph-loop, longform, transfer, intake, triage, decomposition
+- owner: 청정
+- updated_at: 2026-03-12T10:30:00Z
+- acceptance:
+  - longform transfer note가 존재한다
+  - longform은 content room, Ralph Loop는 intake/queue room으로 분리된다
+  - 대형 longform 입력을 small packet 단위로 처리하는 규칙이 고정된다
+- proof:
+  - context/ralph-loop-longform-transfer-2026-03-12.md
+  - context/topics/longform_PLAYBOOK_V0_1.md
+- notes: 긴 문서를 그대로 backlog에 쌓지 않고, full read / summary-first / quotes-only / defer 로 나누는 intake triage 루프를 Ralph Loop로 끌어온다.
+
+
+## RL-20260312-034 [P1] (doing) — [L2] bazaar proof-first backlog slicing을 Ralph Loop checkpoint 루프로 반영
+- labels: ralph-loop, bazaar, transfer, checkpoint, proof-first, backlog
+- owner: 청정
+- updated_at: 2026-03-12T10:31:00Z
+- acceptance:
+  - bazaar transfer note가 존재한다
+  - bazaar는 build room, Ralph Loop는 decomposition/checkpoint room으로 분리된다
+  - today / blocker / next 형태 checkpoint 규칙이 반영된다
+- proof:
+  - context/ralph-loop-bazaar-transfer-2026-03-12.md
+  - context/topics/bazaar_PLAYBOOK_V0_1.md
+- notes: Bazaar build room의 구현 백로그를 Ralph Loop에서 proof-first small task로 쪼개고 checkpoint packet으로 관리한다.
+
+
 ## RL-20260306-001 [P1] (todo) — ACP Dispatch #002 package 준비 (001 포맷 상속 + preflight 재구축)
 - labels: ralph-loop, acp, dispatch
 - owner: 청비
@@ -213,5 +241,19 @@ Concurrency: dispatcher 기본 동시 실행 N=3 (configurable).
   - 필수 파일명 패턴 체크(EN/KR onepager+preface)
   - PASS/FAIL 리포트 출력 + 증빙 저장
 - notes: drafts repo 부재로 workspace에 재구축 필요. public-safe 게이트 강제.
+
+
+## RL-20260312-035 [P2] (todo) — [L1] random 혼재 이슈를 Ralph Loop triage 기준으로 분류/배출
+- labels: ralph-loop, random, triage, routing, cleanup
+- owner: 청정
+- updated_at: 2026-03-12T10:32:00Z
+- acceptance:
+  - random triage note가 존재한다
+  - random에 남을 것과 Ralph Loop로 끌어올 것을 구분한다
+  - 혼재 이슈는 HF/task/pointer 구조로 배출된다
+- proof:
+  - context/ralph-loop-random-triage-note-2026-03-12.md
+  - context/topic-state/random.md
+- notes: random 전체를 먹지 않고, 반복 운영형/교차 토픽형 이슈만 Ralph Loop로 끌어와 tracked artifact로 바꾸는 규칙 정리.
 
 

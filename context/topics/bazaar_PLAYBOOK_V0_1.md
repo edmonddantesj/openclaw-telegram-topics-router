@@ -57,6 +57,20 @@
 - 새 백업 유입 감지 시: raw 백업 보존 + 백업 기반 요약/핵심 규칙 추출 갱신
 - 수동 개입 포인트 최소화: 백업 파일 배치 후 5분 안에 자동 파서가 `context/handoff/INDEX.md`/`TEAM_STATUS` 반영을 시도
 
+## 7.5) Ralph Loop transfer split (2026-03-12 lock-in)
+### stays in bazaar
+- 제품 범위 / 데모 경계 / 구현 선택 / 최종 deliverable acceptance
+
+### moves to Ralph Loop
+- proof-first backlog slicing
+- checkpoint packet(`오늘 할 일 / 블로커 / 다음 액션`) 정리
+- evidence routing / HF-task 분기
+- scope expansion guard
+
+### linked Ralph Loop records
+- `context/ralph-loop-bazaar-transfer-2026-03-12.md`
+- `context/ralph_loop/ledger.json` → `RL-20260312-034`
+
 ## 8) 파일 네이밍 규칙
 - 핸드오프: `context/handoff/HF-YYYYMMDD-<slug>.md`
 - 상태: `context/ops/TEAM_STATUS_DASHBOARD_V0_1.md`

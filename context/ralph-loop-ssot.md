@@ -66,6 +66,9 @@ When another topic produces work that needs repeated scouting, batching, decompo
 ## Current transfer notes
 - `context/ralph-loop-hackathons-transfer-2026-03-11.md`
 - `context/ralph-loop-x-post-ops-transfer-2026-03-12.md`
+- `context/ralph-loop-longform-transfer-2026-03-12.md`
+- `context/ralph-loop-bazaar-transfer-2026-03-12.md`
+- `context/ralph-loop-random-triage-note-2026-03-12.md`
 
 ## Current priority
 Restore Ralph Loop from scan-centric recovery mode back into execution mode:
