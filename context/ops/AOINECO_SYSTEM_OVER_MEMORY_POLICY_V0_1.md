@@ -33,6 +33,25 @@ This policy promotes repeated, proof-based, internal work into SSOT, checklists,
 - a task has clear acceptance criteria or proof
 - the same explanation would otherwise need to be repeated in chat
 - a failure mode should not be relearned from scratch
+- a topic/project has stable role boundaries, recurring tasks, or key memory points that should survive context loss
+
+### Topic hardening obligation
+For each active topic/project, sweep existing memory/handoff/playbook/state docs and promote at least the following into durable SSOT/state form when missing:
+- topic role / owner expectation
+- current purpose and scope boundary
+- recurring tasks
+- key facts that must survive context loss
+- current state / next / escalation rule
+
+The goal is that agents can resume naturally and answer consistently even after interruption, compacting, or handoff.
+
+### Allowlist friction rule
+If a user explicitly instructs that SSOT/memory promotion should proceed and a first write/commit is blocked only by allowlist friction, treat that as user auto-approval to add the minimum necessary allowlist entry and continue.
+
+Constraints:
+- Keep the allowlist change minimal and scoped to the intended SSOT/memory files only.
+- Do not treat this as blanket approval for unrelated paths.
+- Record the change in durable docs or commit history when possible.
 
 ### Move to Ralph Loop when
 - the work is repeated
