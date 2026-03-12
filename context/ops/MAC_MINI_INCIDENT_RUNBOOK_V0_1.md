@@ -71,6 +71,23 @@ tail -n 120 ~/.openclaw/logs/node.err.log
 - Telegram 전송 실패만 있으면 channel/network 쪽 우선
 - SIGTERM + restart가 보이면 supervisor/서비스 재기동 포함해서 본다
 
+### alive but unhealthy 판정
+다음을 만족하면 프로세스는 살아 있어도 서비스는 비정상으로 본다.
+- `openclaw status` 상 gateway/node는 running인데 실제 메시지 응답이 없음
+- Telegram 쪽 polling/send 실패가 반복됨
+- node가 gateway reconnect만 반복하거나 `ECONNREFUSED 127.0.0.1:18789`가 보임
+- stale lock/session 찌꺼기 흔적이 보임
+
+### doctor 실행 기준
+다음 조건이면 `openclaw doctor --fix`를 빠른 복구 수단으로 고려한다.
+- 호스트는 살아 있고 `openclaw status`도 응답하지만 실제 대화 응답이 멈춤
+- 최근 로그에 polling stall / sendMessage failed / shutdown timed out / reconnect loop가 섞여 있음
+- 마지막 큰 변경(예: 저장경로 변경)은 이미 롤백했는데도 OpenClaw 내부 상태만 꼬여 보임
+
+주의:
+- `doctor --fix`는 근본 원인 분석을 대체하지 않는다.
+- 호스트 kernel panic / 재부팅 원인이 있으면 먼저 상위 원인을 따로 추적한다.
+
 ---
 
 ## 4. 롤백 우선 원칙
