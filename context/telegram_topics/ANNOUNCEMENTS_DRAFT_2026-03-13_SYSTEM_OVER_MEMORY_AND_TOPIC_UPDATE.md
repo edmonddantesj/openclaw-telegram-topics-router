@@ -95,7 +95,16 @@
 - unrelated path 전체 허용으로 확장 금지
 - 가능하면 commit/history에 흔적 남김
 
-### 7) 최신 topic id 업데이트
+### 7) SSOT 기록은 서버만이 아니라 프라이빗 GitHub에도 남긴다
+SSOT/내구 문서를 기록할 때는 로컬 서버 파일만으로 끝내지 않는다.
+활성 작업 레이어는 workspace/context에 두되, durable knowledge layer에 해당하는 문서는 기존 md-vault / private GitHub mirror 흐름까지 포함해 이중화하는 것을 기본으로 한다.
+
+즉 기본 인식은:
+- server copy + private GitHub copy
+- 둘 다 남기는 방향
+- local-only/ephemeral이면 그 사실을 명시
+
+### 8) 최신 topic id 업데이트
 현재 canonical topic map은 `context/telegram_topics/thread_topic_map.json` 기준으로 아래를 따른다.
 - announcements = 32
 - ops = 38

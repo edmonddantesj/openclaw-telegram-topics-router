@@ -131,7 +131,17 @@ If the user explicitly instructs SSOT/memory promotion and the first attempt is 
 - do not expand into unrelated blanket approval
 - leave commit/history trace when possible
 
-## 9. Shared topic search environment
+## 9. Durability = server + private GitHub
+When recording SSOT/durable state, do not stop at local server files only.
+Durable SSOT should also be mirrored to the private GitHub durable layer (`md-vault`) when the existing mirror path/process applies.
+
+Rules:
+- local workspace `context/` remains the active authoritative working layer
+- durable documents should also be mirrored to `workspace/md-vault/` / private GitHub (`edmonddantesj/aoi-md-vault`) when they belong to the durable knowledge layer
+- agents should think in terms of **server copy + private GitHub copy**, not server-only memory
+- if a document is intentionally local-only/ephemeral, that should be explicit
+
+## 10. Shared topic search environment
 All agents should be able to search current topic/project state before continuing work.
 
 Shared search layer:
