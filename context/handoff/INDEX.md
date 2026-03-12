@@ -22,3 +22,4 @@
 - `HF_acp_ops_202603.md` — ACP(topic 50): Playbook 규칙 영구화 + 진행작업 HF 분리 + launchd/Ralph 자동화
 - `HF_acp_dispatch_002_202603.md` — ACP(topic 50): Dispatch #002 (Bought & Analyzed) 오늘 투고 가능한 패키지 준비
 - `HF_ralph_loop_drift_integrity_restore_20260308.md` — ralph-loop: 스캔/크론 상태저장 + drift 무결성 체크/자동복구(L2)
+- `HF_random_playbook_hardening_20260312.md` — topic81(random): compact/context-loss 복구 규칙 즉시 반영 + 남은 검증 항목 추적
