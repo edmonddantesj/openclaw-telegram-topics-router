@@ -47,3 +47,6 @@ Inside Ralph Loop, longform becomes a repeated **ingest / extract / package / ro
 ## Proof / references
 - `context/topics/longform_PLAYBOOK_V0_1.md`
 - `context/ops/AUTOMATION_CANDIDATES_SPRINT3_V0_1.md`
+- `context/handoff/HF_longform_ralph_transfer_20260314.md`
+- `context/research/longform/LONGFORM_RALPH_TRANSFER_AUDIT_2026-03-14.md`
+- `ops/items/TASK-20260314-LONGFORM-RLP-01.md`

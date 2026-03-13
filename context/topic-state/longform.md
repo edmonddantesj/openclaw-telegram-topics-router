@@ -22,10 +22,16 @@
 1. 현재 처리 중인 문서 묶음과 판정(S/A/B/C)을 checkpoint에 남긴다.
 2. 중요 인사이트는 context/research 또는 context/knowledge로 승격.
 3. 장기 파이프라인 문제는 HF로 분리.
+4. longform→ralph-loop delegated execution parent/child set을 기준 트랙으로 사용한다:
+   - parent: `ops/items/TASK-20260314-LONGFORM-RLP-01.md`
+   - intake: `ops/items/TASK-20260314-LONGFORM-RLP-02.md`
+   - deep-study gate: `ops/items/TASK-20260314-LONGFORM-RLP-03.md`
+   - synthesis: `ops/items/TASK-20260314-LONGFORM-RLP-04.md`
 
 ## Key files
 - Playbook: `context/topics/longform_PLAYBOOK_V0_1.md`
-- Handoff: (없음)
+- Handoff: `context/handoff/HF_longform_ralph_transfer_20260314.md`
+- Audit note: `context/research/longform/LONGFORM_RALPH_TRANSFER_AUDIT_2026-03-14.md`
 - Topic map: `context/telegram_topics/thread_topic_map.json`
 
 ## Restore instructions
