@@ -25,3 +25,8 @@
 ## Where to record
 - 진행중 작업: `context/handoff/INDEX.md` + 관련 HF
 - 정책/체크리스트: 이 Playbook + `context/adp/*` SSOT
+
+## Heukmyo support routing
+- AC/Judge 구조 정리, work card schema 분해, room workflow 정리, installable package/productization 메모 정리처럼 구조화 지원이 필요할 때는 `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md` 기준으로 요청을 구조화한다.
+- 기술성 높은 요청(상태 스키마/구현 경계/복구성 검토)은 optional extension field(`Affected scope`, `Failure mode`)를 함께 붙인다.
+- 외부 반영, 정책 변경, 고위험 운영 전환은 human gate 유지.
