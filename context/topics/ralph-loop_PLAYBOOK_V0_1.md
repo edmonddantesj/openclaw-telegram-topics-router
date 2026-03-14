@@ -63,6 +63,30 @@
 ## 3) 표준 응답 포맷(채팅 보고)
 - 6줄 요약(Goal/Now/Next/Proof/Blocker/Owner) → 필요 시 HF 링크 포함
 - 완료 보고에는 **증빙(파일 경로/cron id/로그)** 최소 1개 포함
+- active lane/report에는 가능하면 아래 5종 세트를 붙인다:
+  1. STATUS
+  2. HANDOFF
+  3. one-line next action
+  4. Definition of Done / Acceptance Criteria
+  5. Judge rule
+
+### AC/Judge layer (ralph-loop)
+#### Definition of Done
+- repeated packet has cadence / trigger / proof / return rule
+- source topic truth and Ralph Loop execution truth are separated
+- one-line next action is explicit
+
+#### Acceptance Criteria
+- packet shape is explicit
+- next action is packet-sized, not vague epic wording
+- proof or handoff path is visible
+- return rule to source topic is visible
+
+#### Judge rule
+- `pass`: lane is execution-ready and repeated packet can run immediately
+- `fail`: core execution metadata is missing
+- `hold`: structurally correct but current live packet/run is still absent
+- `needs-human-review`: boundary crosses external/manual/irreversible gate
 
 ## 4) 운영 자동화(선택지)
 - **우선:** OpenClaw cron (상태/실행 이력/알림 라우팅 관리가 쉬움)

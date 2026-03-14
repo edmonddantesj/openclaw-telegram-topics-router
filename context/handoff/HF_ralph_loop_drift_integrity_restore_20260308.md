@@ -8,6 +8,30 @@
 - **Blocker:** drift 무결성 체크의 “정본(canonical) 상태 파일 목록”과 “자동 복구가 허용되는 범위”가 아직 명시 SSOT로 고정되지 않음.
 - **Owner:** maintainer(청정) / 승인: 메르세데스(L2, auto-repair까지)
 
+## STATUS / HANDOFF / NEXT
+- STATUS: in_progress
+- HANDOFF: `context/handoff/HF_ralph_loop_drift_integrity_restore_20260308.md`
+- NEXT: canonical drift scope와 auto-repair 범위를 SSOT로 잠근 뒤 daily-scan/drift-check/state-save를 반복 패킷으로 고정
+
+## Definition of Done
+- drift packet has cadence / trigger / proof / return rule
+- canonical scope and auto-repair boundary are explicit
+- recovery action can be judged without re-reading the whole chat history
+
+## Acceptance Criteria
+- state scope / checksum store / repair boundary / rollback rule 이 명시된다
+- current health / next check / fallback path 가 명시된다
+- proof paths (script/state/handoff/report) 가 보인다
+
+## Judge rule
+- `pass`: incident is bounded and next monitoring/recovery rule exists
+- `fail`: core evidence or recovery boundary is missing
+- `hold`: SSOT exists but auto-repair boundary is still not fixed enough
+- `needs-human-review`: host-level/manual/external action required
+
+## Human gate
+- host-level destructive action, external/manual boundary, approval-required infra change 에서만 인간 게이트로 올린다
+
 ## Decisions / Approvals
 - 2026-03-08: **L2 승인** — “ralph-loop 스캔/크론 상태 저장 및 drift 무결성 체크 복구” 진행 승인 (drift 발견 시 **자동 복구까지**).
 
