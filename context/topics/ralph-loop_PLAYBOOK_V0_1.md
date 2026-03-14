@@ -93,3 +93,24 @@
 - **대안:** launchd (macOS 로컬 고정 잡)
 
 > Note: drift 무결성 체크의 “정본 파일 목록/자동복구 허용 범위”는 별도 SSOT로 확정 후 적용한다.
+
+## 5) Support / return system
+Ralph Loop는 반복업무에 대해 단순 triage room이 아니라 support bus 로도 동작한다.
+
+### input
+- source topic support request
+- normalized packet
+- one-line next action
+- proof path
+- return target
+
+### output
+- proof-based result packet
+- what changed
+- next
+- judge verdict
+- human gate needed or not
+
+Canonical SSOT:
+- `context/ops/RALPH_LOOP_SUPPORT_AND_RETURN_SYSTEM_V0_1.md`
+- `context/handoff/HF_ralph_loop_support_system_20260314.md`

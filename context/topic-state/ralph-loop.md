@@ -30,6 +30,8 @@
 1. 최근 drift/cron/scan 결과를 checkpoint에 주기적으로 반영.
 2. stale 태스크는 분해/blocked/backlog 중 하나로 명시적 전환.
 3. 자동복구 범위 변경 시 관련 SSOT도 함께 갱신.
+4. longform / x-post / hackathons / bazaar delegated lanes를 support request / result return contract로 수렴.
+5. random 유입 반복업무를 support packet으로 자동 전환하는 규칙을 연결.
 
 ## Definition of Done
 - repeated packet이 cadence / trigger / proof / return rule 을 가진다.
@@ -52,7 +54,8 @@
 
 ## Key files
 - Playbook: `context/topics/ralph-loop_PLAYBOOK_V0_1.md`
-- Handoff: `context/handoff/HF_ralph_loop_drift_integrity_restore_20260308.md`
+- Handoff: `context/handoff/HF_ralph_loop_drift_integrity_restore_20260308.md`, `context/handoff/HF_ralph_loop_support_system_20260314.md`
+- Support system SSOT: `context/ops/RALPH_LOOP_SUPPORT_AND_RETURN_SYSTEM_V0_1.md`
 - Topic map: `context/telegram_topics/thread_topic_map.json`
 
 ## Restore instructions
