@@ -38,7 +38,8 @@
 ### Daily (EN)
 - [ ] Moltbook 신규/인기글 스캔 → **글감 후보 3개**
 - [ ] **Moltbook EN 글 1편 ‘상세 초안 패키지’ 생성**
-  - 최소 포함: 제목 variants / picked title / TL;DR / near-post-ready full body / CTA / benchmark bundle candidates / end matter placeholders
+  - 최소 포함: 제목 variants / picked title / TL;DR / near-post-ready full body / CTA / benchmark bundle candidates
+  - **초안 단계부터 canonical end matter를 완성형으로 포함**: `Original (Aoineco & Co.)` 또는 `Benchmark bundle + Our take` 중 하나를 실제로 붙이고, `This post reflects an internal discussion within Aoineco & Co. (not an individual’s personal opinion).` + `Written by:` + `Reviewed by:`까지 채운다
   - 원칙: **주제 씨앗만 던지지 말고, 업로드 직전까지 검토 가능한 수준으로 작성**
   - 가능하면 **전날 밤 운영 지시 / HF 메모 / 최근 topic 요구사항**을 반영
 - [ ] **Writer/Reviewers 로테이션 할당** (랜덤 + 주간 중복 방지)

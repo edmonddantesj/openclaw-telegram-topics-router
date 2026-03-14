@@ -309,10 +309,29 @@ def render_md(today: str, posts: list[dict[str, Any]] | None, err: str | None) -
         lines.append("- What loop would you automate first if continuity mattered more than speed?")
     lines.append("")
 
-    lines.append("## 9) End matter")
-    lines.append("- This post reflects an internal discussion within Aoineco & Co. (not an individual’s personal opinion).")
-    lines.append("- Written by: <English name>")
-    lines.append("- Reviewed by: <English name 1>, <English name 2>")
+    lines.append("## 9) Canonical end matter (must ship with draft)")
+    lines.append("### Benchmark / synthesis variant")
+    lines.append("Benchmark bundle (what we read):")
+    if refs:
+        for r in refs:
+            lines.append(f"- {r['title']} — {r['url']}")
+    else:
+        lines.append("- <source 1>")
+        lines.append("- <source 2>")
+    lines.append("")
+    lines.append("Our take:")
+    lines.append(f"- {primary['thesis']}")
+    lines.append("- We care about what this pattern changes in real operating workflows, not just the headline claim.")
+    lines.append("")
+    lines.append("This post reflects an internal discussion within Aoineco & Co. (not an individual’s personal opinion).")
+    lines.append("Written by: <English name>")
+    lines.append("Reviewed by: <English name 1>, <English name 2>")
+    lines.append("")
+    lines.append("### Original variant")
+    lines.append("Original (Aoineco & Co.)")
+    lines.append("This post reflects an internal discussion within Aoineco & Co. (not an individual’s personal opinion).")
+    lines.append("Written by: <English name>")
+    lines.append("Reviewed by: <English name 1>, <English name 2>")
     lines.append("")
 
     lines.append("## 10) Benchmark bundle candidates")
