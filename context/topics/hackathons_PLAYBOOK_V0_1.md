@@ -33,3 +33,7 @@ Proof (DM export tagged log):
 - 진행중 큰 작업: HF 1장 (`context/handoff/HF_*`)
 - 반복업무/규칙: 이 Playbook
 - 제출 패키지: `context/topics/hackathons/` 또는 `context/hackathons/`
+
+## Heukmyo support routing
+- 제출 패키지 준비 중 리서치/체크리스트/초안/비교표 지원이 필요할 때는 `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md` 기준으로 요청 범위를 구조화한다.
+- 최종 제출/외부 공개는 human gate 유지.

@@ -22,3 +22,7 @@
 
 ## Common pitfalls
 - GitHub auth 환경변수(`GITHUB_TOKEN`)가 `gh` 인증을 덮어쓰는 케이스 주의(필요 시 `env -u GITHUB_TOKEN gh ...`).
+
+## Heukmyo support routing
+- 범위가 큰 복구/재구축/설계 분해 요청은 `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md` 기준으로 흑묘팀 지원 요청을 구조화한다.
+- 기술성 높은 요청은 optional extension field(`Affected scope`, `Failure mode`)를 함께 붙인다.

@@ -34,3 +34,7 @@
 ## Where to record
 - 진행중 작업: `context/handoff/INDEX.md` + 개별 HF
 - 운영 규칙/반복업무: 이 Playbook + `context/ops/*` SSOT
+
+## Heukmyo support routing
+- 운영 체크리스트 초안, 장애 triage 정리, 복구/점검 문서화가 필요할 때는 `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md` 기준으로 요청을 구조화한다.
+- 재시작/모델 전환/서비스 변경은 human gate로 남긴다.
