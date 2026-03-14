@@ -37,4 +37,11 @@
 
 ## Heukmyo support routing
 - 운영 체크리스트 초안, 장애 triage 정리, 복구/점검 문서화가 필요할 때는 `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md` 기준으로 요청을 구조화한다.
+- Canonical policy source lives in `context/heukmyo-squad/playbook/` (GitHub canonical docs).
+- Workspace-local operating references for ops are:
+  - `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md`
+  - `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_EXAMPLES_V0_1.md`
+- For technical/ops requests, add optional extension fields when useful:
+  - `Affected scope`
+  - `Failure mode`
 - 재시작/모델 전환/서비스 변경은 human gate로 남긴다.

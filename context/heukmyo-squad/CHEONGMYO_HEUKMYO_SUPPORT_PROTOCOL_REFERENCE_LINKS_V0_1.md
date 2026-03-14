@@ -3,6 +3,19 @@
 ## 목적
 토픽 playbook에서 언제 이 프로토콜을 참조해야 하는지 빠르게 연결하기 위한 메모.
 
+## Canonical vs Local Reference
+
+- Canonical policy source:
+  - `context/heukmyo-squad/playbook/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_V0_2.md`
+  - `context/heukmyo-squad/playbook/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_TECH_EXTENSION_V0_1.md`
+- Workspace-local operating references:
+  - `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md`
+  - `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_EXAMPLES_V0_1.md`
+
+Rule:
+- Policy interpretation should follow canonical playbook docs.
+- Day-to-day topic routing and request drafting inside this workspace may use the local one-page/examples set.
+
 ## 권장 참조 추가 위치
 
 ### 1) inbox-dev PLAYBOOK
