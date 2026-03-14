@@ -1,0 +1,20 @@
+dialogue_id: null
+topic_id: 6062
+question: ""
+participants:
+  - 청묘
+  - 흑묘
+mode: idle
+turn_count: 0
+max_turns: 2
+current_turn_owner: null
+last_speaker: null
+last_message_summary: ""
+current_position_cheongmyo: ""
+current_position_heukmyo: ""
+provisional_conclusion: ""
+status: idle
+night_mode: false
+started_at_kst: null
+ended_at_kst: null
+last_updated_at_kst: null
