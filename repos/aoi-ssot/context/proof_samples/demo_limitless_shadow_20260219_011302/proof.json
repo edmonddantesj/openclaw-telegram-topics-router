@@ -1,0 +1,51 @@
+{
+  "schema": "aoi.proof.v0.1",
+  "run_id": "demo_limitless_shadow_20260219_011302",
+  "task": {
+    "kind": "ops",
+    "name": "aoi_squad_pro_oneclick_demo",
+    "inputs": {
+      "reference": "limitless_shadow",
+      "mode": "shadow-only"
+    }
+  },
+  "decision": {
+    "status": "approved",
+    "approved_by": "edmond",
+    "approved_at": "2026-02-18T16:25:25Z"
+  },
+  "artifacts": [
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_011302/artifacts/digest_12h_supabase.txt",
+      "sha256": "4c07adb719947eb50213df5ddc7ea78546ad5a31e2bc6e0c918e5c6cb63c7d69",
+      "note": "demo artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_011302/artifacts/limitless_ev_btc_hourly.jsonl.tail3",
+      "sha256": "185dad52d4aed5f1e4e519db6d7b6f35b4fd748662100fa79072d50d59959481",
+      "note": "demo artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_011302/artifacts/limitless_odds_btc_hourly.jsonl.tail3",
+      "sha256": "0f81876aa22f429a6647278e9f9c2d343e22f74bd0d2d3375226f73079bbe6e2",
+      "note": "demo artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_011302/artifacts/limitless_settle_btc_hourly.jsonl.tail3",
+      "sha256": "90a9fa7ea1b79adddfa6ec2545666d7ad300a93879d3d8e24670c7ae5798c286",
+      "note": "demo artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_011302/artifacts/public_safe_scan.txt",
+      "sha256": "181e2a8c47a824b6717b412f0e99a6c0a3462985aa105eebe2660e4dded40fbb",
+      "note": "demo artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_011302/artifacts/run_errors.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "note": "demo artifact"
+    }
+  ],
+  "summary": "One-click demo proof bundle for AOI Squad Pro (Limitless shadow reference pipeline).",
+  "created_at": "2026-02-18T16:25:25Z"
+}

@@ -1,0 +1,34 @@
+{
+  "version": "0.1.0",
+  "policy_rules": {
+    "exposure_tier_patterns": {
+      "OPEN": ["open", "public", "release", "announce", "press", "blog", "moltbook", "botmadang"],
+      "TEASER": ["teaser", "preview", "early", "pilot", "demo", "pre-release", "pre launch", "sample", "sampled", "draft", "beta"],
+      "STEALTH": ["stealth", "internal", "사내", "confidential", "restricted", "비공개", "internal-only", "prerelease", "preview-only", "private"],
+      "TOP SECRET": ["top secret", "tokenomics", "treasury", "distribution", "wallet private", "private key", "seed", "kyc", "kms", "signature", "signing"]
+    },
+    "l1_l2_l3_blocklist": [
+      "wallet", "sign", "signing", "private key", "onchain", "tx", "transaction", "deploy", "deploying", "deployments", "commit", "publishing", "external posting", "external post", "immutable", "permanent"
+    ],
+    "evidence_secret_patterns": [
+      "private key", "secret", "api key", "authorization", "bearer", "passwd", "password", "mnemonic", "seed phrase"
+    ]
+  },
+  "policy_score": {
+    "PASS": 0,
+    "WARN": 20,
+    "FAIL": 60
+  },
+  "policy_rule_weights": {
+    "exposure_tier": {"PASS": 0, "WARN": 10, "FAIL": 50},
+    "l1_l2_l3_boundary": {"PASS": 0, "WARN": 35, "FAIL": 60},
+    "evidence_integrity": {"PASS": 0, "WARN": 15, "FAIL": 50},
+    "github_public_final_policy": {"PASS": 0, "WARN": 20, "FAIL": 50}
+  },
+  "policy_threshold": {
+    "warn_conditional": 20,
+    "warn_hold": 55,
+    "score_hold": 80,
+    "score_conditional": 30
+  }
+}

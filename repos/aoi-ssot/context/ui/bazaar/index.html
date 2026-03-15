@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexus Bazaar — Registry (Search)</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#111826; --muted:#9bb0c9; --text:#e6eef8;
+      --chip:#1b2637; --line:#22324a; --accent:#7dd3fc;
+    }
+    body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+    header{padding:18px 20px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0b0f14,#0b0f14 60%,rgba(13,19,28,.6));}
+    h1{margin:0;font-size:16px;font-weight:700;letter-spacing:.2px}
+    .sub{margin-top:6px;color:var(--muted);font-size:12px}
+    .wrap{padding:16px 20px;max-width:1200px;margin:0 auto;}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px;}
+    .controls{display:grid;grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr 1fr;gap:10px;align-items:end;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;}
+    label{display:block;color:var(--muted);font-size:12px;margin:0 0 6px 0}
+    input,select{width:100%;background:#0c1320;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:9px 10px;outline:none;}
+    .btn{background:var(--accent);color:#082033;border:0;border-radius:8px;padding:10px 12px;font-weight:700;cursor:pointer}
+    .btn.secondary{background:#0c1320;color:var(--text);border:1px solid var(--line)}
+
+    table{width:100%;border-collapse:separate;border-spacing:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+    th,td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+    th{color:var(--muted);font-size:12px;text-align:left;background:#0f1726}
+    tr:last-child td{border-bottom:0}
+    .chip{display:inline-flex;gap:6px;align-items:center;background:var(--chip);border:1px solid var(--line);padding:3px 8px;border-radius:999px;color:var(--muted);font-size:12px;}
+    .temp{color:#dbeafe;font-weight:800}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .foot{margin-top:10px;color:var(--muted);font-size:12px}
+    @media (max-width: 980px){
+      .controls{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Nexus Bazaar — Registry (Search/Sort v0.1)</h1>
+      <div class="sub">Loads <code>registry_search_index.json</code> locally. Report-only pointers. TEASER-safe.</div>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="controls">
+      <div>
+        <label>Merchant (id/name contains)</label>
+        <input id="q" placeholder="e.g. blue, guardian, summarizer" />
+      </div>
+      <div>
+        <label>Stall type</label>
+        <select id="stall">
+          <option value="">(any)</option>
+          <option>FX_STALL</option>
+          <option>SKILL_STALL</option>
+          <option>AUDIT_STALL</option>
+        </select>
+      </div>
+      <div>
+        <label>Category</label>
+        <select id="category">
+          <option value="">(any)</option>
+          <option value="fx">fx</option>
+          <option value="skill">skill</option>
+          <option value="audit">audit</option>
+        </select>
+      </div>
+      <div>
+        <label>Sort</label>
+        <select id="sort">
+          <option value="temp_desc">Temp ↓</option>
+          <option value="temp_asc">Temp ↑</option>
+          <option value="date_desc">Date ↓</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn" id="apply">Apply</button>
+        <button class="btn secondary" id="reset">Reset</button>
+      </div>
+    </section>
+
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Stall</th>
+            <th>Merchant</th>
+            <th>🌡️ Temp</th>
+            <th>Badges</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Proof</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="foot" id="meta"></div>
+    </section>
+  </main>
+
+<script>
+const INDEX_URL = "../../proof_samples/nexus_bazaar_registry_v0_1/registry_search_index.json";
+
+function fmtPrice(p){
+  if(!p) return "-";
+  if(p.amount == null) return "-";
+  return `${p.amount} ${p.currency||""}`.trim();
+}
+
+function esc(s){
+  return (s??"").toString().replace(/[&<>\"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+function merchantHay(item){
+  const m=item.merchant||{};
+  return `${m.merchant_id||""} ${m.name||""}`.toLowerCase();
+}
+
+function sortFn(mode){
+  if(mode==="temp_asc") return (a,b)=>(a.merchant?.core_temp??-1)-(b.merchant?.core_temp??-1);
+  if(mode==="date_desc") return (a,b)=> (b.offer?.generated_at||"").localeCompare(a.offer?.generated_at||"");
+  return (a,b)=>(b.merchant?.core_temp??-1)-(a.merchant?.core_temp??-1);
+}
+
+async function loadIndex(){
+  const r = await fetch(INDEX_URL);
+  if(!r.ok) throw new Error(`Failed to load index: ${r.status}`);
+  return r.json();
+}
+
+function render(items){
+  const tbody=document.getElementById('rows');
+  tbody.innerHTML='';
+
+  for(const it of items){
+    const m=it.merchant||{};
+    const badges=(m.badges||[]).map(b=>`<span class=\"chip\">${esc(b)}</span>`).join(' ');
+    const proof=(it.pointers?.proof_latest)||"";
+
+    const tr=document.createElement('tr');
+    tr.innerHTML = `
+      <td>${esc(it.stall_type||"")}</td>
+      <td><div style="font-weight:800">${esc(m.name||m.merchant_id||"")}</div><div style="color:var(--muted);font-size:12px">${esc(m.merchant_id||"")}</div></td>
+      <td class="temp">${(m.core_temp!=null)? Number(m.core_temp).toFixed(1): "-"}</td>
+      <td>${badges || "-"}</td>
+      <td>${esc(it.offer?.category||"")}</td>
+      <td>${esc(fmtPrice(it.offer?.pricing))}</td>
+      <td>${proof? `<code>${esc(proof)}</code>` : "-"}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+
+  document.getElementById('meta').textContent = `Showing ${items.length} items`;
+}
+
+function applyFilters(all){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  const stall=document.getElementById('stall').value;
+  const category=document.getElementById('category').value;
+  const sort=document.getElementById('sort').value;
+
+  let items = all.slice();
+  if(q) items = items.filter(it => merchantHay(it).includes(q));
+  if(stall) items = items.filter(it => it.stall_type === stall);
+  if(category) items = items.filter(it => (it.offer?.category||"").toLowerCase() === category);
+  items.sort(sortFn(sort));
+  return items;
+}
+
+let ALL=[];
+
+(async ()=>{
+  try{
+    const idx = await loadIndex();
+    ALL = idx.items || [];
+    render(applyFilters(ALL));
+  }catch(e){
+    document.getElementById('meta').textContent = e.toString();
+  }
+})();
+
+document.getElementById('apply').addEventListener('click', ()=> render(applyFilters(ALL)));
+document.getElementById('reset').addEventListener('click', ()=>{
+  document.getElementById('q').value='';
+  document.getElementById('stall').value='';
+  document.getElementById('category').value='';
+  document.getElementById('sort').value='temp_desc';
+  render(applyFilters(ALL));
+});
+</script>
+</body>
+</html>

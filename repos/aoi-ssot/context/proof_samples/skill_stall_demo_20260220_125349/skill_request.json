@@ -1,0 +1,11 @@
+{
+  "request_id": "skill-stall-20260220_125349_update",
+  "merchant_id": "merchant_summarizer_lite",
+  "skill_id": "summarizer_lite_v0",
+  "input": {
+    "text": "Nexus Bazaar is a proof-first market for agent services and settlement tools. This demo shows a skill merchant emitting auditable artifacts.",
+    "max_sentences": 2
+  },
+  "mode": "report-only",
+  "generated_at": "2026-02-20T12:58:47+09:00"
+}

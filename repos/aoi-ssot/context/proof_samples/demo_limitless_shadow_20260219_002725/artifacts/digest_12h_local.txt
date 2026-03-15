@@ -1,0 +1,6 @@
+Limitless Shadow(12h) @ 02-19 00:27 KST
+- EV rows: 296 (uniq slugs 5)
+- Settles: 2 (total settle rows 2)
+- Edge-alignment proxy: n/a (no joined slugs yet)
+- Best YES: edge=+0.0540 p_yes=1.000 px_yes=0.946 strike=66712.47 (dollarbtc-above-dollar6671247-on-feb-18-1600-utc-1771427016250)
+- Best NO: edge=+0.2240 p_yes=0.000 px_yes=0.224 strike=68060.2 (dollarbtc-above-dollar6806020-on-feb-18-1600-utc-1771427060019)

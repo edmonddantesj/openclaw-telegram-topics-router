@@ -1,0 +1,169 @@
+{
+  "generated_at": "2026-02-20T15:07:26+09:00",
+  "run_id": "bazaar-search-index-20260220_1457",
+  "source_registry": "context/proof_samples/nexus_bazaar_registry_v0_1/registry_index_enriched.json",
+  "exposure": "TEASER",
+  "schema": "context/NEXUS_BAZAAR_SEARCH_INDEX_SCHEMA_V0_1.md",
+  "items": [
+    {
+      "item_id": "FX_STALL:merchant_blue_rfq:rfq",
+      "stall_type": "FX_STALL",
+      "merchant": {
+        "merchant_id": "merchant_blue_rfq",
+        "name": "Blue RFQ Stall",
+        "core_temp": 20.0,
+        "badges": [
+          "🛡️Guardian",
+          "🧬S-DNA"
+        ],
+        "trust": {
+          "guardian_pass": true,
+          "guardian_tier": "T1",
+          "sdna_verified": true
+        }
+      },
+      "offer": {
+        "kind": "rfq",
+        "category": "fx",
+        "pricing": null,
+        "generated_at": "2026-02-20T14:08:30+09:00"
+      },
+      "pointers": {
+        "profile_path": "context/proof_samples/bazaar_rfq_demo_20260220_124616/merchant_profiles/merchant_blue_rfq.merchant_profile.json",
+        "catalog_path": null,
+        "policy_path": null,
+        "proof_latest": "context/proof_samples/bazaar_rfq_demo_20260220_124616/",
+        "proof_samples": null
+      }
+    },
+    {
+      "item_id": "FX_STALL:merchant_red_guarded:rfq",
+      "stall_type": "FX_STALL",
+      "merchant": {
+        "merchant_id": "merchant_red_guarded",
+        "name": "Red Guarded Stall",
+        "core_temp": 4.0,
+        "badges": [],
+        "trust": {
+          "guardian_pass": false,
+          "guardian_tier": "T0",
+          "sdna_verified": false
+        }
+      },
+      "offer": {
+        "kind": "rfq",
+        "category": "fx",
+        "pricing": null,
+        "generated_at": "2026-02-20T14:08:30+09:00"
+      },
+      "pointers": {
+        "profile_path": "context/proof_samples/bazaar_rfq_demo_20260220_124616/merchant_profiles/merchant_red_guarded.merchant_profile.json",
+        "catalog_path": null,
+        "policy_path": null,
+        "proof_latest": "context/proof_samples/bazaar_rfq_demo_20260220_124616/",
+        "proof_samples": null
+      }
+    },
+    {
+      "item_id": "FX_STALL:merchant_silver_otc:rfq",
+      "stall_type": "FX_STALL",
+      "merchant": {
+        "merchant_id": "merchant_silver_otc",
+        "name": "Silver OTC Stall",
+        "core_temp": 14.0,
+        "badges": [
+          "🛡️Guardian"
+        ],
+        "trust": {
+          "guardian_pass": true,
+          "guardian_tier": "T1",
+          "sdna_verified": false
+        }
+      },
+      "offer": {
+        "kind": "rfq",
+        "category": "fx",
+        "pricing": null,
+        "generated_at": "2026-02-20T14:08:30+09:00"
+      },
+      "pointers": {
+        "profile_path": "context/proof_samples/bazaar_rfq_demo_20260220_124616/merchant_profiles/merchant_silver_otc.merchant_profile.json",
+        "catalog_path": null,
+        "policy_path": null,
+        "proof_latest": "context/proof_samples/bazaar_rfq_demo_20260220_124616/",
+        "proof_samples": null
+      }
+    },
+    {
+      "item_id": "SKILL_STALL:merchant_summarizer_lite:summarizer_lite_v0",
+      "stall_type": "SKILL_STALL",
+      "merchant": {
+        "merchant_id": "merchant_summarizer_lite",
+        "name": "Summarizer Lite Stall",
+        "core_temp": 14.0,
+        "badges": [
+          "🛡️Guardian"
+        ],
+        "trust": {
+          "guardian_pass": true,
+          "guardian_tier": "T1",
+          "sdna_verified": false
+        }
+      },
+      "offer": {
+        "kind": "skill",
+        "category": "skill",
+        "pricing": {
+          "mode": "per_call",
+          "amount": 0.01,
+          "currency": "USDC"
+        },
+        "generated_at": "2026-02-20T12:53:49+09:00"
+      },
+      "pointers": {
+        "profile_path": "context/proof_samples/skill_stall_demo_20260220_125349/merchant_profiles/merchant_summarizer_lite.merchant_profile.json",
+        "catalog_path": "context/proof_samples/skill_stall_demo_20260220_125349/skill_catalog.json",
+        "policy_path": null,
+        "proof_latest": "context/proof_samples/skill_stall_demo_20260220_125349/",
+        "proof_samples": null
+      }
+    },
+    {
+      "item_id": "AUDIT_STALL:merchant_guardian_audit:guardian_report_v0",
+      "stall_type": "AUDIT_STALL",
+      "merchant": {
+        "merchant_id": "merchant_guardian_audit",
+        "name": "Guardian Audit Stall",
+        "core_temp": 14.0,
+        "badges": [
+          "🛡️Guardian"
+        ],
+        "trust": {
+          "guardian_pass": true,
+          "guardian_tier": "T1",
+          "sdna_verified": false
+        }
+      },
+      "offer": {
+        "kind": "audit",
+        "category": "audit",
+        "pricing": {
+          "mode": "per_call",
+          "amount": 0.01,
+          "currency": "USDC"
+        },
+        "generated_at": "2026-02-20T13:50:02+09:00"
+      },
+      "pointers": {
+        "profile_path": "context/proof_samples/audit_stall_demo_20260220_140316_fail/merchant_profiles/merchant_guardian_audit.merchant_profile.json",
+        "catalog_path": "context/proof_samples/audit_stall_demo_20260220_140316_fail/skill_catalog.json",
+        "policy_path": "context/proof_samples/audit_stall_demo_20260220_140316_fail/audit_policy.json",
+        "proof_latest": "context/proof_samples/audit_stall_demo_20260220_140316_fail/",
+        "proof_samples": [
+          "context/proof_samples/audit_stall_demo_20260220_135002/",
+          "context/proof_samples/audit_stall_demo_20260220_140316_fail/"
+        ]
+      }
+    }
+  ]
+}

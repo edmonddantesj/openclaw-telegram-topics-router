@@ -1,0 +1,3 @@
+scripts/aoi_squad_pro_oneclick_demo.sh: line 27: timeout: command not found
+scripts/aoi_squad_pro_oneclick_demo.sh: line 27: timeout: command not found
+WARN: snapshot step failed rc=127 (continuing with existing local data if any)

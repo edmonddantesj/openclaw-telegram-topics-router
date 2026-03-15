@@ -1,0 +1,15 @@
+{
+  "request_id": "audit-stall-20260220_135002_severity",
+  "merchant_id": "merchant_guardian_audit",
+  "audit_id": "guardian_report_v0",
+  "generated_at": "2026-02-20T13:56:21+09:00",
+  "guardian_report": {
+    "tier": "T1",
+    "verdict": "PASS",
+    "risk": "low",
+    "findings": [],
+    "policy_id": "audit_policy_v0_1",
+    "policy_version": "0.1",
+    "notes": "Deterministic demo scan; do not treat as a full security audit."
+  }
+}

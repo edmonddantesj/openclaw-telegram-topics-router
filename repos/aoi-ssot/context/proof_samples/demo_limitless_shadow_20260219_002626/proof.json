@@ -1,0 +1,46 @@
+{
+  "schema": "aoi.proof.v0.1",
+  "run_id": "demo_limitless_shadow_20260219_002626",
+  "task": {
+    "kind": "ops",
+    "name": "aoi_squad_pro_oneclick_demo",
+    "inputs": {
+      "reference": "limitless_shadow",
+      "mode": "shadow-only"
+    }
+  },
+  "decision": {
+    "status": "approved",
+    "approved_by": "edmond",
+    "approved_at": "2026-02-18T15:27:40Z"
+  },
+  "artifacts": [
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_002626/artifacts/digest_12h_local.txt",
+      "sha256": "8ddfbfb6b537ab40553eaafb34f733175312d742f5029bff7ab21e754b773259",
+      "note": "demo artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_002626/artifacts/digest_12h_supabase.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "note": "demo artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_002626/artifacts/limitless_ev_btc_hourly.jsonl.tail3",
+      "sha256": "576343b495a9961725828067c619dd282899d7e236cce98e7dff65199c49631f",
+      "note": "demo artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_002626/artifacts/limitless_odds_btc_hourly.jsonl.tail3",
+      "sha256": "26d0ff295fd72e6d228e7e563743b2f828aa5d45eac17a06d12bba933f597043",
+      "note": "demo artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_002626/artifacts/limitless_settle_btc_hourly.jsonl.tail3",
+      "sha256": "b2dab0b9e5ba1dd4715e2aba272c25a760970284774e48bb12a69b671b2d763a",
+      "note": "demo artifact"
+    }
+  ],
+  "summary": "One-click demo proof bundle for AOI Squad Pro (Limitless shadow reference pipeline).",
+  "created_at": "2026-02-18T15:27:40Z"
+}

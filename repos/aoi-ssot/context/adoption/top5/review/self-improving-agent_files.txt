@@ -1,0 +1,26 @@
+self-improving-agent  self-improving-agent
+Summary: Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks.
+Owner: pskoett
+Created: 2026-01-05T17:03:18.365Z
+Updated: 2026-02-17T04:20:41.107Z
+Latest: 1.0.5
+Tags: latest=1.0.5
+Selected: 1.0.5
+Selected At: 2026-02-03T07:20:44.219Z
+Changelog: - fixed hook sub-agent bug by removing hook for sub-agent processes
+Files:
+SKILL.md  17KB  6234697e11dba69808d105f9cf9c96879a23301a707ceb37f0a0ae50fa2e381b
+.learnings/FEATURE_REQUESTS.md  84B  a6291573936034efaad57b43b6f57bdb35ed627f01ce9309b2c781da63563c37
+.learnings/ERRORS.md  75B  731f4a26fee7074d11e999920e5c3ca63b0e025b75a4d9966429ee88a2cb5988
+.learnings/LEARNINGS.md  99B  f5c1302498cad158c357426ac2aa73f6f05fda8b9103d47acb34d4851b76391c
+assets/SKILL-TEMPLATE.md  3.3KB  3ee008f80d53e0e576f7e747ac4c4e040ff659f02d3f5689a95524a3696e4881
+assets/LEARNINGS.md  1.1KB  33b0de6f4243ea31d913fab017ded852f13443fd1eb84c0983a670334260ff46
+scripts/activator.sh  680B  a751d91466c8c966f01ac32795871ceff0d1e177c7c186ca4201f962a5cc9be4  text/x-sh
+scripts/extract-skill.sh  4.6KB  a0ea0c897e081927305ad4993ef5ffcf37b4eb6d8afbbb08b3b7f7a1c873cd61  text/x-sh
+scripts/error-detector.sh  1.3KB  74f82bfd29bcc3615d4c9df0962f7d5e42af75431c029c0e14c2f6127c4787ba  text/x-sh
+hooks/openclaw/handler.js  1.6KB  19f21bdf74b9be3aa8ba2514dd0c727c841f799f948bb3c945ecc28b90be8b86  text/javascript
+hooks/openclaw/HOOK.md  589B  13294242f2fac134af2dcfcda7c273be98e57d26192989afb7a9ebcb5a1eb224
+hooks/openclaw/handler.ts  1.8KB  a2d4452b135622a7a3a225722cf9422ea85a8121e49607b386282425eb1d844d
+references/examples.md  8.1KB  c11e38794d78cfa1ba633d14232ec7e9808c14696e96a7bd9b8f4fe178f10451
+references/openclaw-integration.md  5.5KB  d7d426beb09e10016def1a45fc901c737fb3abcd101252ce81a9c32e69a78257
+references/hooks-setup.md  4.8KB  838ed1620db4bbe55fc281a61d6dfb1709437d6366ddb3006b70a04109695ab7

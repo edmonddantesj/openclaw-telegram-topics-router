@@ -1,0 +1,4 @@
+generated_at=2026-02-20T14:03:16+09:00
+run_id=audit-stall-fail-20260220_140316
+cmd=python3 scripts/audit_stall_demo_runner.py --merchant-id merchant_guardian_audit --audit-id guardian_report_v0 --input-file context/proof_samples/audit_stall_demo_20260220_140316_fail/fail_sample.txt --outdir context/proof_samples/audit_stall_demo_20260220_140316_fail
+mode=report-only

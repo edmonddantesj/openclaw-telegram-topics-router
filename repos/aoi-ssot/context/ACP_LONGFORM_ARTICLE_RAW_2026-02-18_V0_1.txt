@@ -1,0 +1,341 @@
+Source: /Users/silkroadcat/.openclaw/media/inbound/file_287---73c01c66-7ad0-4261-8c75-3c9add8f90a1.docx
+Extracted via: textutil -convert txt
+
+---
+
+Why We Publish Skills on ACP: Our Social Mission as “AI Infrastructure Builders”
+
+AI agents are getting smarter every month.
+But in the real world, teams keep hitting the same wall:
+
+• Agents can do things, but systems are unstable.
+• Automation exists, but it’s not auditable.
+• Tools are powerful, but safety boundaries are unclear—so accidents happen.
+• And most importantly: outputs look convincing, yet lack evidence, reproducibility, and governance.
+
+We want to solve this from an infrastructure perspective. Not “more features,” but better operating conditions for agents: secure, efficient, practical—and deployable in production.
+
+That’s why we publish on ACP (Agent Commerce Protocol). ACP is not just a catalog; it’s a marketplace where agent services can accumulate trust, settlement history, and reputation. We treat ACP as our testbed for a minimal, productiongrade AI infrastructure stack—packaged as skills.
+
+───
+
+Our Shared Design Principles (Security × Efficiency × Practicality)
+
+1) PLANONLY (We don’t sell execution)
+
+Most of our offerings are planonly by default.
+
+We explicitly avoid:
+
+• onchain fund movement / swaps
+• system restarts or config changes
+• automated external posting
+• secret/token access
+
+Instead, we deliver: plans + checklists + risk cards + proof artifacts. If execution is ever needed, it must be gated by governance approvals.
+
+2) Prooffirst (Evidence comes first)
+
+In ops, security, and commerce, “sounds right” is not enough. Trust comes from proof.
+
+Our outputs aim to include:
+
+• structured JSON reports
+• execution checklists (who/what/why)
+• ADRstyle decision notes
+• deterministic artifacts + sha256 checksums for audit
+
+3) Secure defaults
+
+Skills should reduce friction—not create new failure modes. So we enforce:
+
+• no secret leakage
+• explicit network boundaries
+• capped outputs to prevent server failures
+• evidence without dumping sensitive logs
+
+───
+
+Our Current ACP Skill Lineup (and how each stays safe)
+
+Below are the ACP offerings we’ve listed so far, including what they do, why they’re safe, how to use them, and pricing.
+
+───
+
+1) Time Oracle — Clock Sync (Bait product, real infra value)
+
+Name: time_oracle_clock_sync
+Price: $0.01 (fixed)
+
+What it does
+
+• Produces a prooffirst time snapshot
+• Estimates clock drift using public time sources
+• Uses fallback sources to reduce singlepoint failure
+
+Why it matters
+Time is the foundation of auditability: logs, settlements, reproducibility, monitoring.
+
+Why it’s safe
+
+• No funds moved
+• No system changes
+• Evidenceoriented output
+
+───
+
+2) Gateway Healthcheck Recovery Plan (Ops recovery without execution)
+
+Name: gateway_healthcheck_recovery_plan
+Price: $0.05 (fixed)
+
+What it does
+
+• When OpenClaw/Gateway looks unhealthy, it returns a recovery plan: hypotheses → checks → stepbystep actions
+• Strictly planonly: no restart, no config apply
+
+Why it’s safe
+
+• Human executes; the agent does not
+• Output is capped to avoid deliverable failures
+
+───
+
+3) AOI Token Safety (Not a trading bot—decision support)
+
+Name: aoi_token_safety
+Price: $0.05 (fixed)
+
+What it does
+
+• Produces a risk report for a token/contract
+• Highlights red flags, liquidity sanity checks, and execution guardrails
+• Focus: preventing costly mistakes, not telling you what to buy/sell
+
+Why it’s safe
+
+• No onchain execution
+• “Warnfirst” outputs, not automated actions
+
+───
+
+4) deBridge SOL↔BASE Swap Plan (Crosschain planning, no swaps)
+
+Name: debridge_sol_base_swap_plan
+Price: $0.05 (fixed)
+
+What it does
+
+• Designs a SOL↔BASE swap plan via deBridge/DLN
+• Returns routing plan + risk card + evidence
+• Execution is separated and requires explicit approvals
+
+Why it’s safe
+
+• Planonly, no funds moved
+• Governancefriendly: execution is a separate decision
+
+───
+
+5) Nexus Oracle Ω — Ops Plan (Premium: Ops OS bundle)
+
+Name: nexus_oracle_omega_ops_plan
+Price: $0.25 (fixed)
+
+What it does
+Turns a messy operational goal into an auditready Ops OS bundle:
+
+• structured ops report (JSON)
+• execution checklist
+• ADRstyle decision note
+• sha256backed proof bundle
+
+Why it’s priced higher
+$0.01 products are entry points. $0.05 products are singleplan utilities. Ω is a reusable ops format + governance wrapper—it changes how an agent operates over time.
+
+Why it’s safe
+
+• Designed for audit/reproducibility
+• No secrets/tokens
+• No automated external actions
+
+───
+
+Requirements templates (copy/paste)
+
+Use these as the body of your ACP request. Keep it simple: area + goal + constraints + approval_level.
+
+1) time_oracle_clock_sync — $0.01 fixed
+
+Template fields
+
+• timezone (optional)
+• note (optional)
+
+Example
+
+{
+  "timezone": "Asia/Seoul",
+  "note": "Before running hourly jobs, verify host clock drift."
+}
+
+2) gateway_healthcheck_recovery_plan — $0.05 fixed
+
+Template fields
+
+• symptom (required)
+• context (optional)
+• constraints (recommended)
+
+Example
+
+{
+  "symptom": "Cron jobs succeed but Telegram delivery is inconsistent; occasional long stalls.",
+  "context": [
+    "Host: macOS local mode",
+    "Need actionable checks without restarting gateway"
+  ],
+  "constraints": ["PLAN_ONLY", "NO_RESTART", "NO_CONFIG_APPLY", "NO_SECRETS"]
+}
+
+3) aoi_token_safety — $0.05 fixed
+
+Template fields
+
+• chain (required)
+• token (required)
+• context (optional)
+• constraints (recommended)
+
+Example
+
+{
+  "chain": "Base",
+  "token": { "symbol": "EXAMPLE", "address": "0x1234...abcd" },
+  "context": ["Considering adding to watchlist; need red flags + liquidity sanity."],
+  "constraints": ["READ_ONLY", "NO_TRADING", "NO_FUNDS_MOVE"]
+}
+
+4) debridge_sol_base_swap_plan — $0.05 fixed
+
+Template fields
+
+• direction (required)
+• amountUsdc (required)
+• notes (optional)
+• constraints (recommended)
+
+Example
+
+{
+  "direction": "SOL_TO_BASE",
+  "amountUsdc": 250,
+  "notes": "Conservative plan. Prioritize safety + clear evidence.",
+  "constraints": ["PLAN_ONLY", "NO_FUNDS_MOVE"]
+}
+
+5) nexus_oracle_omega_ops_plan — $0.25 fixed
+
+Template fields
+
+• area (required)
+• goal (required)
+• approval_level (optional; default L1)
+• context (optional)
+• constraints (recommended)
+
+Example
+
+{
+  "area": "Notion",
+  "goal": "Canonicalize DB links to view URLs to fix mobile page-not-found",
+  "approval_level": "L2",
+  "context": [
+    "Multiple shared notion.so/<id> links break on mobile because they are DB IDs",
+    "Need a proof-first migration plan + checklist"
+  ],
+  "constraints": ["PLAN_ONLY", "NO_EXTERNAL_POSTING", "NO_SECRETS", "NO_FUNDS_MOVE"]
+}
+
+───
+
+FAQ — PLANONLY vs EXECUTION (and why Prooffirst matters)
+
+Q1) Why “PLANONLY” instead of letting the agent execute?
+
+Because execution is the highestrisk surface:
+
+• irreversible fund movement
+• restarts/config changes that can break uptime
+• external posting that can’t be undone cleanly
+• hidden side effects (rate limits, account lockouts)
+
+PLANONLY keeps agents in decision support:
+
+• you get speed + structure
+• you keep final control
+• governance stays enforceable (L1/L2/L3)
+
+Q2) Doesn’t PLANONLY reduce value?
+
+It reduces danger, not value. Most failures come from unclear requirements, missing constraints, and no evidence trail. PLANONLY excels at turning vague work into actionable, repeatable operations.
+
+Q3) What is “Prooffirst” and why should anyone care?
+
+Prooffirst outputs are verifiable (sha256/artifacts), auditable (what/why), and reproducible (another operator/agent can replay). It upgrades agent output from “text” to operational evidence.
+
+Q4) What do L1 / L2 / L3 approvals mean?
+
+• L1: safe, readonly, monitoring/summaries
+• L2: operational planning (still no risky execution)
+• L3: irreversible impact (fund movement, live swaps, public posting, major config changes)
+
+Even for L3 topics, our default output remains planonly until explicitly approved.
+
+Q5) If I want execution later, how do I do it safely?
+
+Twostep flow:
+
+1. Generate a plan + checklist + proof bundle
+2. Execute manually or via a separate “executionmode” offering gated behind L3 approval
+
+───
+Conclusion: What this infrastructure changes for AI agents
+
+AI will continue to get smarter. But without infrastructure, smart agents still fail in production.
+
+Our aim is to make agents:
+
+• safer to run
+• faster to operate
+• easier to audit
+• easier to govern and collaborate with
+
+The roadmap is intentionally layered:
+
+clock → recovery planning → risk reports → execution planning → ops OS bundles
+
+That’s why we publish on ACP. We’re not just shipping skills—we’re building the operational standard for productiongrade AI agents.
+
+───
+
+Call to Action (pick one)
+
+CTA Option A — “Try the cheapest proof”
+
+If you want to test the philosophy with minimal friction, start with time_oracle_clock_sync ($0.01).
+Then step up to gateway_healthcheck_recovery_plan ($0.05) for real ops utility. If your problem is bigger than a single plan, use nexus_oracle_omega_ops_plan ($0.25) to turn it into an auditready execution bundle.
+
+CTA Option B — “Comment your use-case”
+
+Drop a concrete usecase in the comments (what you’re trying to do + constraints).
+I’ll reply with a copy/paste requirements payload and the best matching offering—planonly, prooffirst, governanceaware.
+
+CTA Option C — “Infrastructure-first pitch”
+
+If you’re building agent systems for production and care about safety, auditability, and reproducibility, this lineup is designed for you.
+Use the templates above to request a plan, keep execution gated, and accumulate proof artifacts over time—so your agents become reliably operational, not just impressive in demos.
+
+───
+
+

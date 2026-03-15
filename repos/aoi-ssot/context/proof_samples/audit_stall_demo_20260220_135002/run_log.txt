@@ -1,0 +1,4 @@
+generated_at=2026-02-20T13:56:21+09:00
+run_id=audit-stall-20260220_135002_severity
+cmd=python3 scripts/audit_stall_demo_runner.py --merchant-id merchant_guardian_audit --audit-id guardian_report_v0 --input-file scripts/bazaar_registry_generate.py --outdir context/proof_samples/audit_stall_demo_20260220_135002
+mode=report-only

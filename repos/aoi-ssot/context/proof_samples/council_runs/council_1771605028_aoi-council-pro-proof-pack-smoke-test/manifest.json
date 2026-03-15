@@ -1,0 +1,113 @@
+{
+  "run_id": "council_1771605028_aoi-council-pro-proof-pack-smoke-test",
+  "timestamp": "2026-02-20T16:30:28.337161+00:00",
+  "executor": "pro",
+  "schema": {
+    "council_runner_version": "0.1.2",
+    "proof_pack_schema_version": "0.1"
+  },
+  "inputs": {
+    "mode": "planning",
+    "topic": "AOI Council Pro proof pack smoke test",
+    "context": "Need proof pack + smart roster"
+  },
+  "roles": [
+    {
+      "id": "oracle",
+      "label": "🧿 Oracle",
+      "role": "Decision Frame / Veto Gate",
+      "agent_id": "blue-oracle",
+      "output": "[BLUE-ORACLE] (Pro Mode) acknowledged task: 'AOI Council Pro proof pack smo...'",
+      "status": "success"
+    },
+    {
+      "id": "strategy",
+      "label": "🧠 Strategy",
+      "role": "Scoring & Trade-offs",
+      "agent_id": "blue-brain",
+      "output": "[BLUE-BRAIN] (Pro Mode) acknowledged task: 'AOI Council Pro proof pack smo...'",
+      "status": "success"
+    },
+    {
+      "id": "security",
+      "label": "⚔️ Security",
+      "role": "Security / Compliance",
+      "agent_id": "blue-blade",
+      "output": "[BLUE-BLADE] (Pro Mode) acknowledged task: 'AOI Council Pro proof pack smo...'",
+      "status": "success"
+    },
+    {
+      "id": "builder",
+      "label": "⚡ Builder",
+      "role": "Feasibility / Implementation",
+      "agent_id": "blue-flash",
+      "output": "[BLUE-FLASH] (Pro Mode) acknowledged task: 'AOI Council Pro proof pack smo...'",
+      "status": "success"
+    },
+    {
+      "id": "comms",
+      "label": "📢 Comms",
+      "role": "Messaging / Community",
+      "agent_id": "blue-sound",
+      "output": "[BLUE-SOUND] (Pro Mode) acknowledged task: 'AOI Council Pro proof pack smo...'",
+      "status": "success"
+    },
+    {
+      "id": "record",
+      "label": "🗂️ Record",
+      "role": "SSOT Logging / Proof Bundling",
+      "agent_id": "blue-record",
+      "output": "[BLUE-RECORD] (Pro Mode) acknowledged task: 'AOI Council Pro proof pack smo...'",
+      "status": "success"
+    },
+    {
+      "id": "ops",
+      "label": "⚙️ Ops",
+      "role": "Reliability / Observability",
+      "agent_id": "blue-gear",
+      "output": "[BLUE-GEAR] (Pro Mode) acknowledged task: 'AOI Council Pro proof pack smo...'",
+      "status": "success"
+    },
+    {
+      "id": "risk",
+      "label": "💊 Risk",
+      "role": "Devil's Advocate / Circuit Breaker",
+      "agent_id": "blue-med",
+      "output": "[BLUE-MED] (Pro Mode) acknowledged task: 'AOI Council Pro proof pack smo...'",
+      "status": "success"
+    },
+    {
+      "id": "quality",
+      "label": "🧼 Quality",
+      "role": "QA / Edge Cases",
+      "agent_id": "blue-clean",
+      "output": "[BLUE-CLEAN] (Pro Mode) acknowledged task: 'AOI Council Pro proof pack smo...'",
+      "status": "success"
+    }
+  ],
+  "verdict": {},
+  "failures": [],
+  "roster": {
+    "selected": [
+      "oracle",
+      "strategy",
+      "security",
+      "builder",
+      "comms",
+      "record",
+      "ops",
+      "risk",
+      "quality"
+    ],
+    "full_count": 11,
+    "selected_count": 9,
+    "policy": "smart_roster_v0.1"
+  },
+  "outputs": {
+    "proof_pack_dir": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1771605028_aoi-council-pro-proof-pack-smoke-test",
+    "report_md": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1771605028_aoi-council-pro-proof-pack-smoke-test/report.md",
+    "manifest_json": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1771605028_aoi-council-pro-proof-pack-smoke-test/manifest.json",
+    "policy_check_json": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1771605028_aoi-council-pro-proof-pack-smoke-test/policy_check.json",
+    "actions_md": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1771605028_aoi-council-pro-proof-pack-smoke-test/actions.md"
+  }
+}

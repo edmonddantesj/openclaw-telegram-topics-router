@@ -1,0 +1,17 @@
+{
+  "request_id": "bazaar-rfq-20260220_124616_routingreport",
+  "merchant_id": "merchant_blue_rfq",
+  "status": "OK",
+  "price": 3096.5,
+  "fee_bps": 12,
+  "fee_estimate": 1.2,
+  "latency_ms": 180,
+  "valid_until_sec": 15,
+  "amount_out_estimate": 0.3229452607782981,
+  "settlement_options": [
+    "x402",
+    "invoice",
+    "onchain-intent"
+  ],
+  "received_before_deadline": true
+}

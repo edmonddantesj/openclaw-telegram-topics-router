@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "score": 0,
+  "fail_count": 0,
+  "warn_count": 0,
+  "weighted_breakdown": [
+    {
+      "id": "exposure_tier",
+      "status": "PASS",
+      "weight": 0
+    },
+    {
+      "id": "l1_l2_l3_boundary",
+      "status": "PASS",
+      "weight": 0
+    },
+    {
+      "id": "evidence_integrity",
+      "status": "PASS",
+      "weight": 0
+    },
+    {
+      "id": "github_public_final_policy",
+      "status": "PASS",
+      "weight": 0
+    }
+  ]
+}

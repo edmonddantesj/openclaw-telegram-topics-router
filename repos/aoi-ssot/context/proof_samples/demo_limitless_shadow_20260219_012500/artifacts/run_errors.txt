@@ -1,0 +1,2 @@
+/etc/profile: fork: Resource temporarily unavailable
+/Users/silkroadcat/.openclaw/workspace/scripts/limitless/run_btc_shadow_snapshot.sh: fork: Resource temporarily unavailable

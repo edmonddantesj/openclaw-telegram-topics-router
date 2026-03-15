@@ -1,0 +1,23 @@
+{
+  "merchant_id": "merchant_blue_rfq",
+  "name": "Blue RFQ Stall",
+  "version": "0.1",
+  "quote_modes": ["RFQ"],
+  "supported_pairs": ["USDC/ETH"],
+  "size_limits": {"min": 10, "max": 100000},
+  "fees_model": "fee_bps + external settlement fees (est.)",
+  "constraints": ["report-only", "no custody", "no auto-signing"],
+  "contact": {"preferred": "notion", "handle": "(demo)"},
+  "trust": {
+    "guardian_pass": true,
+    "guardian_tier": "T1",
+    "sdna_verified": true,
+    "core_temp": null,
+    "last_audited_at": "2026-02-20T12:46:16+09:00"
+  },
+  "settlement": {"supported_options": ["x402", "invoice", "onchain-intent"], "execution": "report-only"},
+  "evidence_paths": [
+    "context/proof_samples/bazaar_rfq_demo_20260220_124616/",
+    "context/NEXUS_BAZAAR_AGGREGATOR_SPEC_V0_1.md"
+  ]
+}

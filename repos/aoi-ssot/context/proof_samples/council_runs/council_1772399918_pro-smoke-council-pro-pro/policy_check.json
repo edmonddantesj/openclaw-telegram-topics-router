@@ -1,0 +1,69 @@
+{
+  "version": "0.1",
+  "executed_at": "2026-03-01T21:18:42.376193+00:00",
+  "mode": "pro",
+  "mode_requested": "pro",
+  "evidence_id": "ag-20260301T211842Z-0b6eeae2",
+  "action_decision": "ALLOW",
+  "action_gates": {
+    "default_decision": "ALLOW",
+    "review_reasons": [],
+    "evidence": {
+      "id": "ag-20260301T211842Z-0b6eeae2",
+      "decision": "ALLOW",
+      "score": 0,
+      "status": "PASS"
+    }
+  },
+  "summary": {
+    "status": "PASS",
+    "score": 0,
+    "fail_count": 0,
+    "warn_count": 0,
+    "weighted_breakdown": [
+      {
+        "id": "exposure_tier",
+        "status": "PASS",
+        "weight": 0
+      },
+      {
+        "id": "l1_l2_l3_boundary",
+        "status": "PASS",
+        "weight": 0
+      },
+      {
+        "id": "evidence_integrity",
+        "status": "PASS",
+        "weight": 0
+      },
+      {
+        "id": "github_public_final_policy",
+        "status": "PASS",
+        "weight": 0
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "exposure_tier",
+      "status": "PASS",
+      "tier": "OPEN",
+      "note": "No restricted exposure keyword matched. default OPEN."
+    },
+    {
+      "id": "l1_l2_l3_boundary",
+      "status": "PASS",
+      "note": "No L3 trigger found in topic/context."
+    },
+    {
+      "id": "evidence_integrity",
+      "status": "PASS",
+      "note": "No evidence paths provided. This is allowed for local runs."
+    },
+    {
+      "id": "github_public_final_policy",
+      "status": "PASS",
+      "note": "PASS: runner mode is report-only and does not mutate public repositories."
+    }
+  ]
+}

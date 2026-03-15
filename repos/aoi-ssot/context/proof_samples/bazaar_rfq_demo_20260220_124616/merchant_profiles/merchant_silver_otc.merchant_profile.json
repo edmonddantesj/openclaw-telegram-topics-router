@@ -1,0 +1,23 @@
+{
+  "merchant_id": "merchant_silver_otc",
+  "name": "Silver OTC Stall",
+  "version": "0.1",
+  "quote_modes": ["OTC"],
+  "supported_pairs": ["USDC/ETH"],
+  "size_limits": {"min": 50, "max": 250000},
+  "fees_model": "fee_bps + external settlement fees (est.)",
+  "constraints": ["report-only", "no custody", "no auto-signing"],
+  "contact": {"preferred": "notion", "handle": "(demo)"},
+  "trust": {
+    "guardian_pass": true,
+    "guardian_tier": "T1",
+    "sdna_verified": false,
+    "core_temp": null,
+    "last_audited_at": "2026-02-20T12:46:16+09:00"
+  },
+  "settlement": {"supported_options": ["x402", "invoice", "onchain-intent"], "execution": "report-only"},
+  "evidence_paths": [
+    "context/proof_samples/bazaar_rfq_demo_20260220_124616/",
+    "context/NEXUS_BAZAAR_AGGREGATOR_SPEC_V0_1.md"
+  ]
+}

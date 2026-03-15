@@ -1,0 +1,21 @@
+{
+  "version": "0.1",
+  "checks": [
+    {
+      "id": "exposure_tier",
+      "status": "PASS",
+      "note": "stub: no automatic exposure-tier inference implemented yet"
+    },
+    {
+      "id": "l1_l2_l3_boundary",
+      "status": "PASS",
+      "note": "stub: runner is report-only; no money/signing/posting"
+    },
+    {
+      "id": "github_public_final_policy",
+      "status": "PASS",
+      "note": "stub: runner does not mutate public repos"
+    }
+  ],
+  "ts": "2026-02-20T16:30:33.841637+00:00"
+}

@@ -1,0 +1,30 @@
+AOI Squad Pro — Daily Case Study Dashboard (ASCII Wireframe) v0.1
+
++-----------------------------------------------------------------------------------+
+| AOI Squad Pro — Daily Ops Case Study                         [Date: YYYY-MM-DD]  |
++-------------------------------+---------------------------------------------------+
+| Summary (last 24h)            | Latest Proof Bundles                              |
+|-------------------------------|---------------------------------------------------|
+| Total bundles:  364           | run_id                               status       |
+| PASS: 234   FAIL: 51          | demo_limitless_shadow_...012918       PASS         |
+| UNKNOWN: 79                   | demo_limitless_shadow_...012827       PASS         |
+|                               | v6_hourly_bundle_...                 PASS/UNK      |
+| PASS rate: 64.3%              | ...                                               |
+|                               |                                                   |
+| Limitless Shadow (12h)        | Evidence links                                     |
+|-------------------------------|---------------------------------------------------|
+| Odds rows: 11                 | Saved report: context/case_studies/daily/...md     |
+| EV rows:   9                  | Pinned demo:  context/proof_samples/public/...     |
+| Settles:   1                  | Proof schema: aoi-core/docs/PROOF_SCHEMA_V0_1.json |
+| Best YES: edge +0.0155        |                                                   |
+| Best NO : edge +0.0310        |                                                   |
+|                               |                                                   |
+| Actions:                      | Trend (7 days)                                     |
+|  [Open Telegram digest]       | +-----------------------------------------------+  |
+|  [Open saved markdown]        | | PASS rate sparkline / bundles count           |  |
+|  [Open proof root]            | +-----------------------------------------------+  |
++-------------------------------+---------------------------------------------------+
+
+Notes:
+- This is a shareable ops report UI: neutral, evidence-first.
+- "Latest Proof Bundles" becomes the audit trail. "Trend" shows stability.

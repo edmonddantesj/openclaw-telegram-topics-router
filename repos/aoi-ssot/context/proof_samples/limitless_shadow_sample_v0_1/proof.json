@@ -1,0 +1,40 @@
+{
+  "schema": "aoi.proof.v0.1",
+  "run_id": "limitless_shadow_sample_20260219_000807",
+  "task": {
+    "kind": "ops",
+    "name": "limitless_btc_hourly_shadow_sample",
+    "inputs": {
+      "mode": "shadow-only"
+    }
+  },
+  "decision": {
+    "status": "approved",
+    "approved_by": "edmond",
+    "approved_at": "2026-02-18T15:08:07Z"
+  },
+  "artifacts": [
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/limitless_shadow_sample_v0_1/artifacts/digest_12h_supabase.txt",
+      "sha256": "e36bb3a837eb969c78ce459693badc3e37683a5283918d9d2b7dd2b7407ad5b1",
+      "note": "sample artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/limitless_shadow_sample_v0_1/artifacts/limitless_ev_btc_hourly.jsonl.tail3",
+      "sha256": "808d6f36cb31c5b78fa72933f2e3d68043872e9a45d7e052d16fcac2630a5aa7",
+      "note": "sample artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/limitless_shadow_sample_v0_1/artifacts/limitless_odds_btc_hourly.jsonl.tail3",
+      "sha256": "66c3e53b8339f436a622a27cf5a01b243c54f44a1dbb4423f0bc84820cdde9ea",
+      "note": "sample artifact"
+    },
+    {
+      "path": "/Users/silkroadcat/.openclaw/workspace/context/proof_samples/limitless_shadow_sample_v0_1/artifacts/limitless_settle_btc_hourly.jsonl.tail3",
+      "sha256": "b2dab0b9e5ba1dd4715e2aba272c25a760970284774e48bb12a69b671b2d763a",
+      "note": "sample artifact"
+    }
+  ],
+  "summary": "Sample proof bundle for Limitless BTC hourly shadow pipeline (odds/EV/settle + Supabase digest).",
+  "created_at": "2026-02-18T15:08:07Z"
+}

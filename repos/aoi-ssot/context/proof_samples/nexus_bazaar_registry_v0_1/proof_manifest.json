@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-02-20T14:08:30+09:00",
+  "run_id": "bazaar-registry-auto-20260220_141000",
+  "inputs_digest": "46443bef34a5d36ef1c9e776d541184f0160c108a0e4fb6a3f8993c72bb778cf",
+  "exposure_tier": "OPEN",
+  "approvals": [],
+  "evidence_paths": [
+    "context/NEXUS_BAZAAR_REGISTRY_INDEX_SCHEMA_V0_1.md",
+    "aoi-core/docs/ARTIFACTS_STANDARD_V0_1.md"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "20fc93bb0aa4504ebd9c15ebe9fdeba2c68a9e2da6b9ddc0dc5eb8a9ef3cf78a",
+      "bytes": 1615
+    },
+    {
+      "path": "proof_manifest.json",
+      "sha256": "2a52b25448c06c1f785118b835ccc3d79e83ec19ced771ad86fa4a65b4cb3649",
+      "bytes": 382
+    },
+    {
+      "path": "registry_index.json",
+      "sha256": "46443bef34a5d36ef1c9e776d541184f0160c108a0e4fb6a3f8993c72bb778cf",
+      "bytes": 2886
+    },
+    {
+      "path": "run_log.txt",
+      "sha256": "563bed93bb84cef5a11f517e496a400af0e131f857677d99c75d362c75a943cc",
+      "bytes": 391
+    },
+    {
+      "path": "sha256sum.txt",
+      "sha256": "55c59c0ac01b15b31c1a59db7b9819f36763abe4af8450680df5ddb5e8c3deac",
+      "bytes": 406
+    }
+  ],
+  "self_sha256": "2a52b25448c06c1f785118b835ccc3d79e83ec19ced771ad86fa4a65b4cb3649"
+}

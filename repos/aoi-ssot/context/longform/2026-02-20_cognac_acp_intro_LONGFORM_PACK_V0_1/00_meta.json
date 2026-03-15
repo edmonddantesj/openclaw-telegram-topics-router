@@ -1,0 +1,10 @@
+{
+  "title": "Virtuals Protocol & ACP 입문기 (꼬냑님 아티클 공유)",
+  "source": "docx", 
+  "inbox_docx": "context/aoi_core_history_inbox/longform_20260220_111547.docx",
+  "inbox_txt": "context/aoi_core_history_inbox/longform_20260220_111547.docx.txt",
+  "sha256": "023640c8b4ab0e659bb94032e27448467ff3d051e3d1e7a2e6d5b4bdac152ad2",
+  "date_kst": "2026-02-20",
+  "triage": "B",
+  "storage_policy": "B: no fulltext local storage by default; keep thick summary + evidence. (inbox retains raw unless we purge)"
+}

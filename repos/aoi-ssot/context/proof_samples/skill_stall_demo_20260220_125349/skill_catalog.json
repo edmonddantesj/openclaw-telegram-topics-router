@@ -1,0 +1,16 @@
+{
+  "merchant_id": "merchant_summarizer_lite",
+  "generated_at": "2026-02-20T12:53:49+09:00",
+  "skills": [
+    {
+      "skill_id": "summarizer_lite_v0",
+      "name": "Summarizer Lite",
+      "category": "skill",
+      "pricing": {"mode": "per_call", "amount": 0.01, "currency": "USDC"},
+      "io": {"input": ["text"], "output": ["summary"]},
+      "constraints": ["report-only demo", "no external calls"],
+      "evidence_paths": ["context/proof_samples/skill_stall_demo_20260220_125349/"],
+      "exposure": "OPEN"
+    }
+  ]
+}

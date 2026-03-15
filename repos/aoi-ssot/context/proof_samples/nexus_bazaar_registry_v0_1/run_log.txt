@@ -1,0 +1,4 @@
+generated_at=2026-02-20T14:08:30+09:00
+run_id=bazaar-registry-auto-20260220_141000
+cmd=python3 scripts/bazaar_registry_generate.py --outdir context/proof_samples/nexus_bazaar_registry_v0_1 --fx-sample context/proof_samples/bazaar_rfq_demo_20260220_124616 --skill-sample context/proof_samples/skill_stall_demo_20260220_125349 --auto True --samples-root context/proof_samples
+mode=report-only

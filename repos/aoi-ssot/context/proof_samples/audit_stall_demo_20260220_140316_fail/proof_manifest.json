@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-02-20T14:03:16+09:00",
+  "run_id": "audit-stall-fail-20260220_140316",
+  "inputs_digest": "db16f1afcf4e8bf8eaf32b6c6ab82635cf0e3d811df688eaf45f06b35bdeaaac",
+  "exposure_tier": "OPEN",
+  "approvals": [],
+  "evidence_paths": [
+    "aoi-core/docs/ARTIFACTS_STANDARD_V0_1.md",
+    "context/NEXUS_BAZAAR_AGGREGATOR_SPEC_V0_1.md"
+  ],
+  "files": [
+    {
+      "path": "audit_policy.json",
+      "sha256": "8c27cf19866a294b162cebc052e93e5996fdee8472469a5337ed444f20b79985",
+      "bytes": 1145
+    },
+    {
+      "path": "audit_request.json",
+      "sha256": "db16f1afcf4e8bf8eaf32b6c6ab82635cf0e3d811df688eaf45f06b35bdeaaac",
+      "bytes": 668
+    },
+    {
+      "path": "decision_summary.md",
+      "sha256": "a9a1e2a2913e35fd0cee5ee9bf1cb8ecff7985fbdf0b08d312ecd43a85c40267",
+      "bytes": 566
+    },
+    {
+      "path": "fail_sample.txt",
+      "sha256": "c7b3b8d6bf10a616aa2cd5cbe099ecc69d7900246d23fc85eaede22460bb42e2",
+      "bytes": 138
+    },
+    {
+      "path": "guardian_report.json",
+      "sha256": "479489885829a4844cb7595349138d5a4488e4a8896b042845fe70ac940561eb",
+      "bytes": 572
+    },
+    {
+      "path": "merchant_profiles/merchant_guardian_audit.merchant_profile.json",
+      "sha256": "a13118cf880c90659ea7dc4e7ad1c4a5ce0547679ad53200f82e852cd2ac7234",
+      "bytes": 762
+    },
+    {
+      "path": "proof_manifest.json",
+      "sha256": "b2423db6307e28e46c9517ce86b0e5ec95c4d5e4ea53fb9d2064f77d722cce3d",
+      "bytes": 372
+    },
+    {
+      "path": "run_log.txt",
+      "sha256": "fdfe04e6ebd6c49616b5e68dc2c343a338944e3036da2282e314cd98a2c46f30",
+      "bytes": 369
+    },
+    {
+      "path": "skill_catalog.json",
+      "sha256": "810735a3958577b5e7fc93e5dc2b6451be52dba9fcb4182950824b36967cf473",
+      "bytes": 550
+    }
+  ],
+  "self_sha256": "b2423db6307e28e46c9517ce86b0e5ec95c4d5e4ea53fb9d2064f77d722cce3d"
+}

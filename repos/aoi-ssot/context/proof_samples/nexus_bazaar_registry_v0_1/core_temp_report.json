@@ -1,0 +1,46 @@
+{
+  "computed_at": "2026-02-20T14:34:41+09:00",
+  "registry": "context/proof_samples/nexus_bazaar_registry_v0_1/registry_index.json",
+  "count": 5,
+  "results": [
+    {
+      "merchant_id": "merchant_blue_rfq",
+      "type": "FX_STALL",
+      "core_temp": 20.0,
+      "badges": [
+        "🛡️Guardian",
+        "🧬S-DNA"
+      ]
+    },
+    {
+      "merchant_id": "merchant_red_guarded",
+      "type": "FX_STALL",
+      "core_temp": 4.0,
+      "badges": []
+    },
+    {
+      "merchant_id": "merchant_silver_otc",
+      "type": "FX_STALL",
+      "core_temp": 14.0,
+      "badges": [
+        "🛡️Guardian"
+      ]
+    },
+    {
+      "merchant_id": "merchant_summarizer_lite",
+      "type": "SKILL_STALL",
+      "core_temp": 14.0,
+      "badges": [
+        "🛡️Guardian"
+      ]
+    },
+    {
+      "merchant_id": "merchant_guardian_audit",
+      "type": "AUDIT_STALL",
+      "core_temp": 14.0,
+      "badges": [
+        "🛡️Guardian"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "request_id": "audit-stall-fail-20260220_140316",
+  "merchant_id": "merchant_guardian_audit",
+  "audit_id": "guardian_report_v0",
+  "policy": {
+    "path": "context/proof_samples/audit_stall_demo_20260220_140316_fail/audit_policy.json",
+    "sha256": "8c27cf19866a294b162cebc052e93e5996fdee8472469a5337ed444f20b79985",
+    "policy_id": "audit_policy_v0_1",
+    "version": "0.1"
+  },
+  "input": {
+    "path": "context/proof_samples/audit_stall_demo_20260220_140316_fail/fail_sample.txt",
+    "sha256": "c7b3b8d6bf10a616aa2cd5cbe099ecc69d7900246d23fc85eaede22460bb42e2",
+    "bytes": 138
+  },
+  "mode": "report-only",
+  "generated_at": "2026-02-20T14:03:16+09:00"
+}

@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-02-20T14:54:51+09:00",
+  "run_id": "sdna-verify-20260220_145451",
+  "inputs_digest": "547680deb6ecaf5151c442a48aa388b24c9213cf6e62080342fcf0bf97f0dc0e",
+  "exposure_tier": "OPEN",
+  "approvals": [],
+  "evidence_paths": [
+    "aoi-core/docs/ARTIFACTS_STANDARD_V0_1.md",
+    "context/NEXUS_BAZAAR_SDNA_VERIFY_SCHEMA_V0_1.md"
+  ],
+  "files": [
+    {
+      "path": "decision_summary.md",
+      "sha256": "a249048e51443412181c355ba9f59aa36af578f0a265841a657a91a6f22b0625",
+      "bytes": 208
+    },
+    {
+      "path": "proof_manifest.json",
+      "sha256": "a8fc302f98ae1726882c2ec6dbc2eb2a544c0e330d2162c937b09726b28b4217",
+      "bytes": 1058
+    },
+    {
+      "path": "run_log.txt",
+      "sha256": "bf243c707b06028b3c68b4575fc277cf08a38a09a1ef98ab250df26a09cd8b4f",
+      "bytes": 248
+    },
+    {
+      "path": "sdna_verify.json",
+      "sha256": "547680deb6ecaf5151c442a48aa388b24c9213cf6e62080342fcf0bf97f0dc0e",
+      "bytes": 687
+    }
+  ],
+  "self_sha256": "597a1738a697ece0f56789b661521951c2d41523973d28ce1f78b7321c146e12"
+}

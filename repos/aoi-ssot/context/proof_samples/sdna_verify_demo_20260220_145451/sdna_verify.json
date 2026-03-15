@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-02-20T14:54:51+09:00",
+  "run_id": "sdna-verify-20260220_145451",
+  "mode": "verify-only",
+  "target": {
+    "kind": "file",
+    "path": "skills/aoineco-team-council/SKILL.md",
+    "sha256": "0dae42bcc222ebe53214520af2bff5ce5816c3dd3393c74c2855391b49e531a7"
+  },
+  "protocol": {
+    "protocol_version": "1.0",
+    "author_id": null,
+    "sdna_id": null
+  },
+  "result": {
+    "verified": true,
+    "signal": "verified",
+    "notes": "Verify-only demo: format/presence check. Combine with guardian_report for security."
+  },
+  "evidence": {
+    "matches": [
+      {
+        "type": "marker",
+        "value": "S-DNA: AOI-2026-0218-SDNA-TC01"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "request_id": "bazaar-rfq-20260220_124616_routingreport",
+  "merchant_id": "merchant_silver_otc",
+  "status": "REJECT",
+  "reject_reason_code": "TIMEOUT",
+  "reject_reason_human": "Quote arrived after deadline_ms=2500.",
+  "latency_ms": 3200,
+  "received_before_deadline": false
+}

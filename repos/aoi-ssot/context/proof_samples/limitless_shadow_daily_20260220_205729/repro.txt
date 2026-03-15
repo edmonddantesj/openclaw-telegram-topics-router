@@ -1,0 +1,7 @@
+# Commands
+python3 scripts/v6_limitless_hourly_odds_backtest.py --hours 24 --p-floor 0.1 --slippage-bps 150.0 --max-bet-usd 1.0
+
+# Stdout
+OK: wrote /tmp/v6_limitless_odds_backtest_20260220_205729
+wallet_start=7.00 wallet_end=10.4893 ROI=49.848%
+bets=3 win_rate=66.66666666666666

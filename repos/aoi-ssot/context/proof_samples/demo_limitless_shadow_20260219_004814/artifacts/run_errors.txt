@@ -1,0 +1,1 @@
+scripts/aoi_squad_pro_oneclick_demo.sh: line 27: timeout: command not found

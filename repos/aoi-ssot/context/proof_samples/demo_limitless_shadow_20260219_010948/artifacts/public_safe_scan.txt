@@ -1,0 +1,48 @@
++ echo 'AOI Squad Pro public-safe scan (v0.1)'
+AOI Squad Pro public-safe scan (v0.1)
++ echo run_id=demo_limitless_shadow_20260219_010948
+run_id=demo_limitless_shadow_20260219_010948
++ echo 'pattern=(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)'
+pattern=(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)
+++ date -u +%Y-%m-%dT%H:%M:%SZ
++ echo timestamp_utc=2026-02-18T16:09:51Z
+timestamp_utc=2026-02-18T16:09:51Z
++ echo ''
+
++ HIT=0
++ command -v rg
++ for af in '"$OUT"/artifacts/*'
++ '[' -f /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/digest_12h_supabase.txt ']'
+++ basename /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/digest_12h_supabase.txt
++ '[' digest_12h_supabase.txt = public_safe_scan.txt ']'
++ rg -n -i '(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)' /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/digest_12h_supabase.txt
++ for af in '"$OUT"/artifacts/*'
++ '[' -f /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/limitless_ev_btc_hourly.jsonl.tail3 ']'
+++ basename /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/limitless_ev_btc_hourly.jsonl.tail3
++ '[' limitless_ev_btc_hourly.jsonl.tail3 = public_safe_scan.txt ']'
++ rg -n -i '(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)' /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/limitless_ev_btc_hourly.jsonl.tail3
++ for af in '"$OUT"/artifacts/*'
++ '[' -f /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/limitless_odds_btc_hourly.jsonl.tail3 ']'
+++ basename /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/limitless_odds_btc_hourly.jsonl.tail3
++ '[' limitless_odds_btc_hourly.jsonl.tail3 = public_safe_scan.txt ']'
++ rg -n -i '(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)' /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/limitless_odds_btc_hourly.jsonl.tail3
++ for af in '"$OUT"/artifacts/*'
++ '[' -f /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/limitless_settle_btc_hourly.jsonl.tail3 ']'
+++ basename /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/limitless_settle_btc_hourly.jsonl.tail3
++ '[' limitless_settle_btc_hourly.jsonl.tail3 = public_safe_scan.txt ']'
++ rg -n -i '(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)' /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/limitless_settle_btc_hourly.jsonl.tail3
++ for af in '"$OUT"/artifacts/*'
++ '[' -f /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/public_safe_scan.txt ']'
+++ basename /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/public_safe_scan.txt
++ '[' public_safe_scan.txt = public_safe_scan.txt ']'
++ continue
++ for af in '"$OUT"/artifacts/*'
++ '[' -f /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/run_errors.txt ']'
+++ basename /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/run_errors.txt
++ '[' run_errors.txt = public_safe_scan.txt ']'
++ rg -n -i '(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)' /Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_010948/artifacts/run_errors.txt
++ echo ''
+
++ '[' 0 -eq 0 ']'
++ echo 'PUBLIC-SAFE: PASS'
+PUBLIC-SAFE: PASS

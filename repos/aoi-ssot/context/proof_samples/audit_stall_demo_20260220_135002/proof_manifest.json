@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-02-20T13:56:21+09:00",
+  "run_id": "audit-stall-20260220_135002_severity",
+  "inputs_digest": "6d7104164a5fcb45bf3e92fe852e19a94094b15f20ea59b6c5ba4e6dd23ea365",
+  "exposure_tier": "OPEN",
+  "approvals": [],
+  "evidence_paths": [
+    "aoi-core/docs/ARTIFACTS_STANDARD_V0_1.md",
+    "context/NEXUS_BAZAAR_AGGREGATOR_SPEC_V0_1.md"
+  ],
+  "files": [
+    {
+      "path": "audit_policy.json",
+      "sha256": "d6d56a7357935af9f17ac9c79645365d77bdfe5671154f7a20bbf08cf9393f8f",
+      "bytes": 986
+    },
+    {
+      "path": "audit_request.json",
+      "sha256": "6d7104164a5fcb45bf3e92fe852e19a94094b15f20ea59b6c5ba4e6dd23ea365",
+      "bytes": 628
+    },
+    {
+      "path": "decision_summary.md",
+      "sha256": "c1fc8338256064d631516fb89619e2e37cb88ee3f76a77a3e85fe74ae9526266",
+      "bytes": 478
+    },
+    {
+      "path": "guardian_report.json",
+      "sha256": "16bddef09fcfa17c3d219c406540ffb2abf35f5757bdd6f27b9787404caf3640",
+      "bytes": 440
+    },
+    {
+      "path": "merchant_profiles/merchant_guardian_audit.merchant_profile.json",
+      "sha256": "a13118cf880c90659ea7dc4e7ad1c4a5ce0547679ad53200f82e852cd2ac7234",
+      "bytes": 762
+    },
+    {
+      "path": "proof_manifest.json",
+      "sha256": "97bd12d576fedebb77793176cd8e5e04e23b54c556c5cee68ecf4ceb884cfa5f",
+      "bytes": 376
+    },
+    {
+      "path": "run_log.txt",
+      "sha256": "4b492f005af69a34955f14c8f88438953c461d52c27a127ffbb725e36495dc12",
+      "bytes": 328
+    },
+    {
+      "path": "sha256sum.txt",
+      "sha256": "6d8baf87006aa3ca04cd4b9f219e41591d330c530df4b75919cd6e36a0bbef02",
+      "bytes": 801
+    },
+    {
+      "path": "skill_catalog.json",
+      "sha256": "810735a3958577b5e7fc93e5dc2b6451be52dba9fcb4182950824b36967cf473",
+      "bytes": 550
+    }
+  ],
+  "self_sha256": "97bd12d576fedebb77793176cd8e5e04e23b54c556c5cee68ecf4ceb884cfa5f"
+}

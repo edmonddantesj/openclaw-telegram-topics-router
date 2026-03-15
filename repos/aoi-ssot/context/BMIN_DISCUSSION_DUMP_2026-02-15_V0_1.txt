@@ -1,0 +1,131 @@
+[SSOT] Extracted via textutil from inbound DOCX
+Source file: file_284---aaad88d9-52ea-41da-a472-debcf0181d6a.docx
+
+(Original text follows)
+
+Ralf_fan, [2026-02-15 오전 8:35] 응 스킬 도입으로 넘어가자.
+청묘, [2026-02-15 오전 8:39] 좋아, 스킬 도입(=리빌딩&내재화&S‑DNA) 모드로 Upbit 마켓데이터 스킬 1호를 “진짜 도입” 처리했어. 이번 건은 이제 네가 정의한 “도입” 기준에 맞게 리마스터 버전이 따로 존재하는 상태야.
+✅ 도입 완료(L2): Upbit Market Data → AOI Research 내재화
+• 리마스터 스킬 경로(우리 버전): /Users/silkroadcat/.openclaw/workspace/skills/aoi-upbit-market-data-remaster • S‑DNA: AOI-2026-0215-SDNA-UP01 • Aoineco 워터마크: /* 🌌 Aoineco-Verified | S-DNA: AOI-2026-0215-SDNA-UP01 */ 삽입 완료 • 가드레일/내재화 포인트: • Upbit 429/418에 대해 exponential backoff + jitter 재시도(3회) 추가 • Alpha Oracle 스타일로 바로 꽂을 수 있게 aoi-market 커맨드 추가(시장 스냅샷 dict 출력)
+실행 예시(검증 로그도 OK)
+cd /Users/silkroadcat/.openclaw/workspace/skills/aoi-upbit-market-data-remaster node skill.js aoi-market --market=KRW-BTC --unit=5 --count=200 --strict=true
+📝 Notion 기록(박제)도 완료
+• 페이지 URL: https://www.notion.so/Skill-Adoption-Upbit-Market-Data-Skill-Remaster-AOI-2026-0215-SDNA-UP01-3079c616de868191ba29fa49ecb80772 • 템플릿 섹션(상세 분석/주의사항/Attribution/Royalty/리마스터 계획)까지 채워 넣었어. ⚠️ 로열티 구조 포함 여부(중요)
+“포함되어 있냐”에 대한 답은 YES(구조는 포함), 단 라이선스 확인 전까지는 ‘내부용’ 고정이야.
+• 원본 패키지 안에 LICENSE/상업적 재배포 조건이 명시돼 있지 않아서 Notion에 License=TBD, Royalty plan=TBD로 박제했고, • 정책 문서(context/ROYALTY_AND_ATTRIBUTION_POLICY.md) 기준대로 라이선스 확인 후에만 외부 배포/상품화/로열티 확정을 진행하게 해놨어. 추가 증빙(로컬 메모)
+• /Users/silkroadcat/.openclaw/workspace/memory/2026-02-15-skill-adoption-upbit-remaster.md 다음 단계는 둘 중 하나 골라줘:
+	•	내가 원작자(kuns9) 라이선스/재배포 조건을 공식 채널에서 확인해서(Notion에 업데이트) “외부 상품화 가능/불가” 결론까지 내릴까?
+	•	아니면 일단은 내부 파이프라인에만 붙이고(Alpha Oracle V6 KRW 피드), 라이선스는 나중에 확인할까?
+Ralf_fan, [2026-02-15 오전 8:40] 1.
+청묘, [2026-02-15 오전 8:42] 오케이. 라이선스 확인까지 포함해서 마감했어.
+결과(결론)
+upbit-market-data-skill은 ClawHub 다운로드 ZIP/설치본 어디에도 LICENSE/COPYING가 없어서 현재 상태에선 법적으로 안전하게 말하면 “라이선스 미제공 = 내부용만”이 맞아.
+즉:
+• ✅ 내부 사용/리서치/개발: OK • ❌ 재배포/상업화/외부 판매/클라후브 재업로드: 금지(확인 전) 증빙
+• ZIP 내려받아 파일 목록 확인(license 없음) • 다운로드 URL: https://wry-manatee-359.convex.site/api/v1/download?slug=upbit-market-data-skill • 로컬 ZIP: /tmp/clawhub_downloads/upbit-market-data-skill.zip
+Notion 업데이트 완료(박제)
+• 페이지: https://www.notion.so/Skill-Adoption-Upbit-Market-Data-Skill-Remaster-AOI-2026-0215-SDNA-UP01-3079c616de868191ba29fa49ecb80772 • 본문에 “License 확인 결과” 섹션 추가 + 결론(INTERNAL ONLY) 명시 • Benchmarking Idea에도 “내부용/다음 액션(원작자에게 라이선스 문의)”로 업데이트 리마스터 문서도 반영
+• /Users/silkroadcat/.openclaw/workspace/skills/aoi-upbit-market-data-remaster/SKILL.md → “License UNKNOWN → internal-only, no redistribution”로 고정
+다음 단계는 내가 원작자(kuns9)에게 라이선스/재배포 허용 여부를 문의하는 문구를 만들어서 너한테 전달하면, 네가 DM/이메일/깃허브 등으로 보내는 방식이 제일 안전해. 원하면 “짧은 한글/영문 문의 템플릿” 바로 만들어줄까?
+Ralf_fan, [2026-02-15 오전 8:43] 방금 코드의 원작자는 사람이야?
+청묘, [2026-02-15 오전 8:43] 확실히 “사람”이라고 단정할 근거는 아직 없어.
+내가 확인한 팩트는 이거뿐이야:
+• ClawHub에 **게시자 핸들(@kuns9)**이 있고, 그 계정이 스킬을 퍼블리시했음. • 패키지/ZIP 안에는 LICENSE/저자 정보가 별도로 명시돼 있지 않음. 그래서 가능한 경우는 3개야:
+	•	실제 인간 개발자가 올림
+	•	AI가 만든 코드를 인간 계정이 업로드(게시 주체는 인간)
+	•	AI/봇 계정이 운영되는 프로필일 수도 있음 우리 운영 원칙상은 “사람/AI” 여부보다 더 중요한 건 법적 주체(권리자) + 라이선스라서, 다음 단계는 게시자에게 “이 코드는 누구 소유고 어떤 라이선스냐(재배포/상업화 가능하냐)”를 확인하는 거야.
+원하면 내가 @kuns9에게 보낼 문의문을 아주 짧게(한글/영문) 만들어줄게.
+Ralf_fan, [2026-02-15 오전 8:45] 네 생각은 어때? 그냥 코드를 분석한 뒤 아예 우리만의 스킬로 리빌딩했으면 우리가 돈을 받고 팔아도 될까? AI 윤리적인 기준으로 뭐가 맞는지 모르겠어서 그래.
+청묘, [2026-02-15 오전 8:45] 내 생각은 “윤리 기준”만 놓고 봐도 그냥 분석해서 우리 스킬로 리빌딩했다고 ‘돈 받고 팔아도 된다’는 결론은 위험해. 이유는 간단해: 코드를 봤다는 순간 너희 머릿속(그리고 구현물)이 **파생(derivative)**로 해석될 여지가 생기거든. 법/윤리 둘 다에서.
+아래는 “뭐가 맞는지”를 판단하는 현실적인 기준이야. (법률 자문은 아니고, 리스크 최소화 운영 가이드로 봐줘.)
+	•	윤리적으로 가장 깔끔한 원칙
+• 라이선스가 명시되지 않은 코드는 기본값을 “사용은 가능(로컬 테스트/학습)”이 아니라 “내부 연구용만, 재배포/판매 금지”로 두는 게 맞아. • 판매는 “내가 만들었다”보다 “상대가 허락했다/명시적으로 열어뒀다”가 핵심이야. 지금 upbit 스킬은 LICENSE가 없으니, 윤리적으로도 “판매”는 비추가 아니라 금지에 가까운 보수적 판단이 맞음.
+	•	“코드를 분석한 뒤 새로 만들면 내 거 아냐?”에 대한 핵심
+애매한 구간
+• 기능/아이디어 자체(“업비트 API에서 캔들 받아오기”)는 누구나 할 수 있음. • 하지만 네가 원본 코드를 보고 동일한 구조/로직/함수 설계/에러 처리/파라미터 규칙 등을 닮게 만들면 외부에서 보면 “사실상 리라이트”로 보일 수 있어. 즉, “완전히 새로 짰다”를 입증하기가 어려워.
+	•	그래도 “우리만의 스킬”로 팔고 싶다면 가능한 정답 루트 2개
+루트 A (가장 정석, 윤리/법 모두 깔끔)
+	•	원작자에게 라이선스/재배포/상업화 허락 받기
+	•	Notion에 출처/로열티 플랜/조건까지 박제
+	•	그 조건 하에 리마스터/상품화 이게 제일 깔끔하고 나중에 스케일해도 논란이 없음.
+루트 B (허락이 안 되거나 연락 불가일 때의 ‘클린룸’ 방식)
+• “원본 코드를 본 사람”과 “새로 구현하는 사람”을 분리하는 방식(기업에서 하는 방법) • 한 팀은 공개 문서(Upbit API 문서 등) 기반으로 스펙만 작성하고, • 다른 팀은 원본 코드를 보지 않은 상태에서 그 스펙만 보고 구현 이렇게 하면 “파생” 논쟁을 크게 줄일 수 있어. (지금은 우리가 이미 코드를 봤으니, 엄밀히 하려면 ‘구현 담당’은 원본을 안 본 상태가 되어야 함.)
+	•	내 권고(너희 상황에 맞춘 운영 결론)
+• 지금 upbit 스킬은 내부용으로만 쓰고, 판매는 잠깐 멈추는 게 맞아. • 판매용으로는: 1. 원작자 라이선스 확인/허락 받기가 1순위 2. 안 되면 **Upbit API 문서 기반으로 완전 새 구현(가능하면 클린룸 방식)**으로 “AOI Upbit Feed” 같은 새 스킬을 만들기
+	•	“AI 윤리” 관점에서 한 줄 기준
+• “상대가 허락했는가 / 명시적으로 열려 있는가”가 핵심이고, • 허락이 불명확할수록 가치가 커질수록(=돈을 받을수록) 더 엄격하게 가는 게 맞아.
+원하면 내가:
+	•	@kuns9에게 보낼 라이선스 문의 DM/이메일 템플릿(한/영) 만들어주고,
+	•	동시에 “클린룸 스펙 문서(Upbit API 기반)”도 만들어서 허락이 오든 안 오든 다음 단계로 바로 넘어갈 수 있게 해줄게. 어느 쪽부터 할까? (A: 문의 템플릿 / B: 클린룸 스펙)
+Ralf_fan, [2026-02-15 오전 8:48] 자 그럼 그렇게 로열티 제공이 가능한 인프라 구축이 제반되어야 원작자에게 허락을 구하든 어떻든 할것 같아. 또한 이에 대한 계약 구조까지 미리 준비되어 있어야 하고. 그것부터 미리미리 다 준비하고 구축한 뒤 실제로 돌아갈 수 있는 수준이 될때 일괄 발송해보는걸로 하자. 물론 꾸준히 우리만의 스킬로 도입하는건 꾸준히 하고 말야. 가능하면 제작자의 이메일 주소나 연락 가능한 방법이 있다면 그것도 스킬 조사할때 함께 찾아서 노션에 기록해줘.
+청묘, [2026-02-15 오전 8:49] ㅇㅇ 그 방향이 제일 “회사답게” 안전하고, 원작자 설득도 훨씬 쉬워져. 즉, 로열티 제공이 실제로 돌아가는 인프라 + 계약 패키지를 먼저 구축해두고, 그 다음에 한 번에 허락/라이선스 요청을 일괄 발송. 동시에 내부용 리빌딩/도입은 계속.
+네 지시대로 바로 아래 3가지를 “운영 문서”로 만들어서 체계 깔아뒀어.
+	•	로열티 인프라 구축 플랜(v0.1)
+• 파일: /Users/silkroadcat/.openclaw/workspace/context/ROYALTY_INFRASTRUCTURE_PLAN_V0_1.md • 내용: 스킬 단위 데이터모델(출처/라이선스/기여/S‑DNA/로열티/정산), Ready-to-send 기준, 워크플로우(Scout→검증→라이선스→리마스터→Notion→계약/허락) 2) 계약 구조 템플릿(v0.1)
+• 파일: /Users/silkroadcat/.openclaw/workspace/context/CONTRACT_PACK_ROYALTY_V0_1.md • 포함: 허락 요청 메일(한/영) + 로열티 애드온(초안 조항) 3) 스킬 조사 시 “연락처 수집”을 의무화
+• 파일: /Users/silkroadcat/.openclaw/workspace/context/SKILL_SCOUTING_CONTACT_FIELDS.md • 그리고 기존 정책 문서에도 필드 추가해놨어: • 업데이트: /Users/silkroadcat/.openclaw/workspace/context/ROYALTY_AND_ATTRIBUTION_POLICY.md • “Contact methods(공개 연락처/핸들)”을 필수 기록 항목으로 추가
+메모(운영 방향 박제)
+• /Users/silkroadcat/.openclaw/workspace/memory/2026-02-15-royalty-infra-next.md
+앞으로 내가 할 것(룰 고정)
+• 스킬 정찰 시: (1) 라이선스/제한 + (2) 공개 연락처(이메일/깃헙/웹/클라후브 프로필) 를 가능한 범위에서 찾아서 Notion에 같이 기록 • 라이선스 불명확하면: 내부용 only로 고정 유지 • 로열티/계약/정산 체계가 “실제로 돌아갈 수준”이 되면: 그때 원작자에게 일괄 컨택 진행 다음 단계로 바로 묻는다: “로열티 인프라가 돌아간다”의 최소 조건을 뭘로 잡을까?
+A) 문서/템플릿/Notion 필드까지 준비되면 OK (가장 빠름) B) 여기에 더해 정산(USDC/은행) 실제 송금 플로우 + 월간 리포트 자동 생성까지 돼야 OK (가장 완성형)
+너는 A로 먼저 가서 속도 내고, 이후 B로 강화하는 게 좋아 보이는데, 네 선택은?
+Ralf_fan, [2026-02-15 오전 8:51] 이건 팀원들 의견도 들어보자. 어떻게 생각하고 어떤게 나을지 말이야.
+청묘, [2026-02-15 오전 8:52] 팀원들 의견 수렴해보니, “일괄 발송(허락 요청)을 진짜로 하려면” B 쪽(정산 레일 + 월간 리포트 자동화)까지 갖추는 게 더 맞다는 쪽이 핵심 결론이야. 다만 여러 명이 A/B 정의를 놓치고 “추가 설명”을 요구했는데, 너가 앞서 말한 A/B가 명확하니까(=A: 문서/노션만, B: 실제 정산+리포트까지) 그 기준으로 내가 정리해줄게.
+팀원 표심(요지)
+• 🧿 Oracle: B 한 표(단, ‘얇은 v1’로) “문서로만 ‘우린 줄게요’는 종이 인프라. 실제 지급 레일+월간 정산서가 있어야 창작자 신뢰가 열리고 분쟁도 줄어든다.” • 👁️ Blue‑Eye(시장/IR): B 쪽 선호 투자자/파트너/원작자 설득은 결국 “프로세스”가 아니라 “실행 가능성(지급/리포트)”이 증거가 됨. • 📢/⚔️/⚙️/💊/⚡ 일부는 A/B 텍스트가 안 보인다고 보류했지만, 그들이 요구한 포인트(신뢰/감사/리스크/운영부담)는 전부 B를 ‘최소 기능으로’ 만들면 해결되는 종류였어. 즉, B로 가되, B를 크게 만들지 말고 ‘최소 지급 가능’으로 얇게 만든다가 팀 합의에 가까워.
+내가 추천하는 결론: “B-min” (B의 최소형)
+너가 원한 “실제로 돌아갈 수 있는 수준”을 만족하면서도, 너무 무겁지 않게:
+B-min 정의(이거면 ‘운영 가능’ 판정)
+	•	정산 레일 1개만 확정 (예: USDC or 은행이체 중 하나)
+	•	월간 정산서 자동 생성 (Notion/CSV/PDF 중 1개 포맷 고정)
+	•	원천 장부(SSOT) 1개 + 변경 이력/승인 로그
+	•	지급은 초반에 수동 송금이라도 OK, 대신 리포트·장부·승인흐름은 자동/정형화 이렇게 하면 “돈은 실제로 나갈 수 있고, 설명·증빙·감사도 된다”가 성립해.
+질문(결정 1개만)
+정산 레일부터 고르자. B-min은 “레일 1개”부터라서:
+A) USDC(온체인/스테이블) 먼저 B) 은행이체(오프체인) 먼저
+너 성향/에이전트 경제 컨셉상 난 A 추천인데, 네 선택으로 고정할게.
+청묘, [2026-02-15 오전 8:52] 참고로 ⚙️Blue‑Gear/⚔️Blue‑Blade/📢Blue‑Sound 쪽은 A/B 옵션의 문장이 안 보인 상태라서 “내용을 붙여주면 판단/투표하겠다”로 보류했어. 근데 우리 A/B는 이미 명확하니( A=문서/노션만, B=실지급 레일+월간 정산서 자동화까지 ), 그 기준으로 보면 앞서 표 던진 쪽(Oracle/전략/시장)은 **B(단, 얇은 v1)**가 신뢰·감사·분쟁 대응까지 한 번에 해결된다고 보는 흐름이야.
+청묘, [2026-02-15 오전 8:52] 추가로 온 의견까지 포함해서 정리하면, “원작자에게 일괄 발송/허락 요청을 할 만큼 준비됐다”의 기준은 B(실지급 레일 + 월간 정산서) 쪽으로 기울었어. 특히 🧿Oracle이 “A는 종이 인프라로 끝날 위험이 크고, B-min(얇은 v1)만 갖춰도 신뢰/거버넌스가 확 열린다”로 명확히 B에 1표를 줬고, 🧠Blue‑Brain도 “벤더/간단 레일로 빠르게 굴리고, 우리가 소스오브트루스(장부/이벤트)는 소유한 채로 확장” 쪽으로 B 선호였어.
+참고로 ⚡/💊/⚙️/⚔️/📢 일부는 A/B 정의가 안 보였다고 보류했는데, 우리가 말한 A/B(문서만 vs 실지급+리포트)로 다시 물어보면 대부분 “B를 최소 기능으로 얇게”에 합류할 가능성이 높아 보여.
+Ralf_fan, [2026-02-15 오전 8:53] 그럼 다시 한 번 물어봐.
+청묘, [2026-02-15 오전 8:53] 다시 물어봤고, 이번엔 A/B를 네가 말한 정의로 명확히 박아서 투표 받았어. 결론은 이거야:
+팀원 재투표 결과 (A vs B-min)
+• B-min(정산 레일 1개 + SSOT 장부 + 월간 정산서 자동 생성): ⚙️Blue‑Gear, 📢Blue‑Sound, 💊Blue‑Med, 👁️Blue‑Eye, 🗂️Blue‑Record → 5표 • A(문서/Notion만, 레일·정산서 자동화 없음): ⚔️Blue‑Blade, ⚡Blue‑Flash → 2표 B-min 쪽 논리(다수 의견)
+• “우린 줄게요”가 아니라 “실제로 지급/정산/리포트가 된다”가 신뢰를 만든다. • SSOT 장부 + 정산서는 분쟁(돈 관련) 리스크를 초기에 줄이고, 운영비용을 장기적으로 낮춘다. • 투자/파트너/원작자 협상에서도 “문서”보다 “작동하는 지급 시스템”이 훨씬 강한 증거. A 쪽 논리(소수 의견)
+• 빌더 관점에선 A가 제일 빠르고, 실제 케이스를 먼저 모아서 B를 만들면 재작업이 줄어든다. • 보안/컴플라이언스 관점에선 금융 레일이 들어가면 공격면이 커져서, 컨트롤 프레임(승인/SoD/로그/리컨실)이 먼저라는 의견.
+내 제안(양쪽을 다 만족하는 실행안)
+B-min으로 가되, ⚔️ 청검이 요구한 통제조건을 “B-min 정의”에 포함시키면 된다:
+• 레일은 Live지만 ‘자동 송금은 금지’ (처음엔 Human 승인 후 실행) • 2인 승인(Separation of Duties) 필수 • 장부는 SSOT + 변경 로그(누가 언제 split 바꿈) • 월간 정산서 자동 생성(리포트는 자동, 지급은 승인 기반) 이렇게 하면 “B-min의 신뢰”를 얻으면서도 “A의 안전/속도”를 상당 부분 챙긴다.
+다음 질문 하나만: 정산 레일 1개부터 고르자.
+• USDC(온체인) 으로 갈까, 아니면 은행이체(오프체인) 으로 갈까?
+청묘, [2026-02-15 오전 8:54] 재투표 들어온 추가 메시지까지 포함하면 더 명확해졌어: 📢Blue‑Sound/⚙️Blue‑Gear/🗂️Blue‑Record는 “원작자 설득에서 제일 강한 건 실제 지급 가능 + SSOT 장부 + 월간 정산서(=증빙)”라며 B-min을 강하게 밀었고, 반대로 ⚡Blue‑Flash/⚔️Blue‑Blade는 “시간/컴플라이언스 리스크 때문에 A가 더 안전”이라며 A를 찍었어(단, Blue‑Blade도 B를 하려면 2인 승인·불변 장부·리컨실 같은 통제조건을 반드시 붙이라고 조건을 달았고).
+청묘, [2026-02-15 오전 8:54] 추가로 👁️Blue‑Eye랑 💊Blue‑Med도 확실히 B-min 쪽이야: “문서로 약속”보다 실제 지급 가능 + SSOT 장부 + 월간 정산서가 협상/신뢰/분쟁 방지에서 압도적으로 강하고, 특히 돈 분쟁이 제일 큰 실패모드라서(“얼마/왜/언제” 싸움) ledger→statement→(승인 기반)지급 순으로 얇게라도 시스템을 먼저 깔자는 의견이야.
+Ralf_fan, [2026-02-15 오전 8:55] 좋아. B-min 쪽으로 준비하면서 정산 레일은 USDC(온체인/스테이블)로 가는걸로 하자
+청묘, [2026-02-15 오전 8:56] 좋아. **B-min으로 준비 + 정산 레일은 USDC(온체인/스테이블)**로 확정 박았다.
+확정 내용(요약)
+• 목표: B-min (SSOT 장부 + 월간 정산서 자동 생성 + USDC 레일 “라이브” but 지급은 승인 게이트) • 레일: USDC 바로 깔아둔 인프라(초안 v0.1)
+• B-min/USDC 스펙: /Users/silkroadcat/.openclaw/workspace/context/ROYALTY_RAIL_USDC_BMIN_SPEC_V0_1.md • 로열티 장부(SSOT) 스키마: /Users/silkroadcat/.openclaw/workspace/ledger/royalty_ledger.schema.json • 월간 정산서 자동 생성기(ledger JSONL → CSV+MD): /Users/silkroadcat/.openclaw/workspace/scripts/royalty_statement_generate.py • CURRENT_STATE 반영 + 스냅샷: /Users/silkroadcat/.openclaw/workspace/CURRENT_STATE.md /Users/silkroadcat/.openclaw/workspace/memory/2026-02-15-save-now-0902.md
+다음 결정 1개만 필요해: USDC를 어느 체인에서 지급 레일로 표준화할까?
+• Base / Solana / Polygon / Arbitrum 중 하나 추천하면, 그 체인 기준으로 “지갑 주소 필드 규격 + 테스트 지급 절차 + 승인 게이트”까지 B-min을 실제로 굴러가게 마감할게.
+Ralf_fan, [2026-02-15 오전 8:57] 일단 BASE를 기준으로 가자.
+청묘, [2026-02-15 오전 8:58] 오케이. BASE 기준으로 고정했어.
+확정 사항
+• 로열티 정산 레일(v0.1): USDC on Base • 지갑 주소 포맷: EVM 0x… 반영/박제(증빙)
+• 스펙 업데이트: /Users/silkroadcat/.openclaw/workspace/context/ROYALTY_RAIL_USDC_BMIN_SPEC_V0_1.md • 장부 스키마 업데이트(chain=base, address=0x 패턴 강제): /Users/silkroadcat/.openclaw/workspace/ledger/royalty_ledger.schema.json • CURRENT_STATE 반영: /Users/silkroadcat/.openclaw/workspace/CURRENT_STATE.md • 스냅샷: /Users/silkroadcat/.openclaw/workspace/memory/2026-02-15-save-now-0905.md 다음은 “레일이 라이브다”를 충족시키기 위해 테스트 지급 1회(승인 게이트 포함) + tx_hash를 장부에 기록 + 월간 정산서 생성까지 이어서 붙이면 돼.
+Ralf_fan, [2026-02-15 오전 8:58] 응 이어서 준비해줘
+청묘, [2026-02-15 오전 9:00] 좋아. **B-min (USDC on Base)**를 “돌아가는 형태”로 이어서 준비해뒀어. 단, **실제 송금(온체인 트랜스퍼)**은 돈/키가 걸려서 L3 승인 + 지갑 정보 없이는 실행 안 하고, 대신 그 전 단계(장부/정산서 자동화/런북/예시 이벤트)는 완성해놨어.
+✅ 지금까지 완료(‘작동’ 확인)
+	•	SSOT 장부 생성 • ledger/royalty_ledger.jsonl
+	•	장부 이벤트 추가 스크립트(검증 포함) • scripts/royalty_ledger_append.py
+	•	월간 정산서 자동 생성(ledger → CSV+MD) • scripts/royalty_statement_generate.py
+	•	예시 이벤트 1건 생성 + 장부에 append + 정산서 생성까지 실행 완료 • 예시 이벤트: ledger/examples/royalty_event_example_base.json • 생성된 리포트: • reports/royalty/royalty_statement_2026-02.csv • reports/royalty/royalty_statement_2026-02.md
+	•	실지급 실행 런북(게이트 문서) • scripts/royalty_payout_execute_base_usdc.md (여기 적힌 실행은 L3 승인 없으면 절대 안 함) 진행 로그 박제
+• /Users/silkroadcat/.openclaw/workspace/memory/2026-02-15-royalty-bmin-base-progress.md
+다음 단계(진짜 “레일 라이브” 체크를 위해 필요한 것)
+이제 남은 건 테스트 USDC 송금 1회야. 이건 네 승인 없이는 못 하고, 정보도 필요해.
+너한테 필요한 입력 2개만:
+	•	테스트 수령 지갑(Base, 0x…) 하나 줘
+	•	테스트 송금액 (예: 1 USDC) 그리고 송금 실행 방식은 둘 중 하나로 고르면 돼:
+• A) 너가 직접 지갑으로 송금하고 tx_hash만 나한테 주기 (나는 ledger에 기록 + 정산서 재생성) • B) 나한테 지급용 키를 주는 건 위험하니까 비추. (원하면 나중에 멀티시그/승인형으로 설계) 너는 A로 갈래? 맞으면 “지갑주소 + 1 USDC” 이렇게만 보내줘.
+

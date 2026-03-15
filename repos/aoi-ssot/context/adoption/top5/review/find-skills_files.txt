@@ -1,0 +1,13 @@
+find-skills  Find Skills
+Summary: Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
+Owner: JimLiuxinghai
+Created: 2026-01-29T14:58:30.765Z
+Updated: 2026-02-17T04:20:41.107Z
+Latest: 0.1.0
+Tags: latest=0.1.0
+Selected: 0.1.0
+Selected At: 2026-01-29T14:58:30.765Z
+Changelog: - Initial release of the find-skills skill.
+- Helps users discover and install agent skills when looking for new func...
+Files:
+SKILL.md  4.5KB  54b44dc9539df865fbb060f62fb062e8232e765852a0cf14c38301fe0c1eb264  text/plain

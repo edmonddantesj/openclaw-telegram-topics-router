@@ -1,0 +1,4 @@
+/etc/profile: fork: Resource temporarily unavailable
+/etc/profile: fork: Resource temporarily unavailable
+/Users/silkroadcat/.openclaw/workspace/scripts/limitless/run_btc_shadow_snapshot.sh: fork: Resource temporarily unavailable
+WARN: snapshot step failed rc=128 (continuing with existing local data if any)

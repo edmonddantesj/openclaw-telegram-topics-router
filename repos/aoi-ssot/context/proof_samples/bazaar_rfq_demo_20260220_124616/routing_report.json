@@ -1,0 +1,82 @@
+{
+  "run_id": "bazaar-rfq-20260220_124616_routingreport",
+  "generated_at": "2026-02-20T12:58:03+09:00",
+  "pair": "USDC/ETH",
+  "side": "BUY",
+  "amount_in": 1000.0,
+  "policies": {
+    "trust_mode": "prefer_verified",
+    "deadline_ms": 2500
+  },
+  "merchants": [
+    {
+      "merchant_id": "merchant_silver_otc",
+      "trust": {
+        "guardian_pass": true,
+        "sdna_verified": false,
+        "core_temp": null
+      },
+      "eligibility": {
+        "eligible": false,
+        "reasons": [
+          "TIMEOUT"
+        ]
+      },
+      "status": "REJECT",
+      "reject": {
+        "code": "TIMEOUT",
+        "human": "Quote arrived after deadline_ms=2500."
+      }
+    },
+    {
+      "merchant_id": "merchant_blue_rfq",
+      "trust": {
+        "guardian_pass": true,
+        "sdna_verified": true,
+        "core_temp": null
+      },
+      "eligibility": {
+        "eligible": true,
+        "reasons": []
+      },
+      "status": "OK",
+      "quote": {
+        "price": 3096.5,
+        "fee_bps": 12,
+        "effective_price": 3100.2158000000004,
+        "latency_ms": 180,
+        "valid_until_sec": 15
+      }
+    },
+    {
+      "merchant_id": "merchant_red_guarded",
+      "trust": {
+        "guardian_pass": false,
+        "sdna_verified": false,
+        "core_temp": null
+      },
+      "eligibility": {
+        "eligible": false,
+        "reasons": [
+          "EXCLUDED_UNVERIFIED",
+          "RISK_POLICY_BLOCK"
+        ]
+      },
+      "status": "REJECT",
+      "reject": {
+        "code": "RISK_POLICY_BLOCK",
+        "human": "Blocked by merchant policy: pair temporarily disabled for demo."
+      }
+    }
+  ],
+  "decision": {
+    "recommended_merchant_id": "merchant_blue_rfq",
+    "reason_codes": [
+      "BEST_EFFECTIVE_PRICE",
+      "TRUST_OK",
+      "EXCLUDED_UNVERIFIED",
+      "PREFERRED_SDNA"
+    ],
+    "notes": "Demo routing report. Report-only; no execution."
+  }
+}

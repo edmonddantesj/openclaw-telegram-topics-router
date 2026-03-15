@@ -1,0 +1,16 @@
+{
+  "merchant_id": "merchant_guardian_audit",
+  "generated_at": "2026-02-20T13:50:02+09:00",
+  "skills": [
+    {
+      "skill_id": "guardian_report_v0",
+      "name": "Guardian Report (Demo)",
+      "category": "audit",
+      "pricing": {"mode": "per_call", "amount": 0.01, "currency": "USDC"},
+      "io": {"input": ["text_file"], "output": ["guardian_report.json"]},
+      "constraints": ["report-only", "no code execution"],
+      "evidence_paths": ["context/proof_samples/audit_stall_demo_20260220_135002/"],
+      "exposure": "OPEN"
+    }
+  ]
+}

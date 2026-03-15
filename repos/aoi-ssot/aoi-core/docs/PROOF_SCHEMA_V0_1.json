@@ -1,0 +1,19 @@
+{
+  "schema": "aoi.proof.v0.1",
+  "run_id": "string",
+  "task": {
+    "kind": "ops",
+    "name": "string",
+    "inputs": {}
+  },
+  "decision": {
+    "status": "approved|rejected",
+    "approved_by": "string",
+    "approved_at": "ISO-8601"
+  },
+  "artifacts": [
+    {"path": "string", "sha256": "string", "note": "string"}
+  ],
+  "summary": "string",
+  "created_at": "ISO-8601"
+}

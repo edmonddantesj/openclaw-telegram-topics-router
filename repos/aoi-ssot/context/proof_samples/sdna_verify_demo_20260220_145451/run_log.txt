@@ -1,0 +1,4 @@
+generated_at=2026-02-20T14:54:51+09:00
+run_id=sdna-verify-20260220_145451
+cmd=python3 scripts/sdna_verify_demo_runner.py --target skills/aoineco-team-council/SKILL.md --outdir context/proof_samples/sdna_verify_demo_20260220_145451
+mode=report-only

@@ -1,0 +1,4 @@
+generated_at=2026-02-20T12:58:03+09:00
+run_id=bazaar-rfq-20260220_124616_routingreport
+cmd=python3 scripts/bazaar_rfq_demo_runner.py --pair USDC/ETH --side BUY --amount-in 1000.0 --outdir context/proof_samples/bazaar_rfq_demo_20260220_124616 --trust-mode prefer_verified --deadline-ms 2500
+mode=report-only

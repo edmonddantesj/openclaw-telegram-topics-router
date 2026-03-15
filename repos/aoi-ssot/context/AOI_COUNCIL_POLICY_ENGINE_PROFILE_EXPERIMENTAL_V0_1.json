@@ -1,0 +1,10 @@
+{
+  "version": "experimental.v0.1.0",
+  "notes": "실험/스프린트 모드: 회고와 탐색 중심으로 오탐을 줄여서 조건부 판단 범위를 넓힘(단, score_hold은 강제 유지).",
+  "policy_threshold": {
+    "warn_conditional": 30,
+    "warn_hold": 75,
+    "score_hold": 95,
+    "score_conditional": 45
+  }
+}

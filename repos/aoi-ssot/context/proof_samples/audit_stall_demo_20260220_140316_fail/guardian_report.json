@@ -1,0 +1,21 @@
+{
+  "request_id": "audit-stall-fail-20260220_140316",
+  "merchant_id": "merchant_guardian_audit",
+  "audit_id": "guardian_report_v0",
+  "generated_at": "2026-02-20T14:03:16+09:00",
+  "guardian_report": {
+    "tier": "T1",
+    "verdict": "FAIL",
+    "risk": "high",
+    "findings": [
+      {
+        "code": "PRIVATE_KEY_BLOCK",
+        "severity": "high",
+        "message": "Private key marker detected"
+      }
+    ],
+    "policy_id": "audit_policy_v0_1",
+    "policy_version": "0.1",
+    "notes": "Deterministic demo scan; do not treat as a full security audit."
+  }
+}

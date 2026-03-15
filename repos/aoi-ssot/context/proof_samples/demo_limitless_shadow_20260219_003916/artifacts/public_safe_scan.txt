@@ -1,0 +1,9 @@
+AOI Squad Pro public-safe scan (v0.1)
+run_id=demo_limitless_shadow_20260219_003916
+pattern=(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)
+timestamp_utc=2026-02-18T15:39:17Z
+
+HIT file=/Users/silkroadcat/.openclaw/workspace/context/proof_samples/demo_limitless_shadow_20260219_003916/artifacts/public_safe_scan.txt
+3:pattern=(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)
+
+PUBLIC-SAFE: FAIL

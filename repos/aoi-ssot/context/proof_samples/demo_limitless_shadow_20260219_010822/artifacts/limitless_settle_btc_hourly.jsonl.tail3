@@ -1,0 +1,3 @@
+{"settled_at_utc": "2026-02-18T14:01:38.482885Z", "slug": "dollarbtc-above-dollar6743343-on-feb-18-1400-utc-1771419611889", "deadline_utc": "2026-02-18T14:00:00Z", "strike": 67433.43, "btc_close_at_deadline": 67278.0, "outcome": "NO", "ev": null}
+{"settled_at_utc": "2026-02-18T15:01:35.198483Z", "slug": "dollarbtc-above-dollar6659758-on-feb-18-1500-utc-1771423412972", "deadline_utc": "2026-02-18T15:00:00Z", "strike": 66597.58, "btc_close_at_deadline": 67264.96, "outcome": "YES", "ev": null}
+{"settled_at_utc": "2026-02-18T16:01:04.576940Z", "slug": "dollarbtc-above-dollar6719224-on-feb-18-1600-utc-1771426806316", "deadline_utc": "2026-02-18T16:00:00Z", "strike": 67192.24, "btc_close_at_deadline": 67632.75, "outcome": "YES", "ev": null}

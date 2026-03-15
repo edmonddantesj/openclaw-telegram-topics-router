@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-02-20T12:58:47+09:00",
+  "run_id": "skill-stall-20260220_125349_update",
+  "inputs_digest": "fb75f59eef554b8f446c976492623d2cf078787dc0b25a3b032e67dc5431848f",
+  "exposure_tier": "OPEN",
+  "approvals": [],
+  "evidence_paths": [
+    "aoi-core/docs/ARTIFACTS_STANDARD_V0_1.md",
+    "context/NEXUS_BAZAAR_AGGREGATOR_SPEC_V0_1.md"
+  ],
+  "files": [
+    {
+      "path": "decision_summary.md",
+      "sha256": "24426e27cf1ab0cfa7d259252b3edfd31678baf8581c68b4da856c9c506ad009",
+      "bytes": 491
+    },
+    {
+      "path": "merchant_profiles/merchant_summarizer_lite.merchant_profile.json",
+      "sha256": "cad8ffd229e5e9c84feb697e73c108ab56ea424f5501afd0e2f1bf732e212be2",
+      "bytes": 761
+    },
+    {
+      "path": "proof_manifest.json",
+      "sha256": "792e6ad0b6ea3aa4574bc5df9bbf05dac5a04dc9b658a35a733a8989a51570c0",
+      "bytes": 374
+    },
+    {
+      "path": "run_log.txt",
+      "sha256": "fe4656b245def31ebbe1b74a388c40364b583cae7edd30b17cb8bf2899502c68",
+      "bytes": 305
+    },
+    {
+      "path": "sha256sum.txt",
+      "sha256": "af814e35babe132084da5d41bf9d400b960274088b22e221a3bdd9e64045380e",
+      "bytes": 421
+    },
+    {
+      "path": "skill_catalog.json",
+      "sha256": "0968080b72fd33c3b15eacd6be63b57b6a6c8fc7f599e94895793028ece2998d",
+      "bytes": 531
+    },
+    {
+      "path": "skill_request.json",
+      "sha256": "fb75f59eef554b8f446c976492623d2cf078787dc0b25a3b032e67dc5431848f",
+      "bytes": 407
+    },
+    {
+      "path": "skill_response.json",
+      "sha256": "f0fafa33b11a4afdd552fe1cf2054d71e06b8fa912b06d5180b1f105c7ee2e48",
+      "bytes": 424
+    }
+  ],
+  "self_sha256": "792e6ad0b6ea3aa4574bc5df9bbf05dac5a04dc9b658a35a733a8989a51570c0"
+}

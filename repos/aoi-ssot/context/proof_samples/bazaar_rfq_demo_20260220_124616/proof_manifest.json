@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-02-20T12:58:03+09:00",
+  "run_id": "bazaar-rfq-20260220_124616_routingreport",
+  "inputs_digest": "f112abe392d578c8be62fdf7e36678d42bfcc21d299b2203419372cb04fe402b",
+  "exposure_tier": "TEASER",
+  "approvals": [],
+  "evidence_paths": [
+    "context/NEXUS_BAZAAR_AGGREGATOR_SPEC_V0_1.md",
+    "aoi-core/docs/ARTIFACTS_STANDARD_V0_1.md"
+  ],
+  "files": [
+    {
+      "path": "decision_summary.md",
+      "sha256": "84526f9507e7fd1b36fd42a5bd3cf3945913caeab333ad034360f6255d6c8cce",
+      "bytes": 928
+    },
+    {
+      "path": "merchant_profiles/merchant_blue_rfq.merchant_profile.json",
+      "sha256": "614cd85dbc7f6d07cd50ab28c92aeadd93887e3b6c8ff2402e21ab9510901b3d",
+      "bytes": 800
+    },
+    {
+      "path": "merchant_profiles/merchant_red_guarded.merchant_profile.json",
+      "sha256": "6c17de686eae48dcea4c4e8d337643dc3caa9603ffa641e069f0919d17c24f41",
+      "bytes": 791
+    },
+    {
+      "path": "merchant_profiles/merchant_silver_otc.merchant_profile.json",
+      "sha256": "4a8f99654088b2147fe672bd6b7e0656a0c16e1b675b8fd033751c742d525ff5",
+      "bytes": 805
+    },
+    {
+      "path": "proof_manifest.json",
+      "sha256": "1cbf99e0774a73ff9ed645ccaedc2185303b9b8a7c45f79229f30bfd1c267267",
+      "bytes": 382
+    },
+    {
+      "path": "quote_request.json",
+      "sha256": "f112abe392d578c8be62fdf7e36678d42bfcc21d299b2203419372cb04fe402b",
+      "bytes": 307
+    },
+    {
+      "path": "quotes/merchant_blue_rfq.quote_response.json",
+      "sha256": "81a36ca34ab49b2a118c1a2e9934d9f809d1eb9ff8ba6452cccdb2e4930d0981",
+      "bytes": 384
+    },
+    {
+      "path": "quotes/merchant_red_guarded.quote_response.json",
+      "sha256": "2752d422d07ec7038e9b19a738777e41edf4d61a7f56e37b90eb36042d6e8799",
+      "bytes": 320
+    },
+    {
+      "path": "quotes/merchant_silver_otc.quote_response.json",
+      "sha256": "8c9cea7ab2d1fa059395de4b38e2f888cf87295480023bd63b15776428f7de2a",
+      "bytes": 285
+    },
+    {
+      "path": "routing_report.json",
+      "sha256": "086f599520a07cf26d16acb9c37c88c6c7235170368ba4b1ad4f88b265577dc5",
+      "bytes": 1901
+    },
+    {
+      "path": "run_log.txt",
+      "sha256": "d587693fc5852c90d94ab14e4ad8937c38245bb95c6c7acca6541ff74319ea8d",
+      "bytes": 307
+    },
+    {
+      "path": "sha256sum.txt",
+      "sha256": "f20633faad7a762d1fda3501862f0f15529ef1d124a62a9653accf51cfa181e2",
+      "bytes": 1130
+    }
+  ],
+  "self_sha256": "1cbf99e0774a73ff9ed645ccaedc2185303b9b8a7c45f79229f30bfd1c267267"
+}

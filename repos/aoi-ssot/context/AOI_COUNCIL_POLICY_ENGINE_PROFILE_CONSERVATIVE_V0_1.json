@@ -1,0 +1,10 @@
+{
+  "version": "conservative.v0.1.0",
+  "notes": "높은 리스크 회피 운영모드: L3 키워드 흔적이나 공개/최종 아티팩트 흔적만 있어도 보수적으로 hold/조건부 게이팅 강화.",
+  "policy_threshold": {
+    "warn_conditional": 10,
+    "warn_hold": 45,
+    "score_hold": 70,
+    "score_conditional": 18
+  }
+}

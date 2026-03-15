@@ -1,0 +1,10 @@
+{
+  "request_id": "bazaar-rfq-20260220_124616_routingreport",
+  "pair": "USDC/ETH",
+  "side": "BUY",
+  "amount_in": 1000.0,
+  "slippage_bps_max": 50,
+  "deadline_ms": 2500,
+  "caller_context": "DEMO (report-only). No signing. Evidence-first RFQ comparison.",
+  "generated_at": "2026-02-20T12:58:03+09:00"
+}

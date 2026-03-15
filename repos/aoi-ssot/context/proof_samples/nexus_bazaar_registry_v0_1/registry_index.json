@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-02-20T14:08:30+09:00",
+  "run_id": "bazaar-registry-auto-20260220_141000",
+  "bazaar": {
+    "name": "Nexus Bazaar",
+    "version": "0.1",
+    "exposure": "TEASER"
+  },
+  "inputs": {
+    "fx_sample": "context/proof_samples/bazaar_rfq_demo_20260220_124616",
+    "skill_sample": "context/proof_samples/skill_stall_demo_20260220_125349",
+    "audit_sample": "context/proof_samples/audit_stall_demo_20260220_140316_fail",
+    "audit_pass_sample": "context/proof_samples/audit_stall_demo_20260220_135002",
+    "audit_fail_sample": "context/proof_samples/audit_stall_demo_20260220_140316_fail"
+  },
+  "merchants": [
+    {
+      "merchant_id": "merchant_blue_rfq",
+      "type": "FX_STALL",
+      "profile_path": "context/proof_samples/bazaar_rfq_demo_20260220_124616/merchant_profiles/merchant_blue_rfq.merchant_profile.json",
+      "catalog_path": null,
+      "policy_path": null,
+      "latest_proof_sample": "context/proof_samples/bazaar_rfq_demo_20260220_124616/"
+    },
+    {
+      "merchant_id": "merchant_red_guarded",
+      "type": "FX_STALL",
+      "profile_path": "context/proof_samples/bazaar_rfq_demo_20260220_124616/merchant_profiles/merchant_red_guarded.merchant_profile.json",
+      "catalog_path": null,
+      "policy_path": null,
+      "latest_proof_sample": "context/proof_samples/bazaar_rfq_demo_20260220_124616/"
+    },
+    {
+      "merchant_id": "merchant_silver_otc",
+      "type": "FX_STALL",
+      "profile_path": "context/proof_samples/bazaar_rfq_demo_20260220_124616/merchant_profiles/merchant_silver_otc.merchant_profile.json",
+      "catalog_path": null,
+      "policy_path": null,
+      "latest_proof_sample": "context/proof_samples/bazaar_rfq_demo_20260220_124616/"
+    },
+    {
+      "merchant_id": "merchant_summarizer_lite",
+      "type": "SKILL_STALL",
+      "profile_path": "context/proof_samples/skill_stall_demo_20260220_125349/merchant_profiles/merchant_summarizer_lite.merchant_profile.json",
+      "catalog_path": "context/proof_samples/skill_stall_demo_20260220_125349/skill_catalog.json",
+      "policy_path": null,
+      "latest_proof_sample": "context/proof_samples/skill_stall_demo_20260220_125349/"
+    },
+    {
+      "merchant_id": "merchant_guardian_audit",
+      "type": "AUDIT_STALL",
+      "profile_path": "context/proof_samples/audit_stall_demo_20260220_140316_fail/merchant_profiles/merchant_guardian_audit.merchant_profile.json",
+      "catalog_path": "context/proof_samples/audit_stall_demo_20260220_140316_fail/skill_catalog.json",
+      "policy_path": "context/proof_samples/audit_stall_demo_20260220_140316_fail/audit_policy.json",
+      "latest_proof_sample": "context/proof_samples/audit_stall_demo_20260220_140316_fail/",
+      "proof_samples": [
+        "context/proof_samples/audit_stall_demo_20260220_135002/",
+        "context/proof_samples/audit_stall_demo_20260220_140316_fail/"
+      ]
+    }
+  ]
+}

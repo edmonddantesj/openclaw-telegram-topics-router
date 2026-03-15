@@ -1,0 +1,5 @@
+# demo payload
+# this file intentionally contains a high-risk marker
+-----BEGIN PRIVATE KEY-----
+not-a-real-key
+-----END PRIVATE KEY-----

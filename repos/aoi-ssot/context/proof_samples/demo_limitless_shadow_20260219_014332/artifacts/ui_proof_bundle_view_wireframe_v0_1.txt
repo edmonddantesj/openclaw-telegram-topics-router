@@ -1,0 +1,35 @@
+AOI Squad Pro — Proof Bundle Viewer (ASCII Wireframe) v0.1
+
++-----------------------------------------------------------------------------------+
+| AOI Squad Pro — Proof Bundle Viewer                        [Search: run_id____]  |
++---------------------------+-------------------------------------------------------+
+| Bundles (recent)          | Bundle Detail                                         |
+|---------------------------|-------------------------------------------------------|
+| > demo_limitless_012918   | Run ID: demo_limitless_shadow_20260219_012918          |
+|   demo_limitless_012827   | Task : aoi_squad_pro_oneclick_demo                     |
+|   v6_hourly_20260218_2258 | Created: 2026-02-19 01:29 KST                          |
+|   ...                     | Public-safe scan: PASS  (artifacts/public_safe_scan)  |
+|                           |                                                       |
+| Filters:                  | Files                                                  |
+|  [ ] public-safe PASS     |  - proof.json (schema aoi.proof.v0.1)                  |
+|  [ ] public-safe FAIL     |  - sha256sum.txt                                       |
+|  [ ] UNKNOWN              |  - report.md                                           |
+|  [ ] demo only            |  - artifacts/                                          |
+|  [ ] pinned/public        |     * digest_12h_supabase.txt                          |
+|                           |     * limitless_odds...tail3                           |
+|                           |     * limitless_ev...tail3                             |
+|                           |     * limitless_settle...tail3                         |
+|                           |     * public_safe_scan.txt                             |
+|                           |                                                       |
+|                           | Preview (selected file)                                |
+|                           | +---------------------------------------------------+ |
+|                           | | (file text preview, masked)                        | |
+|                           | |                                                   | |
+|                           | +---------------------------------------------------+ |
+|                           |                                                       |
+|                           | Actions: [Open Folder] [Copy Path] [Copy sha256]      |
++---------------------------+-------------------------------------------------------+
+
+Notes:
+- Viewer is public-safe by default: masked artifacts + PASS/FAIL scan.
+- Everything is addressable by file path for reproducible ops.

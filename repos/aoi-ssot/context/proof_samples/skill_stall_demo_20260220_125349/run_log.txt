@@ -1,0 +1,5 @@
+generated_at=2026-02-20T12:58:47+09:00
+run_id=skill-stall-20260220_125349_update
+cmd=python3 scripts/skill_stall_demo_runner.py --merchant-id merchant_summarizer_lite --skill-id summarizer_lite_v0 --input <text> --outdir context/proof_samples/skill_stall_demo_20260220_125349
+mode=report-only
+llm_calls=0

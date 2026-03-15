@@ -1,0 +1,36 @@
+{
+  "policy_id": "audit_policy_v0_1",
+  "version": "0.1",
+  "generated_at": "2026-02-20T13:55:00+09:00",
+  "rules": [
+    {
+      "code": "NETWORK_CALL",
+      "severity": "medium",
+      "pattern": "\\b(requests\\.|urllib\\.|fetch\\(|http[s]?://)",
+      "message": "Potential network access"
+    },
+    {
+      "code": "SHELL_EXEC",
+      "severity": "medium",
+      "pattern": "\\b(os\\.system\\(|subprocess\\.|child_process|exec\\()",
+      "message": "Potential shell execution"
+    },
+    {
+      "code": "SECRET_HINT",
+      "severity": "medium",
+      "pattern": "(api[_-]?key|secret|private[_-]?key|mnemonic|seed phrase)",
+      "message": "Potential secret handling"
+    },
+    {
+      "code": "DELETE_RISK",
+      "severity": "medium",
+      "pattern": "\\b(rm\\s+-rf|shutil\\.rmtree|unlink\\(|remove\\()",
+      "message": "Potential destructive operation"
+    }
+  ],
+  "defaults": {
+    "tier": "T1",
+    "pass_if_no_findings": true,
+    "fail_on_severity": ["high"]
+  }
+}

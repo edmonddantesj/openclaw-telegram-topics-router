@@ -1,0 +1,7 @@
+{
+  "hours": 24,
+  "p_floor": 0.1,
+  "slippage_bps": 150.0,
+  "max_bet_usd": 1.0,
+  "stdout": "wallet_start=7.00 wallet_end=10.4893 ROI=49.848%"
+}

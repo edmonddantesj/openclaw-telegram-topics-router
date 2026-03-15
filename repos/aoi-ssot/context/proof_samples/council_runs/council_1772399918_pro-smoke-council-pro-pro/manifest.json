@@ -1,0 +1,466 @@
+{
+  "run_id": "council_1772399918_pro-smoke-council-pro-pro",
+  "timestamp": "2026-03-01T21:18:38.565760+00:00",
+  "executor": "pro",
+  "schema": {
+    "council_runner_version": "0.1.8",
+    "proof_pack_schema_version": "0.1"
+  },
+  "inputs": {
+    "mode": "decision",
+    "topic": "Pro smoke: 설치된 Council Pro가 Pro로 판정되는지 확인",
+    "context": null,
+    "evidence_paths": null,
+    "permission_scope_path": null,
+    "actor": "manual",
+    "target": "web-or-cli",
+    "method": "cli",
+    "action": "propose",
+    "amount": 0.0,
+    "value_usd": 0.0,
+    "network": "",
+    "estimated_cost_usd": 0.0,
+    "retry_attempt": 0,
+    "cost_governor_state": "/tmp/aoi_cost_governor_state_v0_1.json"
+  },
+  "roles": [
+    {
+      "id": "oracle",
+      "label": "🧿 Oracle",
+      "role": "Decision Frame / Veto Gate",
+      "agent_id": "blue-oracle",
+      "pass_a_output": "[BLUE-ORACLE] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds",
+      "output": "[BLUE-ORACLE] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...'",
+      "status": "success",
+      "pass_b_output": [],
+      "pass_c_output": "Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [💊 Risk] aligns with 🧿 Oracle on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc",
+      "critiques_received": [
+        "[💊 Risk] aligns with 🧿 Oracle on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+      ],
+      "position": {
+        "recommendation": "Conditional",
+        "confidence": "Medium",
+        "risk": "Medium",
+        "risk_signal": false,
+        "note": "policy risk within normal bounds"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "🧠 Strategy",
+      "role": "Scoring & Trade-offs",
+      "agent_id": "blue-brain",
+      "pass_a_output": "[BLUE-BRAIN] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds",
+      "output": "[BLUE-BRAIN] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...'",
+      "status": "success",
+      "pass_b_output": [],
+      "pass_c_output": "Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [🧿 Oracle] aligns with 🧠 Strategy on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc",
+      "critiques_received": [
+        "[🧿 Oracle] aligns with 🧠 Strategy on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+      ],
+      "position": {
+        "recommendation": "Conditional",
+        "confidence": "Medium",
+        "risk": "Medium",
+        "risk_signal": false,
+        "note": "policy risk within normal bounds"
+      }
+    },
+    {
+      "id": "security",
+      "label": "⚔️ Security",
+      "role": "Security / Compliance",
+      "agent_id": "blue-blade",
+      "pass_a_output": "[BLUE-BLADE] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds",
+      "output": "[BLUE-BLADE] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...'",
+      "status": "success",
+      "pass_b_output": [],
+      "pass_c_output": "Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [🧠 Strategy] aligns with ⚔️ Security on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc",
+      "critiques_received": [
+        "[🧠 Strategy] aligns with ⚔️ Security on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+      ],
+      "position": {
+        "recommendation": "Conditional",
+        "confidence": "Medium",
+        "risk": "High",
+        "risk_signal": false,
+        "note": "policy risk within normal bounds"
+      }
+    },
+    {
+      "id": "builder",
+      "label": "⚡ Builder",
+      "role": "Feasibility / Implementation",
+      "agent_id": "blue-flash",
+      "pass_a_output": "[BLUE-FLASH] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds",
+      "output": "[BLUE-FLASH] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...'",
+      "status": "success",
+      "pass_b_output": [],
+      "pass_c_output": "Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [⚔️ Security] aligns with ⚡ Builder on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc",
+      "critiques_received": [
+        "[⚔️ Security] aligns with ⚡ Builder on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+      ],
+      "position": {
+        "recommendation": "Conditional",
+        "confidence": "High",
+        "risk": "Low",
+        "risk_signal": false,
+        "note": "policy risk within normal bounds"
+      }
+    },
+    {
+      "id": "comms",
+      "label": "📢 Comms",
+      "role": "Messaging / Community",
+      "agent_id": "blue-sound",
+      "pass_a_output": "[BLUE-SOUND] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds",
+      "output": "[BLUE-SOUND] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...'",
+      "status": "success",
+      "pass_b_output": [],
+      "pass_c_output": "Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [⚡ Builder] aligns with 📢 Comms on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc",
+      "critiques_received": [
+        "[⚡ Builder] aligns with 📢 Comms on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+      ],
+      "position": {
+        "recommendation": "Conditional",
+        "confidence": "High",
+        "risk": "Low",
+        "risk_signal": false,
+        "note": "policy risk within normal bounds"
+      }
+    },
+    {
+      "id": "ops",
+      "label": "⚙️ Ops",
+      "role": "Reliability / Observability",
+      "agent_id": "blue-gear",
+      "pass_a_output": "[BLUE-GEAR] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds",
+      "output": "[BLUE-GEAR] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...'",
+      "status": "success",
+      "pass_b_output": [],
+      "pass_c_output": "Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [📢 Comms] aligns with ⚙️ Ops on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc",
+      "critiques_received": [
+        "[📢 Comms] aligns with ⚙️ Ops on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+      ],
+      "position": {
+        "recommendation": "Conditional",
+        "confidence": "Medium",
+        "risk": "Medium",
+        "risk_signal": false,
+        "note": "policy risk within normal bounds"
+      }
+    },
+    {
+      "id": "risk",
+      "label": "💊 Risk",
+      "role": "Devil's Advocate / Circuit Breaker",
+      "agent_id": "blue-med",
+      "pass_a_output": "[BLUE-MED] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds",
+      "output": "[BLUE-MED] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...'",
+      "status": "success",
+      "pass_b_output": [],
+      "pass_c_output": "Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [⚙️ Ops] aligns with 💊 Risk on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc",
+      "critiques_received": [
+        "[⚙️ Ops] aligns with 💊 Risk on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+      ],
+      "position": {
+        "recommendation": "Conditional",
+        "confidence": "Medium",
+        "risk": "High",
+        "risk_signal": false,
+        "note": "policy risk within normal bounds"
+      }
+    }
+  ],
+  "verdict": {
+    "recommendation": "Conditional",
+    "confidence": "High",
+    "risk": "High",
+    "policy_adjustments": [
+      "permission_scope: NOT_FOUND (No permission scope file provided)",
+      "cost_governor: OK/ALLOW (within_threshold)"
+    ],
+    "action": "ALLOW",
+    "evidence_id": "ag-20260301T211842Z-0b6eeae2",
+    "permission": {
+      "status": "NOT_FOUND",
+      "decision": "ALLOW",
+      "permission_id": null
+    },
+    "cost_governor": {
+      "status": "OK",
+      "decision": "ALLOW",
+      "auto_action": "proceed",
+      "reason": "within_threshold"
+    }
+  },
+  "failures": [],
+  "critiques": [
+    {
+      "critic_id": "oracle",
+      "critic_label": "🧿 Oracle",
+      "target_id": "strategy",
+      "target_label": "🧠 Strategy",
+      "critique": "[🧿 Oracle] aligns with 🧠 Strategy on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+    },
+    {
+      "critic_id": "strategy",
+      "critic_label": "🧠 Strategy",
+      "target_id": "security",
+      "target_label": "⚔️ Security",
+      "critique": "[🧠 Strategy] aligns with ⚔️ Security on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+    },
+    {
+      "critic_id": "security",
+      "critic_label": "⚔️ Security",
+      "target_id": "builder",
+      "target_label": "⚡ Builder",
+      "critique": "[⚔️ Security] aligns with ⚡ Builder on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+    },
+    {
+      "critic_id": "builder",
+      "critic_label": "⚡ Builder",
+      "target_id": "comms",
+      "target_label": "📢 Comms",
+      "critique": "[⚡ Builder] aligns with 📢 Comms on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+    },
+    {
+      "critic_id": "comms",
+      "critic_label": "📢 Comms",
+      "target_id": "ops",
+      "target_label": "⚙️ Ops",
+      "critique": "[📢 Comms] aligns with ⚙️ Ops on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+    },
+    {
+      "critic_id": "ops",
+      "critic_label": "⚙️ Ops",
+      "target_id": "risk",
+      "target_label": "💊 Risk",
+      "critique": "[⚙️ Ops] aligns with 💊 Risk on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+    },
+    {
+      "critic_id": "risk",
+      "critic_label": "💊 Risk",
+      "target_id": "oracle",
+      "target_label": "🧿 Oracle",
+      "critique": "[💊 Risk] aligns with 🧿 Oracle on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc"
+    }
+  ],
+  "synthesis": {
+    "consensus": "Most roles align on a conservative path.",
+    "conflict": "No major conflict; roles converge on Conditional path with explicit safety conditions.",
+    "dissent": [],
+    "assumptions": [
+      "Final decision requires measurable pass/fail criteria before implementation.",
+      "Policy scorecard and L1/L2/L3 constraints are treated as hard post-synthesis gates.",
+      "Fallback plan should be prepared for Hold/Conditional boundary transitions.",
+      "Policy constraints applied by runner governance layer."
+    ],
+    "recommendation": "Conditional",
+    "confidence": "High",
+    "risk": "High",
+    "policy_adjustments": [
+      "permission_scope: NOT_FOUND (No permission scope file provided)",
+      "cost_governor: OK/ALLOW (within_threshold)"
+    ],
+    "policy_score": 0,
+    "policy_risk_score_card": {
+      "status": "PASS",
+      "score": 0,
+      "warn_count": 0,
+      "fail_count": 0,
+      "breakdown": [
+        {
+          "id": "exposure_tier",
+          "status": "PASS",
+          "weight": 0
+        },
+        {
+          "id": "l1_l2_l3_boundary",
+          "status": "PASS",
+          "weight": 0
+        },
+        {
+          "id": "evidence_integrity",
+          "status": "PASS",
+          "weight": 0
+        },
+        {
+          "id": "github_public_final_policy",
+          "status": "PASS",
+          "weight": 0
+        }
+      ]
+    },
+    "pass_votes": {
+      "Conditional": 7
+    },
+    "action_decision": "ALLOW",
+    "permission_scope": {
+      "status": "NOT_FOUND",
+      "decision": "ALLOW",
+      "reason": "No permission scope file provided",
+      "permission_id": null,
+      "checks": [
+        "permission_path"
+      ],
+      "checked_at": "2026-03-01T21:18:42.376218+00:00"
+    },
+    "cost_governor": {
+      "status": "OK",
+      "decision": "ALLOW",
+      "auto_action": "proceed",
+      "reason": "within_threshold",
+      "metrics": {
+        "cost_estimate": 0.0,
+        "attempts": {
+          "minute": 1,
+          "hour": 1,
+          "retry_window": 0
+        },
+        "budget": {
+          "soft": 5.0,
+          "hard": 7.0,
+          "spent": 0.0
+        },
+        "state": {
+          "minute_bucket": 29539998,
+          "hour_bucket": 492333,
+          "burst_bucket": 5907999
+        }
+      }
+    }
+  },
+  "roster": {
+    "selected": [
+      "oracle",
+      "strategy",
+      "security",
+      "builder",
+      "comms",
+      "ops",
+      "risk"
+    ],
+    "full_count": 11,
+    "selected_count": 7,
+    "policy": "smart_roster_v0.1"
+  },
+  "policy_check": {
+    "version": "0.1",
+    "executed_at": "2026-03-01T21:18:42.376193+00:00",
+    "mode": "pro",
+    "mode_requested": "pro",
+    "evidence_id": "ag-20260301T211842Z-0b6eeae2",
+    "action_decision": "ALLOW",
+    "action_gates": {
+      "default_decision": "ALLOW",
+      "review_reasons": [],
+      "evidence": {
+        "id": "ag-20260301T211842Z-0b6eeae2",
+        "decision": "ALLOW",
+        "score": 0,
+        "status": "PASS"
+      }
+    },
+    "summary": {
+      "status": "PASS",
+      "score": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "weighted_breakdown": [
+        {
+          "id": "exposure_tier",
+          "status": "PASS",
+          "weight": 0
+        },
+        {
+          "id": "l1_l2_l3_boundary",
+          "status": "PASS",
+          "weight": 0
+        },
+        {
+          "id": "evidence_integrity",
+          "status": "PASS",
+          "weight": 0
+        },
+        {
+          "id": "github_public_final_policy",
+          "status": "PASS",
+          "weight": 0
+        }
+      ]
+    },
+    "checks": [
+      {
+        "id": "exposure_tier",
+        "status": "PASS",
+        "tier": "OPEN",
+        "note": "No restricted exposure keyword matched. default OPEN."
+      },
+      {
+        "id": "l1_l2_l3_boundary",
+        "status": "PASS",
+        "note": "No L3 trigger found in topic/context."
+      },
+      {
+        "id": "evidence_integrity",
+        "status": "PASS",
+        "note": "No evidence paths provided. This is allowed for local runs."
+      },
+      {
+        "id": "github_public_final_policy",
+        "status": "PASS",
+        "note": "PASS: runner mode is report-only and does not mutate public repositories."
+      }
+    ]
+  },
+  "permission_scope_check": {
+    "version": "v0.1",
+    "status": "NOT_FOUND",
+    "decision": "ALLOW",
+    "matched_permission_id": null,
+    "reason": "No permission scope file provided",
+    "notes": [
+      "permission scope input is optional in current rollout"
+    ],
+    "checks": [
+      "permission_path"
+    ],
+    "checked_at": "2026-03-01T21:18:42.376218+00:00"
+  },
+  "cost_governor_check": {
+    "version": "v0.1",
+    "status": "OK",
+    "decision": "ALLOW",
+    "reason": "within_threshold",
+    "checks": [],
+    "auto_action": "proceed",
+    "metrics": {
+      "cost_estimate": 0.0,
+      "attempts": {
+        "minute": 1,
+        "hour": 1,
+        "retry_window": 0
+      },
+      "budget": {
+        "soft": 5.0,
+        "hard": 7.0,
+        "spent": 0.0
+      },
+      "state": {
+        "minute_bucket": 29539998,
+        "hour_bucket": 492333,
+        "burst_bucket": 5907999
+      }
+    }
+  },
+  "outputs": {
+    "proof_pack_dir": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1772399918_pro-smoke-council-pro-pro",
+    "report_md": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1772399918_pro-smoke-council-pro-pro/report.md",
+    "manifest_json": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1772399918_pro-smoke-council-pro-pro/manifest.json",
+    "policy_check_json": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1772399918_pro-smoke-council-pro-pro/policy_check.json",
+    "policy_scorecard_json": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1772399918_pro-smoke-council-pro-pro/policy_scorecard.json",
+    "actions_md": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1772399918_pro-smoke-council-pro-pro/actions.md",
+    "summary_html": "/Users/silkroadcat/.openclaw/workspace/repos/aoi-ssot/context/proof_samples/council_runs/council_1772399918_pro-smoke-council-pro-pro/summary.html"
+  }
+}

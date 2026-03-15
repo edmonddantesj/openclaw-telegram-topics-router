@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AOI Council Proof Pack</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; color: #222; }
+    h1, h2 { color: #1f2937; }
+    .meta { background: #f7f7f9; padding: 12px; border-left: 4px solid #3b82f6; margin: 12px 0; }
+    .bad { color: #b91c1c; } .warn { color: #92400e; } .ok { color: #166534; }
+    .card { border: 1px solid #ddd; padding: 12px; margin: 12px 0; border-radius: 8px; }
+    .badge { display: inline-block; margin-right: 8px; padding: 3px 8px; border-radius: 999px; background: #eef2ff; font-size: 0.85rem; }
+    pre { background: #111827; color: #f9fafb; padding: 12px; overflow:auto; }
+    .status { font-weight: 700; }
+  </style>
+</head>
+<body>
+  <h1>AOI Council Proof Pack</h1>
+  <div class="meta">
+    <b>Run:</b> council_1772399918_pro-smoke-council-pro-pro<br />
+    <b>Mode:</b> pro<br />
+    <b>Topic:</b> Pro smoke: 설치된 Council Pro가 Pro로 판정되는지 확인<br />
+    <b>Time:</b> 2026-03-01T21:18:38.565760+00:00<br />
+    <b>Policy:</b> <span class="status ok">PASS</span>
+  </div>
+
+  <h2>Verdict</h2>
+  <div class="card">
+    <div><b>Recommendation:</b> Conditional</div>
+    <div><b>Action:</b> ALLOW</div>
+    <div><b>Confidence:</b> High</div>
+    <div><b>Risk:</b> High</div>
+    <div><b>Policy score:</b> 0</div>
+    <div><b>Evidence ID:</b> ag-20260301T211842Z-0b6eeae2</div>
+    <div><b>Cost governor:</b> OK/ALLOW</div>
+    <div><b>Cost reason:</b> within_threshold</div>
+    <div><b>Permission scope:</b> NOT_FOUND/ALLOW</div>
+    <div><b>Permission id:</b> None</div>
+    <div><b>Policy adjustments:</b> permission_scope: NOT_FOUND (No permission scope file provided); cost_governor: OK/ALLOW (within_threshold)</div>
+  </div>
+
+  <h2>Policy Checks</h2>
+  <div class="card">
+    <span class='badge ok'>exposure_tier: PASS</span><span class='badge ok'>l1_l2_l3_boundary: PASS</span><span class='badge ok'>evidence_integrity: PASS</span><span class='badge ok'>github_public_final_policy: PASS</span>
+    <div><b>exposure_tier:</b> <span class='ok'>PASS</span> — No restricted exposure keyword matched. default OPEN.</div><div><b>l1_l2_l3_boundary:</b> <span class='ok'>PASS</span> — No L3 trigger found in topic/context.</div><div><b>evidence_integrity:</b> <span class='ok'>PASS</span> — No evidence paths provided. This is allowed for local runs.</div><div><b>github_public_final_policy:</b> <span class='ok'>PASS</span> — PASS: runner mode is report-only and does not mutate public repositories.</div>
+  </div>
+
+  <h2>Consensus / Conflict</h2>
+  <div class="card">
+    <div><b>Consensus:</b> Most roles align on a conservative path.</div>
+    <div><b>Conflict:</b> No major conflict; roles converge on Conditional path with explicit safety conditions.</div>
+  </div>
+
+  <h2>Policy & Assumptions</h2>
+  <div class="card">
+    <ul>
+      <li>Final decision requires measurable pass/fail criteria before implementation.</li><li>Policy scorecard and L1/L2/L3 constraints are treated as hard post-synthesis gates.</li><li>Fallback plan should be prepared for Hold/Conditional boundary transitions.</li><li>Policy constraints applied by runner governance layer.</li>
+    </ul>
+  </div>
+
+  <h2>Report Snapshot</h2>
+  <pre># Team Council (Pro) — decision
+
+**Date:** 2026-03-01T21:18:38.565760+00:00
+**Topic:** Pro smoke: 설치된 Council Pro가 Pro로 판정되는지 확인
+
+## TL;DR
+Recommendation=Conditional, Confidence=High, Risk=High
+
+## Cross-Critique (3-pass scaffold)
+
+### Pass A (Initial)
+- **🧿 Oracle**: [BLUE-ORACLE] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds
+- **🧠 Strategy**: [BLUE-BRAIN] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds
+- **⚔️ Security**: [BLUE-BLADE] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds
+- **⚡ Builder**: [BLUE-FLASH] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds
+- **📢 Comms**: [BLUE-SOUND] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds
+- **⚙️ Ops**: [BLUE-GEAR] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds
+- **💊 Risk**: [BLUE-MED] (Pro Mode) acknowledged task: 'Pro smoke: 설치된 Council Pro가 Pr...' | policy risk within normal bounds
+
+### Pass B (Cross-Critique)
+- **🧿 Oracle** -> **🧠 Strategy**: [🧿 Oracle] aligns with 🧠 Strategy on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **🧠 Strategy** -> **⚔️ Security**: [🧠 Strategy] aligns with ⚔️ Security on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **⚔️ Security** -> **⚡ Builder**: [⚔️ Security] aligns with ⚡ Builder on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **⚡ Builder** -> **📢 Comms**: [⚡ Builder] aligns with 📢 Comms on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **📢 Comms** -> **⚙️ Ops**: [📢 Comms] aligns with ⚙️ Ops on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **⚙️ Ops** -> **💊 Risk**: [⚙️ Ops] aligns with 💊 Risk on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **💊 Risk** -> **🧿 Oracle**: [💊 Risk] aligns with 🧿 Oracle on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+
+### Pass C (Revision)
+- **🧿 Oracle**: Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [💊 Risk] aligns with 🧿 Oracle on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **🧠 Strategy**: Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [🧿 Oracle] aligns with 🧠 Strategy on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **⚔️ Security**: Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [🧠 Strategy] aligns with ⚔️ Security on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **⚡ Builder**: Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [⚔️ Security] aligns with ⚡ Builder on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **📢 Comms**: Revised position: keep direction = Conditional, add fallback condition and acceptance criteria from feedback: [⚡ Builder] aligns with 📢 Comms on recommendation, but requires clearer failure thresholds and ownership of follow-up checks. topic=Pro smoke: 설치된 Counc
+- **⚙️ Ops**: Revised position: keep direction = Conditional, add fallback con</pre>
+</body>
+</html>

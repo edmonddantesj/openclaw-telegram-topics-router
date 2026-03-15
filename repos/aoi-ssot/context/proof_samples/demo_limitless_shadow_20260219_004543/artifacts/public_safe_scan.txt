@@ -1,0 +1,7 @@
+AOI Squad Pro public-safe scan (v0.1)
+run_id=demo_limitless_shadow_20260219_004543
+pattern=(lmts_|SUPABASE_|service_role|BEGIN( RSA)? PRIVATE KEY|0x[a-fA-F0-9]{40}|[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}|api[_-]?key|secret|mnemonic|seed phrase|private key)
+timestamp_utc=2026-02-18T15:45:50Z
+
+
+PUBLIC-SAFE: PASS
