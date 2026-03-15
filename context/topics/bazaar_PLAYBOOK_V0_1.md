@@ -159,7 +159,26 @@ Bazaar 관련 작업 재진입 시 검색 순서:
 
 기억이나 분위기로 이어가지 말고, durable state부터 읽고 이어간다냥.
 
-## 12) Heukmyo support routing
-- 리서치/비교표/체크리스트/운영 문서화/market skeleton 정리처럼 범위를 나눠서 보조 산출물이 필요할 때는 `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md` 기준으로 흑묘팀 지원 요청을 구조화한다.
+## 12) Team support / parallel discussion routing
+- Bazaar의 기본 owner는 청뇌(`analyzer`)지만, **토론/검토/분해가 필요할 때는 owner 1인 고정으로 닫지 않는다.**
+- 아래 표현은 **명시적 멀티 호출(explicit multi-call)** 로 해석한다:
+  - `토론해줘`
+  - `같이 논의해줘`
+  - `병렬로 봐줘`
+  - `팀원 불러서 봐줘`
+  - 특정 팀원 2명 이상 동시 호출
+- 위 트리거가 오면 Bazaar owner(청뇌)는 필요 역할을 병렬 호출해 **짧은 내부 토론 → 합의 요약** 흐름으로 답한다.
+- 권장 기본 조합:
+  - 제품/전략/범위 → 청뇌 + 청묘/흑묘
+  - 구현/장애/복구 → 청뇌 + 청기(devops) + 청정(maintainer)
+  - 리스크/안전성 → 청뇌 + 청검(risk/security)
+  - 문서/체크리스트/정리 → 청뇌 + 청비(record/knowledge)
+- 출력 기본값:
+  1. 병렬 검토 참여자
+  2. 핵심 쟁점 2~4개
+  3. 합의 결론
+  4. next action
+- 장문 핑퐁은 금지하고, `context/AOINECO_AGENT_TO_AGENT_DIALOGUE_RUNTIME_V0_1.md` 의 turn-taking / strong stop rule을 따른다.
+- 범위를 나눠서 보조 산출물이 필요할 때는 `context/heukmyo-squad/CHEONGMYO_HEUKMYO_SUPPORT_PROTOCOL_ONEPAGE_V0_1.md` 기준으로 흑묘팀 지원 요청을 구조화한다.
 - 기술성 높은 요청(배포 경계, repo/live 매핑, incident/recovery, 구현 리스크)은 optional extension field(`Affected scope`, `Failure mode`)를 함께 붙인다.
 - final public deployment approval / outward message send / payment / signing은 계속 human gate로 남긴다.
