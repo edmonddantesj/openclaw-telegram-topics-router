@@ -1,0 +1,4 @@
+# One relative path per line.
+# Keep empty by default for safety-first remote backups.
+# Example:
+# agents/strategist/context

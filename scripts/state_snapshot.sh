@@ -10,22 +10,31 @@ BASENAME="state_snapshot__${TS}"
 TMPDIR="$(mktemp -d)"
 
 # What we snapshot (curated, recoverable, not huge binaries)
-# NOTE: include per-agent durable notes under agents/*/context only (not full agents workspaces).
+# Safety-first remote backup profile:
+# - exclude MEMORY.md (high-sensitivity long-term memory)
+# - exclude broad agents/*/context by default
+# - allow agent context only via explicit allowlist file
 PATHS=(
-  "$WS/MEMORY.md"
   "$WS/USER.md"
   "$WS/IDENTITY.md"
+  "$WS/TOOLS.md"
   "$WS/context"
   "$WS/memory"
   "$WS/scripts"
 )
 
-# Agent-local SSOT (agents/*/context)
+# Optional allowlist for agent-local SSOT (one relative path per line)
+# Example: agents/strategist/context
 AGENT_CONTEXT_DIRS=()
-if [[ -d "$WS/agents" ]]; then
-  while IFS= read -r d; do
-    AGENT_CONTEXT_DIRS+=("$d")
-  done < <(find "$WS/agents" -maxdepth 2 -type d -name context 2>/dev/null | sort)
+ALLOWLIST="$WS/context/ops/STATE_SNAPSHOT_AGENT_CONTEXT_ALLOWLIST.txt"
+if [[ -f "$ALLOWLIST" ]]; then
+  while IFS= read -r rel; do
+    [[ -n "$rel" ]] || continue
+    [[ "$rel" = \#* ]] && continue
+    if [[ -d "$WS/$rel" ]]; then
+      AGENT_CONTEXT_DIRS+=("$WS/$rel")
+    fi
+  done < "$ALLOWLIST"
 fi
 
 # Build a file list (files only)
