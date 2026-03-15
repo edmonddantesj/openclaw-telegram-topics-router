@@ -55,5 +55,6 @@ This is a lightweight index of canonical SSOT docs in `context/`.
 - Ralph Loop Ledger sync protocol (Local SSOT + GitHub + Notion): `context/ralph_loop/RALPH_LOOP_LEDGER_SYNC_PROTOCOL_V0_1.md`
 
 ## Nexus Bazaar / Agent DeFi
+- Resource hub expansion / Archive+Library+reactions direction SSOT: `context/NEXUS_BAZAAR_ARCHIVE_RESOURCE_HUB_EXPANSION_SSOT_V0_1.md`
 - Agent Liquidity Mesh concept brief (prompt packet): `context/defi_mesh/NEXUS_AGENT_LIQUIDITY_MESH_CONCEPT_BRIEF_V0_1.md`
 - Agent Liquidity Mesh spec (placeholder; to be expanded after 2nd-model review): `context/defi_mesh/AGENT_LIQUIDITY_MESH_SPEC_V0_1.md`
