@@ -136,11 +136,3 @@ Purpose: quick shared search layer so any agent can find current topic status, c
 
 ## Agent usage rule
 Before continuing work in any indexed topic, read the indexed state/playbook/handoff paths first instead of relying on conversation memory alone.
-
-## Parallel summon baseline (2026-03-15)
-- Topic-bound owner agents should share the same baseline summon capability as `main`.
-- Effective policy: all topic owner agents are configured to allow bounded real-agent parallel summon.
-- Reference SSOT: `context/ops/TOPIC_PARALLEL_SUMMON_POLICY_V0_1.md`
-- Interpretation:
-  - allowed: distinct real agents for bounded review/consensus
-  - not allowed: clone-shard discussion using many copies of the same agent
