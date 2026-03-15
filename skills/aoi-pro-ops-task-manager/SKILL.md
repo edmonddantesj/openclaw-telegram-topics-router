@@ -35,6 +35,18 @@ python3 skills/aoi-pro-ops-task-manager/scripts/ops_task_manager.py --apply
 ## Policy SSOT
 - `skills/aoi-pro-ops-task-manager/state/policy.json`
 
+## Multi-agent review mode
+- Use bounded parallel summon when a request needs real cross-functional review rather than single-owner hygiene.
+- Treat phrases like `토론해줘`, `같이 논의해줘`, `병렬로 봐줘`, `팀원 불러서 봐줘`, or direct naming of 2+ roles as explicit multi-review triggers.
+- Use distinct real agents only; do not fake discussion by spawning clone-shards of the same agent.
+- Prefer small sets (2~4 participants).
+- Return in this order:
+  1. Participants
+  2. Key issues
+  3. Consensus / conclusion
+  4. Next action
+- Follow global baseline: `context/ops/TOPIC_PARALLEL_SUMMON_POLICY_V0_1.md`
+
 ## Docs
 - Ops item template: `skills/aoi-pro-ops-task-manager/docs/TEMPLATE_OPS_ITEM_AOI_PRO_V0_1.md`
 - Wave execution policy: `skills/aoi-pro-ops-task-manager/docs/AOI_PRO_WAVE_EXECUTION_POLICY_V0_1.md`

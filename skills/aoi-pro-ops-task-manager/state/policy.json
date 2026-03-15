@@ -37,5 +37,24 @@
   },
   "reporting": {
     "reportDir": "ops/reports/task_manager"
+  },
+  "multiAgentReview": {
+    "enabled": true,
+    "triggerPhrases": [
+      "토론해줘",
+      "같이 논의해줘",
+      "병렬로 봐줘",
+      "팀원 불러서 봐줘"
+    ],
+    "allowDistinctRealAgentsOnly": true,
+    "recommendedParticipantsMin": 2,
+    "recommendedParticipantsMax": 4,
+    "outputOrder": [
+      "participants",
+      "key_issues",
+      "consensus",
+      "next_action"
+    ],
+    "policyDoc": "context/ops/TOPIC_PARALLEL_SUMMON_POLICY_V0_1.md"
   }
 }
